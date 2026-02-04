@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+
+    <!-- SEO Meta Tags -->
+    <title>블로그명 - 유용한 정보를 공유합니다</title>
+    <meta name="description" content="생활, 기술, 재테크 등 다양한 분야의 유용한 정보를 공유하는 블로그입니다.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="블로그명">
+    <meta property="og:description" content="유용한 정보를 공유합니다">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My Blog</h1>
-    <p>Welcome to my blog.</p>
+    <!-- 헤더 -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">블로그명</a>
+            <nav class="main-nav">
+                <a href="index.html">홈</a>
+                <a href="category/life.html">생활</a>
+                <a href="category/tech.html">기술</a>
+                <a href="category/finance.html">재테크</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <h1 style="margin-bottom: 32px;">최신 글</h1>
+
+        <!-- 글 목록 (포스트가 추가되면 여기에 표시) -->
+        <ul class="post-list">
+            <!--
+            <li class="post-list-item">
+                <h2 class="post-list-title">
+                    <a href="posts/example-post.html">포스트 제목이 여기에 표시됩니다</a>
+                </h2>
+                <p class="post-list-excerpt">
+                    포스트의 요약 내용이 여기에 표시됩니다. 독자가 글의 내용을 미리 파악할 수 있도록 첫 문단이나 요약문을 보여줍니다.
+                </p>
+                <div class="post-list-meta">
+                    <time>2025년 2월 5일</time> · <span>카테고리</span>
+                </div>
+            </li>
+            -->
+
+            <li class="post-list-item">
+                <p style="color: var(--color-text-light); text-align: center; padding: 40px 0;">
+                    아직 작성된 글이 없습니다.<br>
+                    첫 번째 글을 작성해 보세요.
+                </p>
+            </li>
+        </ul>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2025 블로그명. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy.html">개인정보처리방침</a>
+                <a href="contact.html">문의</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
