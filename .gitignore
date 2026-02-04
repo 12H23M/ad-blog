@@ -8,3 +8,9 @@
 .worktrees/
 .security-key
 logs/security/
+
+# Agent configuration (local only)
+.claude/
+CLAUDE.md
+templates/
+research/
