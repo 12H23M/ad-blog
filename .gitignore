@@ -1,3 +1,7 @@
+# Node
+node_modules/
+dist/
+
 # Auto Claude data directory
 .auto-claude/
 

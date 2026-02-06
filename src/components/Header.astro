@@ -1,0 +1,16 @@
+---
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="logo">baksuls</a>
+        <nav class="main-nav">
+            <a href="/category/culture" class:list={{ active: currentPath.includes('/culture') }}>Culture</a>
+            <a href="/category/food" class:list={{ active: currentPath.includes('/food') }}>Food</a>
+            <a href="/category/travel" class:list={{ active: currentPath.includes('/travel') }}>Travel</a>
+            <a href="/category/lifestyle" class:list={{ active: currentPath.includes('/lifestyle') }}>Lifestyle</a>
+            <a href="/category/language" class:list={{ active: currentPath.includes('/language') }}>Language</a>
+        </nav>
+    </div>
+</header>

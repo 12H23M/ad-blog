@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const sortedPosts = posts.sort((a, b) =>
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+const featuredPosts = sortedPosts.slice(0, 3);
+const recentPosts = sortedPosts.slice(3, 6);
+
+const categoryColors: Record<string, { class: string; cardClass: string }> = {
+  'culture': { class: 'post-list-category--coral', cardClass: 'card--coral' },
+  'food': { class: 'post-list-category--green', cardClass: 'card--green' },
+  'travel': { class: 'post-list-category--green', cardClass: 'card--green' },
+  'lifestyle': { class: 'post-list-category--coral', cardClass: 'card--coral' },
+  'language': { class: 'post-list-category--green', cardClass: 'card--green' }
+};
+
+const categoryCardColors: Record<string, string> = {
+  'culture': 'card-category--coral',
+  'food': 'card-category--green',
+  'travel': 'card-category--green',
+  'lifestyle': 'card-category--coral',
+  'language': 'card-category--green'
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+
+function readingTime(description: string) {
+  const words = description.split(' ').length;
+  return Math.max(5, Math.ceil(words / 40)) + ' min read';
+}
+---
+
+<BaseLayout title="Baksuls Blog - Discover Korea" wide={true}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="hero-badge">Discover Korea</span>
+    <h1>Your Window<br>into Korea</h1>
+    <p class="hero-description">
+      Stories about Korean culture, food, travel, and everyday life — written for the curious traveler and culture enthusiast.
+    </p>
+    <a href="#featured" class="hero-cta">Start Reading</a>
+    <p class="hero-categories">— Culture · Food · Travel · Lifestyle · Language —</p>
+  </section>
+
+  <!-- Featured Stories -->
+  <section class="featured-section" id="featured">
+    <div class="section-header">
+      <h2 class="section-title">Featured Stories</h2>
+      <a href="/category/culture" class="section-link">View all stories →</a>
+    </div>
+
+    <div class="cards-grid">
+      {featuredPosts.map((post) => {
+        const colors = categoryColors[post.data.category] || { cardClass: 'card--green' };
+        const catColor = categoryCardColors[post.data.category] || 'card-category--green';
+        return (
+          <a href={`/${post.data.category}/${post.data.shortId}`} class={`card ${colors.cardClass}`}>
+            <div class="card-body">
+              <span class={`card-category ${catColor}`}>{post.data.category.toUpperCase()}</span>
+              <h3 class="card-title">{post.data.title}</h3>
+              <p class="card-desc">{post.data.description}</p>
+              <span class="card-meta">{formatDate(post.data.pubDate)} · {readingTime(post.data.description)}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Explore by Category -->
+  <section class="category-section">
+    <div class="section-header">
+      <h2 class="section-title">Explore by Category</h2>
+      <div class="category-tabs">
+        <a href="/" class="category-tab category-tab--active">All</a>
+        <a href="/category/culture" class="category-tab category-tab--inactive">Culture</a>
+        <a href="/category/food" class="category-tab category-tab--inactive">Food</a>
+        <a href="/category/travel" class="category-tab category-tab--inactive">Travel</a>
+        <a href="/category/lifestyle" class="category-tab category-tab--inactive">Lifestyle</a>
+      </div>
+    </div>
+
+    <ul class="post-list">
+      {recentPosts.map((post) => {
+        const colors = categoryColors[post.data.category] || { class: 'post-list-category--green' };
+        return (
+          <li class="post-list-item">
+            <a href={`/${post.data.category}/${post.data.shortId}`}>
+              <div class="post-list-meta-row">
+                <span class={`post-list-category ${colors.class}`}>{post.data.category.toUpperCase()}</span>
+                <span class="post-list-dot">·</span>
+                <span class="post-list-date">{formatDate(post.data.pubDate)}</span>
+              </div>
+              <h3 class="post-list-title">{post.data.title}</h3>
+              <p class="post-list-excerpt">{post.data.description}</p>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+</BaseLayout>

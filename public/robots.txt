@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baksuls.com/sitemap-index.xml

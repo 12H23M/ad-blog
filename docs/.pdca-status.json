@@ -1,0 +1,299 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-02-06T14:28:54.410Z",
+  "activeFeatures": [
+    "ad-blog",
+    "[category]",
+    "layouts",
+    "category"
+  ],
+  "primaryFeature": "ad-blog",
+  "features": {
+    "ad-blog": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-06T00:40:28.009Z",
+        "lastUpdated": "2026-02-06T14:28:54.410Z"
+      },
+      "lastFile": "/Users/elfguy/alba/ad-blog/src/pages/index.astro"
+    },
+    "[category]": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-06T00:40:53.315Z",
+        "lastUpdated": "2026-02-06T00:40:53.315Z"
+      },
+      "lastFile": "/Users/elfguy/alba/ad-blog/src/pages/[category]/[id].astro"
+    },
+    "layouts": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-06T00:41:25.981Z",
+        "lastUpdated": "2026-02-06T14:21:29.483Z"
+      },
+      "lastFile": "/Users/elfguy/alba/ad-blog/src/layouts/PostLayout.astro"
+    },
+    "category": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-06T03:40:19.589Z",
+        "lastUpdated": "2026-02-06T14:22:03.643Z"
+      },
+      "lastFile": "/Users/elfguy/alba/ad-blog/src/pages/category/[category].astro"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-02-05T23:43:52.560Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-02-06T14:28:54.410Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-02-06T00:40:28.009Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T00:40:53.315Z",
+      "feature": "[category]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T00:41:25.981Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T00:46:48.855Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T00:54:18.875Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T00:57:38.976Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T01:01:46.474Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T01:02:27.307Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T03:40:19.589Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:25:46.216Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:25:54.946Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:25:59.945Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:26:22.008Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:26:57.814Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:27:24.515Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:27:49.010Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T11:28:10.006Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:52.468Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:53.559Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:54.644Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:55.728Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:56.814Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:57.895Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:51:58.981Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:52:00.072Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:52:01.156Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T13:52:10.146Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:20:51.112Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:20:52.202Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:20:53.294Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:21:21.751Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:21:29.483Z",
+      "feature": "layouts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:21:39.339Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:21:44.891Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:21:50.057Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:22:03.643Z",
+      "feature": "category",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-06T14:28:54.410Z",
+      "feature": "ad-blog",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

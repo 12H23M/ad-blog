@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return [
+    { params: { category: 'culture' } },
+    { params: { category: 'food' } },
+    { params: { category: 'travel' } },
+    { params: { category: 'lifestyle' } },
+    { params: { category: 'language' } },
+  ];
+}
+
+const { category } = Astro.params;
+
+const categoryData: Record<string, { name: string; description: string }> = {
+  'culture': {
+    name: 'Culture',
+    description: 'Explore Korean traditions, customs, holidays, and the rich cultural heritage that makes Korea unique.'
+  },
+  'food': {
+    name: 'Food',
+    description: 'Discover Korean cuisine from street food to home cooking, restaurant guides, and food culture.'
+  },
+  'travel': {
+    name: 'Travel',
+    description: 'Plan your Korea trip with destination guides, travel tips, and hidden gems to explore.'
+  },
+  'lifestyle': {
+    name: 'Lifestyle',
+    description: 'Learn about daily life, trends, K-beauty, and unique experiences in modern Korea.'
+  },
+  'language': {
+    name: 'Language',
+    description: 'Learn Korean phrases, tips for beginners, and resources to help you speak like a local.'
+  }
+};
+
+const currentCategory = categoryData[category] || { name: category, description: '' };
+
+const allPosts = await getCollection('posts');
+const posts = allPosts
+  .filter(post => post.data.category === category)
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+---
+
+<BaseLayout
+  title={`${currentCategory.name} | Baksuls Blog`}
+  description={currentCategory.description}
+>
+  <section class="category-page">
+    <header class="category-header">
+      <h1>{currentCategory.name}</h1>
+      <p class="category-description">{currentCategory.description}</p>
+      <p class="post-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</p>
+    </header>
+
+    <div class="posts-list">
+      {posts.length > 0 ? (
+        posts.map(post => (
+          <article class="post-card">
+            <a href={`/${post.data.category}/${post.data.shortId}`}>
+              <h2>{post.data.title}</h2>
+              <p class="description">{post.data.description}</p>
+              <div class="meta">
+                <time datetime={post.data.pubDate}>
+                  {new Date(post.data.pubDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+            </a>
+          </article>
+        ))
+      ) : (
+        <div class="no-posts">
+          <p>No articles in this category yet.</p>
+          <p class="no-posts-hint">Check back soon for new content!</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .no-posts {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 3rem;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+  }
+
+  .no-posts p {
+    margin-bottom: 0.5rem;
+  }
+
+  .no-posts-hint {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+</style>
