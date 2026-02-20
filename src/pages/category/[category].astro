@@ -39,6 +39,14 @@ const categoryData: Record<string, { name: string; description: string }> = {
 
 const currentCategory = categoryData[category] || { name: category, description: '' };
 
+function isNew(dateStr: string) {
+  const postDate = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - postDate.getTime();
+  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  return diffDays <= 3;
+}
+
 const allPosts = await getCollection('posts');
 const posts = allPosts
   .filter(post => post.data.category === category)
@@ -61,7 +69,7 @@ const posts = allPosts
         posts.map(post => (
           <article class="post-card">
             <a href={`/${post.data.category}/${post.data.shortId}`}>
-              <h2>{post.data.title}</h2>
+              <h2>{post.data.title}{isNew(post.data.pubDate) && <span class="badge-new badge-new--inline">NEW</span>}</h2>
               <p class="description">{post.data.description}</p>
               <div class="meta">
                 <time datetime={post.data.pubDate}>

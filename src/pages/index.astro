@@ -38,6 +38,14 @@ function readingTime(description: string) {
   const words = description.split(' ').length;
   return Math.max(5, Math.ceil(words / 40)) + ' min read';
 }
+
+function isNew(dateStr: string) {
+  const postDate = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - postDate.getTime();
+  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  return diffDays <= 3;
+}
 ---
 
 <BaseLayout title="Baksuls Blog - Discover Korea" wide={true}>
@@ -66,7 +74,10 @@ function readingTime(description: string) {
         return (
           <a href={`/${post.data.category}/${post.data.shortId}`} class={`card ${colors.cardClass}`}>
             <div class="card-body">
-              <span class={`card-category ${catColor}`}>{post.data.category.toUpperCase()}</span>
+              <div class="card-category-row">
+                <span class={`card-category ${catColor}`}>{post.data.category.toUpperCase()}</span>
+                {isNew(post.data.pubDate) && <span class="badge-new">NEW</span>}
+              </div>
               <h3 class="card-title">{post.data.title}</h3>
               <p class="card-desc">{post.data.description}</p>
               <span class="card-meta">{formatDate(post.data.pubDate)} · {readingTime(post.data.description)}</span>
@@ -101,7 +112,7 @@ function readingTime(description: string) {
                 <span class="post-list-dot">·</span>
                 <span class="post-list-date">{formatDate(post.data.pubDate)}</span>
               </div>
-              <h3 class="post-list-title">{post.data.title}</h3>
+              <h3 class="post-list-title">{post.data.title}{isNew(post.data.pubDate) && <span class="badge-new badge-new--inline">NEW</span>}</h3>
               <p class="post-list-excerpt">{post.data.description}</p>
             </a>
           </li>

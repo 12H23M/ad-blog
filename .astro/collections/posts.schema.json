@@ -1,0 +1,49 @@
+{
+  "$ref": "#/definitions/posts",
+  "definitions": {
+    "posts": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "pubDate": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "culture",
+            "food",
+            "travel",
+            "lifestyle",
+            "language"
+          ]
+        },
+        "shortId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 6
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "pubDate",
+        "category",
+        "shortId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
