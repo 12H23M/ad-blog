@@ -10,6 +10,7 @@ interface Props {
   ogDescription?: string;
   ogType?: string;
   wide?: boolean;
+  noindex?: boolean;
 }
 
 const {
@@ -18,7 +19,8 @@ const {
   ogTitle,
   ogDescription,
   ogType = 'website',
-  wide = false
+  wide = false,
+  noindex = false
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -45,6 +47,8 @@ const currentPath = Astro.url.pathname;
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
