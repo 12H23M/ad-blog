@@ -7,7 +7,7 @@ shortId: "3mg6kh"
 keywords: "Korean speech levels, jondaenmal, banmal, Korean honorifics, formal Korean, informal Korean, Korean language"
 ---
 
-A few years ago, my son's American English teacher came over for dinner. She'd been living in Seoul for about six months, and her Korean was getting pretty decent. At one point, she turned to my mother-in-law and said, "밥 먹었어?" (Did you eat?). Just like that. Pure banmal. To a 70-year-old woman she'd just met.
+A few years ago, my older son's American English teacher came over for dinner. She'd been living in Seoul for about six months, and her Korean was getting pretty decent. At one point, she turned to my mother-in-law and said, "밥 먹었어?" (Did you eat?). Just like that. Pure banmal. To a 70-year-old woman she'd just met.
 
 My mother-in-law's chopsticks froze mid-air. My husband suddenly became very interested in his soup. And I had to gently explain later that what she said was the grammatical equivalent of walking up to someone's grandmother and going, "Yo, you eat yet?"
 
@@ -73,7 +73,7 @@ Getting invited to switch to banmal is a genuine social milestone. It means the 
 
 Refusing to switch — continuing to use 존댓말 after being invited to drop it — signals that you want to keep your distance. It's not rude exactly, but it's noticeable. In K-dramas, the moment a character switches from 존댓말 to 반말 is often a dramatic pivot point. Audiences gasp. That's how much weight it carries.
 
-When I started dating my husband in college, we used 존댓말 for the first few weeks. The day he said "말 놓을까?" was basically our unofficial "this is getting serious" moment. My daughter would probably roll her eyes if she heard this. But that's how it works.
+When I started dating my husband in college, we used 존댓말 for the first few weeks. The day he said "말 놓을까?" was basically our unofficial "this is getting serious" moment. My older son would probably roll his eyes if he heard this. But that's how it works.
 
 ## It's Not Just About the Listener — Honorifics Go Deeper
 
@@ -110,7 +110,7 @@ Korean has specific words for older brother, older sister, younger sibling — a
 - 형 (hyeong) — what you call an older male (brother, older male friend)
 - 누나 (nuna) — what you call an older female (sister, older female friend)
 
-Calling an older friend by their first name without one of these titles is rude. If my daughter's friend is two years older, my daughter calls her 언니, not by her name. This extends to pretty much all social relationships. Your university senior is 선배 (seonbae). A coworker who joined before you is also 선배.
+Calling an older friend by their first name without one of these titles is rude. If my older son's friend is two years older, my son calls him 형 (hyung), not by his name. This extends to pretty much all social relationships. Your university senior is 선배 (seonbae). A coworker who joined before you is also 선배.
 
 Then there's the whole romantic dimension. 오빠 is what women call their boyfriends. My younger sister calls her husband 오빠 after 15 years of marriage. 누나 is what younger guys call their older girlfriends. Context is everything.
 
@@ -159,9 +159,9 @@ Korean speech levels aren't static. They're shifting, especially with younger ge
 
 My kids' generation is more flexible with honorifics among friends. They question rigid hierarchy more openly than we ever did. Some younger Koreans argue that the 존댓말/반말 system reinforces inequality and doesn't build genuine relationships.
 
-Social media has accelerated casual speech. Texting is almost always more casual than face-to-face conversation. My daughter texts her school seniors in a way that would have gotten me a lecture when I was her age.
+Social media has accelerated casual speech. Texting is almost always more casual than face-to-face conversation. My older son texts his school seniors in a way that would have gotten me a lecture when I was his age.
 
-There's even a growing trend of children using banmal with their parents. When my son drops his 요 endings with me, I let it slide sometimes. My mother-in-law is horrified. "In my day," she says, and then I stop listening because I know what comes next.
+There's even a growing trend of children using banmal with their parents. When my younger son drops his 요 endings with me, I let it slide sometimes. My mother-in-law is horrified. "In my day," she says, and then I stop listening because I know what comes next.
 
 Korea also reformed its age counting system in 2023, switching from the traditional Korean age to international age for legal purposes. One goal was to reduce confusion in situations where speech levels depend on age differences within the same school year.
 
@@ -185,7 +185,7 @@ For most foreigners learning Korean, standard Seoul Korean is the way to go. But
 
 If all of this sounds overwhelming, here's my honest advice as someone who's been speaking this language for over 40 years: when in doubt, use 해요체. Add "-요" to the end of things. Say "안녕하세요" instead of "안녕." Say "감사합니다" instead of "고마워." Be a little more formal than you think necessary.
 
-Koreans are genuinely forgiving when foreigners make speech level mistakes. We know it's hard. When my son's American teacher used banmal with my mother-in-law, we corrected her gently and moved on. My mother-in-law even laughed about it later (much later). The effort to speak Korean at all earns you enormous goodwill.
+Koreans are genuinely forgiving when foreigners make speech level mistakes. We know it's hard. When my older son's American teacher used banmal with my mother-in-law, we corrected her gently and moved on. My mother-in-law even laughed about it later (much later). The effort to speak Korean at all earns you enormous goodwill.
 
 But understanding how speech levels work gives you more than just grammatical accuracy. It gives you a window into how Korean society operates — the respect for elders, the importance of relationships, the way closeness is earned through small linguistic negotiations. Every "-요" you add isn't just grammar. It's a gesture of respect. And every time someone tells you "반말하자," it's an invitation into their inner circle.
 

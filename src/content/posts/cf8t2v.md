@@ -7,7 +7,7 @@ shortId: "cf8t2v"
 keywords: "Korean café culture, Korean coffee, Seoul cafés, Seongsu-dong cafés, Korean café drinks, bingsu, study café Korea, café hopping Korea"
 ---
 
-Last week my daughter asked if we could stop at Mega Coffee on the way home from hagwon. We'd already passed three other cafés in the two blocks since leaving. I said yes, obviously — it was a 1,800 won iced Americano kind of afternoon. While we waited for our drinks, I counted the coffee shops visible from the window. Four. Four cafés within maybe a hundred meters of each other. That's not unusual here. That's just Korea.
+Last week my younger son asked if we could stop at Mega Coffee on the way home from hagwon. We'd already passed three other cafés in the two blocks since leaving. I said yes, obviously — it was a 1,800 won iced Americano kind of afternoon. While we waited for our drinks, I counted the coffee shops visible from the window. Four. Four cafés within maybe a hundred meters of each other. That's not unusual here. That's just Korea.
 
 If you've walked around any Korean city, you've noticed. Cafés everywhere. Stacked on top of each other, tucked into basement levels, sprawling across rooftops. Korea has over 100,000 cafés, which works out to roughly 1,384 coffee shops per million people — the highest density in the world. Japan comes in second at about 529. We more than double them. And honestly, we need every single one.
 
@@ -41,7 +41,7 @@ Korean cafés don't just serve coffee and tea. The menu innovation here is relen
 
 **Ade drinks** are a whole category unto themselves. These are sparkling fruit beverages — not soda, but fresh fruit syrup or purée mixed with sparkling water. Grapefruit ade, peach ade, lemon ade, watermelon ade in summer. They're refreshing in a way that's hard to describe until you've had one on a humid August day in Seoul.
 
-Then there are the drinks rooted in Korean ingredients. **Sweet potato latte** shows up every fall — creamy, slightly sweet, made with real roasted sweet potatoes. **Misugaru latte** uses traditional Korean multigrain powder (a mix of roasted barley, oats, brown rice, and other grains) blended with milk and honey. My grandmother drank misugaru mixed with cold water in summer. Now my daughter orders it at a café with oat milk. Same drink, different generation.
+Then there are the drinks rooted in Korean ingredients. **Sweet potato latte** shows up every fall — creamy, slightly sweet, made with real roasted sweet potatoes. **Misugaru latte** uses traditional Korean multigrain powder (a mix of roasted barley, oats, brown rice, and other grains) blended with milk and honey. My grandmother drank misugaru mixed with cold water in summer. Now my older son orders it at a café with oat milk. Same drink, different generation.
 
 Other uniquely Korean options include mugwort latte, black sesame latte, red bean latte, and yuja (citron) tea in winter. Some cafés even do a Jolly Pong latte — if you don't know Jolly Pong, it's a puffed wheat snack that every Korean kid grows up eating. Blending it into a latte sounds weird, but it works.
 
@@ -53,7 +53,7 @@ You can't talk about Korean cafés without talking about desserts. Some cafés a
 
 **Bingsu** is the crown jewel — shaved ice, but not the crunchy, syrup-drenched kind you might be picturing. Korean bingsu uses frozen milk that's shaved into impossibly fine, snow-like flakes. It melts on your tongue. Classic patbingsu comes topped with sweet red beans, mochi, and condensed milk. Modern versions go wild: mango cheesecake bingsu, matcha tiramisu bingsu, injeolmi bingsu dusted in roasted soybean flour. Sulbing is the most famous chain for it, but honestly almost every café offers their own version in summer. A bowl runs about 8,000 to 15,000 won and it's usually big enough to split.
 
-**Croffles** — croissant meets waffle — have become a permanent fixture on Seoul café menus. Crispy, buttery, served with ice cream or chocolate or just on their own. My son would eat one every day if I let him.
+**Croffles** — croissant meets waffle — have become a permanent fixture on Seoul café menus. Crispy, buttery, served with ice cream or chocolate or just on their own. My older son would eat one every day if I let him.
 
 **Ttuungcarong** (fat macarons) are the Korean twist on French macarons — oversized, stuffed with thick fillings like cream cheese, buttercream, or ganache. They're almost comically large compared to a Parisian macaron. And then there's the basque cheesecake trend, soufflé pancakes that jiggle when you poke them, and Korean-style soufflé cheesecake that's so light it practically floats.
 

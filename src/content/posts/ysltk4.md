@@ -53,7 +53,7 @@ Ondol is over 2,000 years old. The word literally means "warm stone." Traditiona
 
 Modern apartments use the same principle, just updated. Hot water runs through pipes embedded in the floor, heated by a gas boiler. Over 90% of Korean homes have this system. Every apartment I've ever lived in has had it. You control the temperature through your wallpad or a thermostat, usually setting it around 20 to 22 degrees in winter. It takes about 30 minutes to fully heat up, and then your entire floor becomes a warm surface.
 
-This is why we live on the floor. We sit on the floor, eat at low tables, and many of us sleep on the floor too — or at least, we did growing up. My kids have beds now, but when winter comes, I still catch my daughter dragging her blanket onto the heated living room floor. Even the sofa becomes a backrest rather than a seat. You sit in front of it, not on it.
+This is why we live on the floor. We sit on the floor, eat at low tables, and many of us sleep on the floor too — or at least, we did growing up. My kids have beds now, but when winter comes, I still catch my younger son dragging his blanket onto the heated living room floor. Even the sofa becomes a backrest rather than a seat. You sit in front of it, not on it.
 
 And this is exactly why we take off shoes at the door. The floor isn't just a floor in Korean homes. It's where you eat, sit, play, and sleep. Walking on it with outdoor shoes would be unthinkable.
 
@@ -95,7 +95,7 @@ In the old days, you'd also share 시루떡 (red bean steamed rice cake) with yo
 
 Living above and below other families means noise is a constant tension. 층간소음 (inter-floor noise) is one of the most talked-about social problems in Korea. It's led to real conflicts — arguments, lawsuits, and in extreme cases, violence.
 
-The biggest trigger? Kids running indoors. I've been on both sides of this. When my son was five, the neighbor below us knocked on our door to complain. We bought thick play mats for the entire living room floor. Years later, the family above us had a toddler who apparently trained for marathons every evening at 9 PM. I understood the frustration firsthand.
+The biggest trigger? Kids running indoors. I've been on both sides of this. When my older son was five, the neighbor below us knocked on our door to complain. We bought thick play mats for the entire living room floor. Years later, the family above us had a toddler who apparently trained for marathons every evening at 9 PM. I understood the frustration firsthand.
 
 There are actual legal limits: 43 decibels during the day, 57 decibels at night. Newer apartments are required to have floor slabs at least 25 centimeters thick with cushioning material. Samsung C&T even built a lab specifically dedicated to studying inter-floor noise.
 

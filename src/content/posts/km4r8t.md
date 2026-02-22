@@ -25,7 +25,7 @@ Let me introduce you to the ones we actually eat at home on a regular basis.
 
 **Chonggak Kimchi (총각김치)** uses small ponytail radishes, fermented whole with their green tops still attached. The name literally means "bachelor" — supposedly the radishes resemble the braids unmarried men wore back in Joseon dynasty times. It has a firmer, crunchier texture than kkakdugi and a more peppery kick. My mom always makes a massive batch during kimjang and it lasts well into spring.
 
-**Baek Kimchi (백김치)** is the white kimchi — no red pepper at all. It's seasoned with garlic, pine nuts, chestnuts, jujubes, and sometimes Korean pear, all stored in a mild, fruity brine. This is the one I give my youngest when she complains that "everything is too spicy." It's also the gateway kimchi I recommend for foreigners who are nervous about heat. The flavor is gentle but surprisingly complex.
+**Baek Kimchi (백김치)** is the white kimchi — no red pepper at all. It's seasoned with garlic, pine nuts, chestnuts, jujubes, and sometimes Korean pear, all stored in a mild, fruity brine. This is the one I give my youngest when he complains that "everything is too spicy." It's also the gateway kimchi I recommend for foreigners who are nervous about heat. The flavor is gentle but surprisingly complex.
 
 **Dongchimi (동치미)** is a radish water kimchi — whole small radishes floating in a cold, tangy brine. We drink the brine as much as we eat the radish. On a hot day, cold dongchimi broth is genuinely refreshing. It's also the traditional base for naengmyeon (cold buckwheat noodles) — the broth you slurp those icy noodles in often starts as dongchimi liquid.
 
@@ -89,6 +89,6 @@ If you're visiting Korea and new to kimchi, here's my honest advice.
 
 Koreans often say that rice is the body of a meal and kimchi is the soul. That sounds dramatic, but I don't think it's an exaggeration. Kimchi is present at every meal in every Korean household, from the fanciest restaurant to a student's dorm room. It connects us to our families (through those kimjang weekends), to our regions (through local recipes), and to our history (through a tradition that stretches back centuries).
 
-My daughter started helping with kimjang last year — her hands are still too small to properly rub the paste into the cabbage leaves, but she tries. She complained about the garlic smell on her fingers for three days afterward. But when she ate the first batch of fresh kimchi and said "this is the best one yet," I knew the tradition was safe for at least one more generation.
+My younger son started helping with kimjang last year — his hands are still too small to properly rub the paste into the cabbage leaves, but he tries. He complained about the garlic smell on his fingers for three days afterward. But when he ate the first batch of fresh kimchi and said "this is the best one yet," I knew the tradition was safe for at least one more generation.
 
 That's the thing about kimchi. It's not just something we eat. It's something we make, together, every year, and have for hundreds of years. And honestly, I think that's what makes it taste so good.

@@ -9,7 +9,7 @@ keywords: "Korean ramen, Korean instant noodles, shin ramyeon, buldak, best Kore
 
 My pantry has a dedicated ramen shelf. Not a corner, not a basket — a whole shelf. Three rows deep, sorted by brand. My husband thinks this is excessive. I think this is just called being prepared.
 
-Here in Korea, ramen isn't just convenience food. It's comfort, it's nostalgia, it's what you make at 11pm when you're tired and the kids are finally asleep and you just need something good. My son Jiwoo, who's 14, won't touch anything milder than Shin Ramyun. My daughter Soeun, who's 11, adds cheese to everything. And me? I have opinions. Strong ones.
+Here in Korea, ramen isn't just convenience food. It's comfort, it's nostalgia, it's what you make at 11pm when you're tired and the kids are finally asleep and you just need something good. My older son, who's 14, won't touch anything milder than Shin Ramyun. My younger son, who's 11, adds cheese to everything. And me? I have opinions. Strong ones.
 
 So let me walk you through the ramen aisle — because if you've ever stood in a Korean mart staring at 50 different red and yellow packages wondering what any of it means, this guide is for you.
 
@@ -31,10 +31,10 @@ Let me be honest with you. I've eaten all of these. Multiple times. Here's my re
 The absolute classic. The benchmark. If you ask any Korean to picture "ramen," this is probably what they see. Deep, spicy beef broth with chewy noodles and a seasoning packet that smells incredible even before you open it. Spice level: medium. My mother-in-law has eaten this three times a week for thirty years. That should tell you something.
 
 **2. Jin Ramen (진라면) — Ottogi**
-The everyday workhorse. Comes in two versions — mild (순한맛) and spicy (매운맛). The mild version is what you make for kids who haven't graduated to Shin yet. Soeun went through a phase where she'd only eat the mild version with a slice of American cheese melted on top, and honestly? That combo is underrated. The broth is rounder and less aggressive than Shin.
+The everyday workhorse. Comes in two versions — mild (순한맛) and spicy (매운맛). The mild version is what you make for kids who haven't graduated to Shin yet. My younger son went through a phase where he'd only eat the mild version with a slice of American cheese melted on top, and honestly? That combo is underrated. The broth is rounder and less aggressive than Shin.
 
 **3. Buldak Bokkeummyun (불닭볶음면) — Samyang**
-The one the whole world is doing challenges with. Fire chicken flavor. Thick chewy noodles, a thick chili sauce, a packet of sesame and dried seaweed. No broth — you drain the water and mix. It is very spicy. Not life-altering if you have any heat tolerance, but it'll make your forehead sweat. Jiwoo eats it without flinching, which I'm choosing to see as a parenting success.
+The one the whole world is doing challenges with. Fire chicken flavor. Thick chewy noodles, a thick chili sauce, a packet of sesame and dried seaweed. No broth — you drain the water and mix. It is very spicy. Not life-altering if you have any heat tolerance, but it'll make your forehead sweat. My older son eats it without flinching, which I'm choosing to see as a parenting success.
 
 **4. Neoguri (너구리) — Nongshim**
 Seafood udon style, thicker noodles, a slightly sweet and spicy broth with real dried kelp in the packet. This is the base ingredient for Chapaguri (더 on this in a minute). The udon-style noodles hold up better in a big pot, which is why Koreans love using Neoguri when cooking for more than one person. It also reheats better than most.
@@ -55,7 +55,7 @@ Army stew flavored instant ramen. The original budae jjigae is a dish from the p
 Exactly what it sounds like. Bright kimchi flavor, a little sour, medium spicy. If you like kimchi, you'll like this. If you're new to kimchi flavor and want to test the waters in a low-stakes way before trying actual kimchi, this is a good entry point. The broth is punchy and a little fermented in flavor.
 
 **10. 2x Spicy Buldak (핵불닭볶음면) — Samyang**
-I include this as a warning as much as a recommendation. This is the black package with the angry cartoon chicken. It's roughly twice as hot as regular Buldak. My husband tried to finish a bowl on a dare from Jiwoo and needed to lie down afterward. Some people love extreme heat — if you're one of them, this is your ramen. Everyone else: proceed carefully.
+I include this as a warning as much as a recommendation. This is the black package with the angry cartoon chicken. It's roughly twice as hot as regular Buldak. My husband tried to finish a bowl on a dare from our older son and needed to lie down afterward. Some people love extreme heat — if you're one of them, this is your ramen. Everyone else: proceed carefully.
 
 ## How Koreans Actually Eat Ramen (Our Secret Add-Ins)
 
@@ -63,7 +63,7 @@ Here's where I'll let you in on something. When you see Korean ramen in dramas o
 
 **The egg is non-negotiable.** Almost every Korean who cooks ramen at home cracks an egg in. The question is when — some crack it in the last minute of cooking so it sets partially, some crack it in at the very end for a runny yolk, some scramble it in during cooking. I crack mine in right at the end and put a lid on for 30 seconds. Semi-set, still a little runny. Perfect.
 
-**Cheese.** American cheese slice, mozzarella, whatever you have. This sounds strange until you try it with Shin Ramyun and realize the creaminess cuts the heat perfectly. Soeun discovered this on her own and honestly the child is a culinary genius.
+**Cheese.** American cheese slice, mozzarella, whatever you have. This sounds strange until you try it with Shin Ramyun and realize the creaminess cuts the heat perfectly. My younger son discovered this on his own and honestly the kid is a culinary genius.
 
 **Green onions (파).** Always. Cut them in at the last minute. They add freshness and color and make the whole thing feel more like real food.
 
