@@ -4,6 +4,8 @@ description: "Korea's unique age counting system confused visitors for decades. 
 pubDate: "2026-02-04"
 category: "culture"
 shortId: "ag4n8w"
+image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?w=1200&q=80"
+imageAlt: "Korean temple with autumn foliage"
 keywords: "Korean age, Korean age system, international age Korea, Korean age reform 2023, how old am I in Korea"
 ---
 

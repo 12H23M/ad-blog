@@ -9,6 +9,8 @@ const posts = defineCollection({
     category: z.enum(['culture', 'food', 'travel', 'lifestyle', 'language']),
     shortId: z.string().length(6),
     keywords: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
   }),
 });
 

@@ -4,6 +4,8 @@ description: "From tteokbokki to hotteok, discover the best Korean street food s
 pubDate: "2026-02-05"
 category: "food"
 shortId: "sf7k2x"
+image: "https://images.unsplash.com/photo-1553621042-f6e147245754?w=1200&q=80"
+imageAlt: "Korean street food vendor stall with tteokbokki"
 keywords: "Korean street food, tteokbokki, hotteok, Korean snacks, Seoul street food, Myeongdong food"
 ---
 

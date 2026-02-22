@@ -4,6 +4,8 @@ description: "From 1,800 won budget chains to stunning themed cafés, here's you
 pubDate: "2026-02-20"
 category: "lifestyle"
 shortId: "cf8t2v"
+image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=80"
+imageAlt: "Iced coffee in a Korean cafe with warm lighting"
 keywords: "Korean café culture, Korean coffee, Seoul cafés, Seongsu-dong cafés, Korean café drinks, bingsu, study café Korea, café hopping Korea"
 ---
 

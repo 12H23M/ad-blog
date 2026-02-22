@@ -4,6 +4,8 @@ description: "A Korean mom's guide to the best instant ramen in Korea — top pi
 pubDate: "2026-02-22"
 category: "food"
 shortId: "rm4k9s"
+image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200&q=80"
+imageAlt: "Korean instant ramen noodles with egg and vegetables"
 keywords: "Korean ramen, Korean instant noodles, shin ramyeon, buldak, best Korean ramen, ramyun guide"
 ---
 

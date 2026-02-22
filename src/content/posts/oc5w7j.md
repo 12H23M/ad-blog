@@ -4,6 +4,8 @@ description: "An honest look at Korean workplace culture, from strict hierarchie
 pubDate: "2026-01-30"
 category: "lifestyle"
 shortId: "oc5w7j"
+image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
+imageAlt: "Modern Korean office building interior"
 keywords: "Korean work culture, Korean office, hoesik, Korean business etiquette, working in Korea, Korean workplace"
 ---
 

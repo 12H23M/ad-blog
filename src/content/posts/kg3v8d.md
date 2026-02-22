@@ -4,6 +4,8 @@ description: "From 'fighting' to 'skinship' to 'one-piece,' discover the fascina
 pubDate: "2026-01-28"
 category: "language"
 shortId: "kg3v8d"
+image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?w=1200&q=80"
+imageAlt: "Neon signs with Korean text in a busy Seoul street"
 keywords: "Konglish, Korean English, Konglish words, Korean language, English loanwords Korean, funny Korean words"
 ---
 

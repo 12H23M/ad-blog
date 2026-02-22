@@ -4,6 +4,8 @@ description: "Demystifying the famous Korean skincare routine with practical adv
 pubDate: "2026-01-31"
 category: "lifestyle"
 shortId: "sk8m1z"
+image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1200&q=80"
+imageAlt: "Korean skincare products on a clean white surface"
 keywords: "Korean skincare, K-beauty, 10-step skincare, Korean skincare routine, glass skin, Korean beauty products"
 ---
 

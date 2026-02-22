@@ -515,6 +515,20 @@ body {
     border: 1px solid var(--border-subtle);
 }
 
+.post-hero-image {
+    margin-bottom: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.post-hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
 .post-header {
     margin-bottom: 40px;
     padding-bottom: 32px;

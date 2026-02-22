@@ -4,6 +4,8 @@ description: "A Korean local breaks down 존댓말, 반말, honorifics, and the 
 pubDate: "2026-02-12"
 category: "language"
 shortId: "3mg6kh"
+image: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=1200&q=80"
+imageAlt: "Korean street with traditional hanok buildings and modern signs"
 keywords: "Korean speech levels, jondaenmal, banmal, Korean honorifics, formal Korean, informal Korean, Korean language"
 ---
 

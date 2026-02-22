@@ -4,6 +4,8 @@ description: "Escape the city with these perfect day trips from Seoul, from coas
 pubDate: "2026-02-01"
 category: "travel"
 shortId: "dt6h3q"
+image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=1200&q=80"
+imageAlt: "Korean countryside with mountains and autumn colors"
 keywords: "day trips from Seoul, Nami Island, DMZ tour, Suwon, Incheon, Korea travel, Seoul excursions"
 ---
 

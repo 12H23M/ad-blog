@@ -4,6 +4,8 @@ description: "A local's guide to Korean apartment culture, from ondol heating an
 pubDate: "2026-02-12"
 category: "lifestyle"
 shortId: "ysltk4"
+image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80"
+imageAlt: "Korean apartment complex with city view"
 keywords: "Korean apartment, apartment living in Korea, jeonse, ondol, Korean housing, apartment culture Korea"
 ---
 

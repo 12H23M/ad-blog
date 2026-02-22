@@ -4,6 +4,8 @@ description: "Your guide to Korean drinking culture, from soju etiquette and anj
 pubDate: "2026-02-07"
 category: "culture"
 shortId: "dv7m3q"
+image: "https://images.unsplash.com/photo-1569396116180-90b7d9628e3f?w=1200&q=80"
+imageAlt: "Soju bottles and Korean drinking glasses on a table"
 keywords: "Korean drinking culture, soju, Korean alcohol, Korean drinking etiquette, makgeolli, somaek, anju, Korean bar"
 ---
 

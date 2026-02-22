@@ -4,6 +4,8 @@ description: "Discover the traditions, food, games, and meaning behind Seollal, 
 pubDate: "2026-02-03"
 category: "culture"
 shortId: "sl2p5v"
+image: "https://images.unsplash.com/photo-1549888834-3ec93abae044?w=1200&q=80"
+imageAlt: "Korean traditional hanbok and Lunar New Year decoration"
 keywords: "Seollal, Korean Lunar New Year, Korean holiday, tteokguk, sebae, Korean traditions"
 ---
 

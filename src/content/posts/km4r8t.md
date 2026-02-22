@@ -4,6 +4,8 @@ description: "A Korean mom's guide to kimchi — from the 200+ varieties most fo
 pubDate: "2026-02-10"
 category: "food"
 shortId: "km4r8t"
+image: "https://images.unsplash.com/photo-1583224994076-0ef8e6a18cd8?w=1200&q=80"
+imageAlt: "Korean kimchi in traditional earthenware pots"
 keywords: "kimchi, Korean kimchi, types of kimchi, kimjang, baechu kimchi, kkakdugi, Korean food, fermented vegetables"
 ---
 

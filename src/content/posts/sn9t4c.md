@@ -4,6 +4,8 @@ description: "From trendy Hongdae to historic Jongno, explore Seoul's best neigh
 pubDate: "2026-02-02"
 category: "travel"
 shortId: "sn9t4c"
+image: "https://images.unsplash.com/photo-1546874177-9e664107314e?w=1200&q=80"
+imageAlt: "Seoul skyline with Han River and mountains"
 keywords: "Seoul neighborhoods, Hongdae, Gangnam, Itaewon, Myeongdong, Seoul travel guide, Seoul districts"
 ---
 

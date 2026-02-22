@@ -4,6 +4,8 @@ description: "Everything you need to know about Korean BBQ, from choosing the ri
 pubDate: "2026-02-06"
 category: "food"
 shortId: "kb3r9m"
+image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=1200&q=80"
+imageAlt: "Korean BBQ grilling meat with side dishes"
 keywords: "Korean BBQ, samgyeopsal, galbi, Korean food, Korean restaurant, how to eat Korean BBQ"
 ---
 

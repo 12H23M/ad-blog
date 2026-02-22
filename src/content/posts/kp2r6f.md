@@ -4,6 +4,8 @@ description: "The most useful Korean phrases for tourists, from basic greetings 
 pubDate: "2026-01-29"
 category: "language"
 shortId: "kp2r6f"
+image: "https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?w=1200&q=80"
+imageAlt: "Seoul cityscape with Namsan Tower at twilight"
 keywords: "Korean phrases, learn Korean, Korean for travelers, basic Korean, Korean language, Korean greetings"
 ---
 

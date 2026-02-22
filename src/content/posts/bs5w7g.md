@@ -4,6 +4,8 @@ description: "A local's guide to Busan — from Haeundae Beach and Gamcheon Vill
 pubDate: "2026-02-11"
 category: "travel"
 shortId: "bs5w7g"
+image: "https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=1200&q=80"
+imageAlt: "Busan Haeundae Beach skyline at sunset"
 keywords: "Busan travel guide, Busan Korea, Haeundae Beach, Gamcheon Culture Village, Jagalchi Market, Busan food, dwaeji gukbap, milmyeon"
 ---
 

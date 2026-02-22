@@ -4,6 +4,8 @@ description: "Discover why Korean convenience stores like CU and GS25 are a must
 pubDate: "2026-02-08"
 category: "food"
 shortId: "cv7n3k"
+image: "https://images.unsplash.com/photo-1626203011774-12e43e8bfed8?w=1200&q=80"
+imageAlt: "Korean convenience store at night with bright neon signs"
 keywords: "Korean convenience store, CU Korea, GS25, Korean snacks, convenience store food Korea, Korean travel tips"
 ---
 
