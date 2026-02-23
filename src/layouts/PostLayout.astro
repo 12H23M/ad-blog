@@ -181,5 +181,18 @@ const canonicalUrl = `${siteUrl}/${category}/${shortId}`;
     </main>
 
     <Footer />
+
+    <script>
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG' && e.target.closest('.post-content')) {
+                e.target.classList.toggle('zoomed');
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelector('.post-content img.zoomed')?.classList.remove('zoomed');
+            }
+        });
+    </script>
 </body>
 </html>
