@@ -184,13 +184,28 @@ const canonicalUrl = `${siteUrl}/${category}/${shortId}`;
 
     <script>
         document.addEventListener('click', (e) => {
-            if (e.target.tagName === 'IMG' && e.target.closest('.post-content')) {
-                e.target.classList.toggle('zoomed');
+            const img = e.target;
+            // Open zoom
+            if (img.tagName === 'IMG' && img.closest('.post-content') && !img.closest('.img-zoom-overlay')) {
+                const overlay = document.createElement('div');
+                overlay.className = 'img-zoom-overlay';
+                const clone = document.createElement('img');
+                clone.src = img.src;
+                clone.alt = img.alt || '';
+                overlay.appendChild(clone);
+                document.body.appendChild(overlay);
+                document.body.style.overflow = 'hidden';
+            }
+            // Close zoom
+            if (e.target.closest('.img-zoom-overlay')) {
+                e.target.closest('.img-zoom-overlay').remove();
+                document.body.style.overflow = '';
             }
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                document.querySelector('.post-content img.zoomed')?.classList.remove('zoomed');
+                const overlay = document.querySelector('.img-zoom-overlay');
+                if (overlay) { overlay.remove(); document.body.style.overflow = ''; }
             }
         });
     </script>
