@@ -9,7 +9,7 @@ keywords: "Seoul subway, Seoul metro, T-money card, WOWPASS, Seoul transportatio
 
 I take the Seoul subway almost every day. Drop my kids off, run errands in Gangnam, meet friends in Hongdae, head to my parents' place in Bundang — it's just how life works here. And honestly? After living in Seoul for over 20 years, I still think this subway system is kind of incredible.
 
-But I also see foreigners standing frozen at ticket machines, looking panicked at transfer stations, or accidentally riding the express train past their stop. I get it. The system is massive — 23 lines, over 700 stations — and the maps look like someone spilled rainbow spaghetti on a page.
+But I also see foreigners standing frozen at ticket machines, looking panicked at transfer stations, or accidentally riding the express train past their stop. I get it. The system is massive — 24 lines, over 650 stations — and the maps look like someone spilled rainbow spaghetti on a page.
 
 So let me walk you through it the way I'd explain it to a friend visiting for the first time.
 
@@ -27,11 +27,16 @@ Here's what to get instead:
 
 **Single Journey Token** — Available at ticket machines in every station. You pay a ₩500 deposit that you get back when you return the token at the exit. Fine for a one-time ride, but seriously, just get a T-money.
 
-Pro tip: load at least ₩10,000 to start. A single ride is ₩1,400 (with T-money — it's ₩1,500 with a token), and transfers are free within 30 minutes, so ₩10,000 will last you several days of riding.
+Pro tip: load at least ₩10,000 to start. A single ride is ₩1,550 (with T-money — it's ₩1,650 with a single-journey token), and transfers are free within 30 minutes, so ₩10,000 will last you several days of riding. Oh, and if you're an early bird: rides before 6:30 AM get a 20% discount on the base fare. My husband discovered this on his morning gym commute and won't stop bragging about it.
 
 ## Understanding the Lines: Which Ones Actually Matter
 
-Seoul's subway map is intimidating. But here's a secret — as a tourist, you'll probably use about five lines for 90% of your trips.
+Seoul's subway map is intimidating. Take a look:
+
+![Seoul Metropolitan Subway Map](/images/seoul-subway-map.png)
+*Seoul's full subway network — 24 lines, 656+ stations. Don't panic, you won't need most of them. (Source: Wikimedia Commons, CC BY-SA)*
+
+But here's a secret — as a tourist, you'll probably use about five lines for 90% of your trips.
 
 **Line 1 (Dark Blue)** — The oldest line, running through the old heart of Seoul. Takes you to Seoul Station, City Hall, Jongno (traditional areas), and connects all the way up to Uijeongbu and down to Suwon. Fair warning: this line is crowded and a bit worn. But if you're going to Gwanghwamun or Namdaemun Market, you'll need it.
 
@@ -51,9 +56,9 @@ This is the part that confuses most visitors. Seoul's transfer system is actuall
 
 **The basics:** When you tap out of the subway and tap onto a bus (or vice versa) within 30 minutes, the transfer is free. You can even transfer between different subway lines without tapping out — you just walk through the transfer corridors inside the station.
 
-**What catches people:** The 30-minute window is tight if you're above ground. If you exit the subway, wander around, grab a coffee, and then try to catch a bus 40 minutes later — that's a new fare. But underground transfers between subway lines have no time limit. You could technically walk through the entire underground network of transfer corridors (though I wouldn't recommend it — some of those walks are long enough to count as exercise).
+**What catches people:** The 30-minute window is tight if you're above ground. If you exit the subway, wander around, grab a coffee, and then try to catch a bus 40 minutes later — that's a new fare. Good news though: between 9 PM and 7 AM, the transfer window extends to 60 minutes, which is nice for late-night outings. But underground transfers between subway lines have no time limit. You could technically walk through the entire underground network of transfer corridors (though I wouldn't recommend it — some of those walks are long enough to count as exercise).
 
-**The distance factor:** Seoul's transit fare is distance-based. Your base fare covers 10km, then it's an extra ₩100 per 5km. So if you're going from one end of the city to the other, you might pay ₩1,600-1,800 instead of ₩1,400. Still ridiculously cheap.
+**The distance factor:** Seoul's transit fare is distance-based. Your base fare of ₩1,550 covers 10km, then it's an extra ₩100 per 5km up to 50km, and ₩100 per 8km after that. So if you're going from one end of the city to the other, you might pay ₩1,750-1,850 instead of ₩1,550. Still ridiculously cheap.
 
 **My tip:** When transferring between lines, follow the signs. They're in Korean and English. The number and color of the line you want will be on overhead signs. Walk toward that color. If you see a crowd of people all walking the same direction during rush hour, follow them — they know where they're going.
 
