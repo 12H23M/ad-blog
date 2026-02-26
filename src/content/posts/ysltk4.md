@@ -17,7 +17,7 @@ If you're thinking about living in Korea, or you're just curious about how we li
 
 Foreigners sometimes ask me, "Don't you want a house with a yard?" Honestly? Not really. Our apartments aren't like the ones you might picture in other countries. They're part of massive complexes called 단지 (danji), and each one is basically a small town.
 
-My complex has two playgrounds, a fitness center, underground parking for every unit, a security team that works around the clock, and a row of shops at the ground level with a bakery, a convenience store, and three different hagwons for my kids. I can handle groceries, my son's math tutoring, and picking up dry cleaning without ever leaving the complex.
+My complex has two playgrounds, a fitness center, underground parking for every unit, a security team that works around the clock, and a row of shops at the ground level with a bakery, a convenience store. Between the [convenience stores](/food/cv7n3k) and delivery apps, you barely need to cook, and three different hagwons for my kids. I can handle groceries, my son's math tutoring, and picking up dry cleaning without ever leaving the complex.
 
 The first apartment complex in Korea was built in Mapo back in 1964. Since then, apartments have become the dominant way Koreans live. Over 62% of all housing in Korea is apartment buildings, and in cities, more than 80% of people live in them. Big construction companies like Samsung, Hyundai, and Lotte all have their own apartment brands. Samsung has "Raemian," Hyundai has "Hillstate," and there's also GS "Xi" and Daewoo "Prugio." The brand name on the sign at the entrance matters to people here, sometimes more than the actual layout of the unit.
 
@@ -33,7 +33,7 @@ The system started back in the 1960s and 70s when Korea was urbanizing fast and 
 
 **Wolse** is more straightforward. You pay a smaller deposit plus monthly rent. Foreigners almost always go with this option. A typical arrangement might be a 10 million won deposit with 600,000 to 1.5 million won in monthly rent, depending on the neighborhood and apartment type.
 
-Then there's **banjeonse** (반전세), which splits the difference. You put down a bigger deposit than wolse but smaller than jeonse, and pay reduced monthly rent. My sister-in-law does this for her place in Gangnam. She says it gives her "the best of both worlds," though I think she just couldn't scrape together a full jeonse deposit.
+Then there's **banjeonse** (반전세), which splits the difference. You put down a bigger deposit than wolse but smaller than jeonse, and pay reduced monthly rent. My sister-in-law does this for her place in Gangnam. I covered the different vibes in my [Seoul neighborhood guide](/travel/sn9t4c). She says it gives her "the best of both worlds," though I think she just couldn't scrape together a full jeonse deposit.
 
 ## Housing Types: It's Not Just "Apartments"
 

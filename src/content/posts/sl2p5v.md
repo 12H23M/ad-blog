@@ -6,7 +6,7 @@ category: "culture"
 shortId: "sl2p5v"
 image: "https://images.unsplash.com/photo-1549888834-3ec93abae044?w=1200&q=80"
 imageAlt: "Korean traditional hanbok and Lunar New Year decoration"
-keywords: "Seollal, Korean Lunar New Year, Korean holiday, tteokguk, sebae, Korean traditions"
+keywords: "Seollal, Korean Lunar New Year, Korean holiday, tteokguk. Korean food traditions run deep — I wrote about [kimchi traditions](/food/km4r8t) too, sebae, Korean traditions"
 ---
 
 If you've ever been in Seoul during late January or early February and noticed something strange — eerily empty subway cars, shuttered restaurants, streets that are usually packed suddenly feeling like a ghost town — you probably stumbled into Seollal weekend. Korea's Lunar New Year holiday is the one time of year when the entire country collectively hits pause. Millions of people leave the cities and head to their hometowns, highways turn into parking lots, and the usual frenetic energy of Korean life gives way to something quieter, warmer, and deeply rooted in tradition.

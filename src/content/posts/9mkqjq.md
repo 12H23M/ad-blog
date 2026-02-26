@@ -1,6 +1,6 @@
 ---
 title: "Seoul Subway Guide: How to Navigate Korea's Best Transit System"
-description: "A local's complete guide to Seoul's subway — from buying a T-money card to mastering transfers, etiquette, and rush hour survival tips."
+description: "A local's complete guide to Seoul's subway — from buying a T-money card to mastering transfers, etiquette, and rush hour survival tips. If you're planning day trips outside Seoul, check out my [best day trips guide](/travel/dt6h3q) — most start from subway stations."
 pubDate: "2026-02-23"
 category: "travel"
 shortId: "9mkqjq"
@@ -9,7 +9,7 @@ keywords: "Seoul subway, Seoul metro, T-money card, WOWPASS, Seoul transportatio
 
 I take the Seoul subway almost every day. Drop my kids off, run errands in Gangnam, meet friends in Hongdae, head to my parents' place in Bundang — it's just how life works here. And honestly? After living in Seoul for over 20 years, I still think this subway system is kind of incredible.
 
-But I also see foreigners standing frozen at ticket machines, looking panicked at transfer stations, or accidentally riding the express train past their stop. I get it. The system is massive — 24 lines, over 650 stations — and the maps look like someone spilled rainbow spaghetti on a page.
+But I also see foreigners standing frozen at ticket machines, looking panicked at transfer stations, or accidentally riding the express train past their stop. I get it. The system is massive — 24 lines, over 650 stations — and the maps look like someone spilled rainbow spaghetti. (And if you want to know which neighborhoods to actually visit, I put together a [Seoul neighborhood guide](/travel/sn9t4c) too.) on a page.
 
 So let me walk you through it the way I'd explain it to a friend visiting for the first time.
 
@@ -19,7 +19,7 @@ First things first. You need a transit card. Technically you can buy single-jour
 
 Here's what to get instead:
 
-**T-Money Card** — This is what most Koreans use. You can buy one at any convenience store (CU, GS25, 7-Eleven) for about ₩2,500, then load cash onto it at the store counter or at subway station machines. Tap it when you enter, tap it when you exit. Done. It also works on buses, taxis, and even some vending machines.
+**T-Money Card** — This is what most Koreans use. You can buy one at any convenience store (CU, GS25, 7-Eleven) for about ₩2,500, then load cash onto it at the store counter or at subway station machines. Tap it when you enter, tap it when you exit. Done. It also works on buses, taxis, and even some vending machines. It's also what you'll tap at [convenience stores](/food/cv7n3k) to pay for your late-night snacks.
 
 **WOWPASS** — If you're a tourist, this might be even better. It's a prepaid card that works as both a transit card and a payment card. You load foreign currency at the WOWPASS kiosks (they're everywhere in tourist areas), and it converts to Korean won at decent rates. My younger son's English teacher uses one and swears by it.
 

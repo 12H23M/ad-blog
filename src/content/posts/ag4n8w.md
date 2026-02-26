@@ -67,7 +67,7 @@ So while the big headline was "Korea adopts international age," the reality has 
 
 Even with the 2023 reform on the books, age remains absolutely central to how Korean society functions. Understanding this is crucial if you want to make sense of daily interactions here.
 
-**Language and honorifics** are the most immediate way age shapes life in Korea. Korean has multiple speech levels, ranging from very casual to extremely formal. When you meet someone and discover they're even one year older than you by birth year, you're expected to use polite speech (존댓말, jondaenmal). Switching to casual speech (반말, banmal) with someone older requires their explicit permission, and it's considered a meaningful moment in a relationship. Think of it like being invited to use someone's first name in a very formal culture, but amplified.
+**Language and honorifics** are the most immediate way age shapes life in Korea. Korean has [multiple speech levels](/language/3mg6kh), ranging from very casual to extremely formal. When you meet someone and discover they're even one year older than you by birth year, you're expected to use polite speech (존댓말, jondaenmal) — I cover key phrases in my [essential Korean phrases guide](/language/kp2r6f). Switching to casual speech (반말, banmal) with someone older requires their explicit permission, and it's considered a meaningful moment in a relationship. Think of it like being invited to use someone's first name in a very formal culture, but amplified.
 
 Among friends of the same birth year, you're 동갑 (donggap), and you can speak casually from the start. But if someone was born even in January of the year before you? They're your 선배 (senior) or 형/오빠/누나/언니 (older brother/sister terms), and the dynamic shifts.
 

@@ -11,13 +11,13 @@ keywords: "Korean phrases, learn Korean, Korean for travelers, basic Korean, Kor
 
 Here's a little secret about traveling in Korea: you don't need to be fluent to have an incredible time. But knowing even a handful of Korean phrases? That changes everything. Shop owners smile wider. Taxi drivers chat with you. Grandmas at the market hand you an extra sample and say something encouraging you can't quite catch yet.
 
-Koreans genuinely appreciate when foreigners make an effort to speak their language. Even a clumsy 감사합니다 (gam-sa-ham-ni-da) — "thank you" — delivered with a slight bow will earn you warmth you wouldn't believe. English is increasingly common in Seoul, sure, but step outside the capital or wander into a neighborhood restaurant where the ajumma has been making the same kimchi jjigae for thirty years, and a few Korean words become your lifeline.
+Koreans genuinely appreciate when foreigners make an effort to speak their language. Even a clumsy 감사합니다 (gam-sa-ham-ni-da) — "thank you" — delivered with a slight bow will earn you warmth you wouldn't believe. English is increasingly common in Seoul, sure, but step outside the capital or wander into a neighborhood restaurant. If you want to know what to actually order, check out my [Korean BBQ guide](/food/kb3r9m) or [street food guide](/food/sf7k2x) where the ajumma has been making the same kimchi jjigae for thirty years, and a few Korean words become your lifeline.
 
 So let's get you prepared. These fifty phrases are organized by situation, and I've included the Hangul script, a romanized pronunciation guide, and the English meaning for each one. You don't need to memorize all fifty before your flight. Even picking up ten or fifteen will make your trip noticeably smoother.
 
 ## Greetings and Basic Politeness
 
-Korean culture places enormous value on respect, and the language reflects that. You'll hear formal and informal speech everywhere, but as a traveler, sticking with polite formal endings (the ones ending in -요, pronounced "yo") keeps you safe in virtually every situation.
+Korean culture places enormous value on respect, and the language reflects that — your [age even works differently here](/culture/ag4n8w), which directly affects how people talk to you. You'll hear formal and informal speech everywhere, but as a traveler, sticking with polite formal endings (the ones ending in -요, pronounced "yo") keeps you safe in virtually every situation.
 
 **안녕하세요** (an-nyeong-ha-se-yo) — "Hello"
 

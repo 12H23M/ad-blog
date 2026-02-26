@@ -6,7 +6,7 @@ category: "lifestyle"
 shortId: "oc5w7j"
 image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
 imageAlt: "Modern Korean office building interior"
-keywords: "Korean work culture, Korean office, hoesik, Korean business etiquette, working in Korea, Korean workplace"
+keywords: "Korean work culture, Korean office, hoesik — the after-work drinking sessions I covered in my [Korean drinking culture](/culture/dv7m3q) guide, Korean business etiquette, working in Korea, Korean workplace"
 ---
 
 It's 8:47 AM on a Monday in Gangnam. You step out of the elevator on the 14th floor, bow slightly to a senior colleague you barely know, and settle into your desk. Your team leader is already there — he's always already there. You open KakaoTalk on your phone and see seventeen unread messages in the team group chat, most of them sent after midnight. Welcome to the Korean office.

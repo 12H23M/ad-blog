@@ -8,7 +8,7 @@ const sortedPosts = posts.sort((a, b) =>
 );
 
 const featuredPosts = sortedPosts.slice(0, 3);
-const recentPosts = sortedPosts.slice(3, 6);
+const recentPosts = sortedPosts.slice(3);
 
 const categoryColors: Record<string, { class: string; cardClass: string }> = {
   'culture': { class: 'post-list-category--coral', cardClass: 'card--coral' },

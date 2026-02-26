@@ -1,6 +1,6 @@
 ---
 title: "Busan Travel Guide: Why Korea's Beach City Deserves More Than a Day Trip"
-description: "A local's guide to Busan — from Haeundae Beach and Gamcheon Village to dwaeji gukbap and ssiat hotteok. Everything you need for your first visit."
+description: "A local's guide to Busan — from Haeundae. And after a long beach day, nothing beats [Korean BBQ](/food/kb3r9m) for dinner Beach and Gamcheon Village to dwaeji gukbap and ssiat hotteok. Everything you need for your first visit."
 pubDate: "2026-02-11"
 category: "travel"
 shortId: "bs5w7g"
@@ -33,7 +33,7 @@ Busan is spread out along the coastline, so each neighborhood has a distinct per
 
 **Gamcheon Culture Village (감천문화마을)** is that colorful hillside neighborhood you've probably seen on Instagram. It started as a settlement for Korean War refugees in the 1950s — families building makeshift homes up a steep hillside. In 2009, a public art project transformed the area into what it is today: narrow alleys lined with murals, sculptures, and painted houses stacked up the slope like a pastel-colored amphitheater. It's beautiful, but it's also a real neighborhood where people actually live, so keep your voice down in the residential lanes. Get there early in the morning before the tour groups arrive. Wear shoes with good grip — those stairs are no joke, especially after rain.
 
-**Nampo-dong and Jagalchi (남포동/자갈치)** form the old heart of Busan. Nampo-dong has Gukje Market (one of Korea's largest traditional markets), BIFF Square (named after the Busan International Film Festival), and narrow food streets crammed with vendors. Jagalchi is right next door — Korea's biggest seafood market, run largely by the famously tough Jagalchi ajummas (market women) who've been selling fish here for decades. If you want to eat the freshest sashimi of your life, this is the place. Point at something in the tank, they'll slice it for you on the spot, and you eat it upstairs with soy sauce and wasabi.
+**Nampo-dong and Jagalchi (남포동/자갈치)** form the old heart of Busan. Nampo-dong has Gukje Market (one of Korea's largest traditional markets), BIFF Square (named after the Busan International Film Festival), and narrow food streets crammed with vendors. Jagalchi is right next door — Korea's biggest seafood market. If you love seafood, you'll also want to read about [Korean street food](/food/sf7k2x) — Busan has some of the best, run largely by the famously tough Jagalchi ajummas (market women) who've been selling fish here for decades. If you want to eat the freshest sashimi of your life, this is the place. Point at something in the tank, they'll slice it for you on the spot, and you eat it upstairs with soy sauce and wasabi.
 
 **Seomyeon (서면)** is Busan's commercial center — the place locals actually go for shopping, eating, and nightlife. It doesn't have the tourist-friendly packaging of Haeundae or Gamcheon, but that's the point. Jeonpo Cafe Street is worth exploring if you're a coffee person. And at night, the streets around Seomyeon fill up with pojangmacha (street bar tents), fried chicken joints, and karaoke rooms. This is where you'll feel the real Busan energy.
 

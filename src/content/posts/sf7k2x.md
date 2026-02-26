@@ -6,7 +6,7 @@ category: "food"
 shortId: "sf7k2x"
 image: "https://images.unsplash.com/photo-1553621042-f6e147245754?w=1200&q=80"
 imageAlt: "Korean street food vendor stall with tteokbokki"
-keywords: "Korean street food, tteokbokki, hotteok, Korean snacks, Seoul street food, Myeongdong food"
+keywords: "Korean street food, tteokbokki, hotteok, Korean snacks, Seoul street food, Myeongdong. Each [Seoul neighborhood](/travel/sn9t4c) has its own street food specialties food"
 ---
 
 Picture this: you step off the subway in Seoul and immediately the air hits you. It smells like something sweet is caramelizing somewhere to your left, something savory and fried is sizzling to your right, and a cloud of steam rises from a cart straight ahead where a woman is ladling bright red sauce over rice cakes. There are sounds everywhere — vendors calling out, K-pop blasting from a shop speaker, the crunch of someone biting into a corn dog the length of their forearm. Welcome to Korean street food culture. It is loud, it is delicious, and it will absolutely ruin your dinner plans.

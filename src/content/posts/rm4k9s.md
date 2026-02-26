@@ -23,7 +23,7 @@ The ramen industry here is fiercely competitive. Nongshim, Samyang, Ottogi, Pald
 
 The variety breaks down roughly like this: soup-based ramyun (국물 라면) where you cook in water and eat the broth, stir-fry ramyun (볶음면) where you drain the water and toss with a thick sauce, and cold noodles (비빔면) for summer. Then within each of those, you've got beef broth, seafood, kimchi, cheese, jjajang (black bean), budae (army stew) — the list doesn't stop.
 
-The most important thing to know: not all red packages are equally spicy. This seems obvious but it has burned many tourists. I watched a man at a convenience store in Myeongdong pick up 2x Spicy Buldak thinking it was just regular ramen because it looked similar to what he'd had before. I wanted to stop him but I was too far away. He did not have a good time.
+The most important thing to know: not all red packages are equally spicy. This seems obvious but it has burned many tourists. I watched a man at a convenience store (and honestly, [Korean convenience stores](/food/cv7n3k) deserve their own guide — which I wrote) in Myeongdong pick up 2x Spicy Buldak thinking it was just regular ramen because it looked similar to what he'd had before. I wanted to stop him but I was too far away. He did not have a good time.
 
 ## My Top 10 Korean Ramens (and What Makes Each One Special)
 

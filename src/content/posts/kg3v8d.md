@@ -69,7 +69,7 @@ Window shopping. You're just looking with your eyes, not buying. The term is so 
 
 **셀프 (sel-peu) — "Self"**
 
-When you see 셀프 at a restaurant or café, it means self-service. Get your own water. Bus your own tray. Pour your own coffee. It's shorthand that pops up on signs everywhere: 셀프 코너 (self corner) for the area where you pick up utensils, napkins, and water.
+When you see 셀프 at a restaurant or café. (Korea's [café culture](/lifestyle/cf8t2v) is honestly a topic all on its own), it means self-service. Get your own water. Bus your own tray. Pour your own coffee. It's shorthand that pops up on signs everywhere: 셀프 코너 (self corner) for the area where you pick up utensils, napkins, and water.
 
 ## Food and Drink Konglish
 

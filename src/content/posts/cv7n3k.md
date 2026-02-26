@@ -31,7 +31,7 @@ You'll see four major brands everywhere, and each one has its own personality.
 
 **GS25** matches CU's store count and arguably wins on innovation. They launch new products constantly — limited-edition snacks, bizarre flavor collaborations, and seasonal specials that create genuine buzz on Korean social media. If you like discovering weird and wonderful food, spend some time browsing GS25's shelves.
 
-**7-Eleven** will feel familiar if you've visited the chain in Japan or Southeast Asia, but the Korean version stocks a different product lineup. They're particularly good for seasonal drinks and imported snacks. They're also where you can buy and recharge a T-money transportation card, which you'll need for buses and subways.
+**7-Eleven** will feel familiar if you've visited the chain in Japan or Southeast Asia, but the Korean version stocks a different product lineup. They're particularly good for seasonal drinks and imported snacks. They're also where you can buy and recharge a T-money (the same card you use for the [subway](/travel/9mkqjq)) transportation card, which you'll need for buses and subways.
 
 **Emart24** is the smallest of the four but positions itself as slightly more premium. Their snack selection skews upscale, and they tend to have a cleaner, more spacious layout. Worth checking out if you spot one.
 

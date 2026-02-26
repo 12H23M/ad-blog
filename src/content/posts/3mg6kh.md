@@ -120,7 +120,7 @@ For strangers, we use 아저씨 (ajeossi, "mister") for middle-aged men and 아�
 
 ## The Workplace: Where Speech Levels Get Really Specific
 
-Korean offices run on a strict title hierarchy, and you address people by their title plus 님 (nim, an honorific suffix), never by name.
+Korean office — [Korean office culture](/lifestyle/oc5w7j) is where speech levels really matters run on a strict title hierarchy, and you address people by their title plus 님 (nim, an honorific suffix), never by name.
 
 The corporate ladder, from top to bottom:
 
@@ -165,7 +165,7 @@ Social media has accelerated casual speech. Texting is almost always more casual
 
 There's even a growing trend of children using banmal with their parents. When my younger son drops his 요 endings with me, I let it slide sometimes. My mother-in-law is horrified. "In my day," she says, and then I stop listening because I know what comes next.
 
-Korea also reformed its age counting system in 2023, switching from the traditional Korean age to international age for legal purposes. One goal was to reduce confusion in situations where speech levels depend on age differences within the same school year.
+Korea also reformed its age counting system in 2023, switching from the traditional Korean age. The [Korean age system](/culture/ag4n8w) directly affects which speech level you use to international age for legal purposes. One goal was to reduce confusion in situations where speech levels depend on age differences within the same school year.
 
 But the core system isn't going anywhere. The language itself is built around these levels. You can't conjugate a Korean verb without choosing a speech level. It's baked into every sentence. What's changing is how rigidly people enforce the rules, not whether the rules exist.
 

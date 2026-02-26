@@ -6,7 +6,7 @@ category: "lifestyle"
 shortId: "cf8t2v"
 image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=80"
 imageAlt: "Iced coffee in a Korean cafe with warm lighting"
-keywords: "Korean café culture, Korean coffee, Seoul cafés, Seongsu-dong cafés, Korean café drinks, bingsu, study café Korea, café hopping Korea"
+keywords: "Korean café culture, Korean coffee, Seoul cafés, Seongsu-dong cafés, Korean café drinks, bingsu, study café. A lot of [Korean office workers](/lifestyle/oc5w7j) practically live in cafés after work too Korea, café hopping Korea"
 ---
 
 Last week my younger son asked if we could stop at Mega Coffee on the way home from hagwon. We'd already passed three other cafés in the two blocks since leaving. I said yes, obviously — it was a 1,800 won iced Americano kind of afternoon. While we waited for our drinks, I counted the coffee shops visible from the window. Four. Four cafés within maybe a hundred meters of each other. That's not unusual here. That's just Korea.

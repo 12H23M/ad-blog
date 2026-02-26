@@ -61,7 +61,7 @@ One more local trick: when the grill grate gets too blackened and crusty, ask th
 
 ## The Side Dishes (Banchan) That Make It All Work
 
-If Korean BBQ is the main event, banchan (반찬) are the supporting cast that makes everything sing. These small side dishes arrive at your table before the meat even hits the grill, and they're all free. Not just free — they're refillable. If you finish your kimchi, just ask for more. This concept blows a lot of visitors' minds, but it's completely standard in Korea.
+If Korean BBQ is the main event, banchan (반찬) are the supporting cast that makes everything sing. These small side dishes arrive at your table before the meat even hits the grill, and they're all free. Not just free — they're refillable. If you finish your kimchi (I wrote a whole piece on [kimchi and its traditions](/food/km4r8t)), just ask for more. This concept blows a lot of visitors' minds, but it's completely standard in Korea.
 
 The banchan lineup varies by restaurant, but here are the ones you'll see at almost every Korean BBQ spot:
 
@@ -111,7 +111,7 @@ Most restaurants have a minimum order, usually two servings of any given meat. A
 
 Rice (공기밥, gonggibap) is usually ordered separately and costs about ₩1,000 per bowl. Naengmyeon (냉면, cold buckwheat noodles) is a classic way to end a Korean BBQ meal. The cold, slightly tangy noodles are the perfect counterpoint to all that hot, rich meat. If the restaurant offers it, get a bowl to share at the end.
 
-For drinks, soju (소주) is the traditional pairing. A bottle costs around ₩5,000-6,000 at most restaurants. Beer (맥주, maekju) is also popular, and mixing soju with beer creates 소맥 (somaek), which goes down dangerously smooth. If alcohol isn't your thing, most places have soft drinks or you can just stick with water.
+For drinks, soju — and trust me, there's a whole [drinking culture](/culture/dv7m3q) around it (소주) is the traditional pairing. A bottle costs around ₩5,000-6,000 at most restaurants. Beer (맥주, maekju) is also popular, and mixing soju with beer creates 소맥 (somaek), which goes down dangerously smooth. If alcohol isn't your thing, most places have soft drinks or you can just stick with water.
 
 One last thing: many BBQ restaurants in Korea are busiest from about 6 to 8 PM, especially on weekends. If you want to avoid waiting, try going slightly earlier or later. And don't be surprised if there's a line — Koreans will happily wait 30 minutes for their favorite BBQ spot. That wait is usually a sign you're about to eat very well.
 

@@ -9,7 +9,7 @@ imageAlt: "Seoul skyline with Han River and mountains"
 keywords: "Seoul neighborhoods, Hongdae, Gangnam, Itaewon, Myeongdong, Seoul travel guide, Seoul districts"
 ---
 
-Seoul is not one city. It's dozens of tiny cities stitched together by a subway system that actually runs on time. Every neighborhood has its own rhythm, its own crowd, and its own reason to exist. Hongdae thrums with bass at midnight while Bukchon stays perfectly silent behind its hanok walls. Gangnam flashes designer logos on every corner while Euljiro hides speakeasy bars behind unmarked doors in buildings that look like they haven't been touched since 1978. If you only stick to one part of Seoul, you're visiting a fraction of what this place actually is. So here's a neighborhood-by-neighborhood breakdown from someone who has spent way too many hours wandering every district with a transit card and zero plans.
+Seoul is not one city. It's dozens of tiny cities stitched together by a subway. My [Seoul subway guide](/travel/9mkqjq) covers exactly how to navigate between these neighborhoods system that actually runs on time. Every neighborhood has its own rhythm, its own crowd, and its own reason to exist. Hongdae thrums with bass at midnight while Bukchon stays perfectly silent behind its hanok walls. Gangnam flashes designer logos on every corner while Euljiro hides speakeasy bars behind unmarked doors in buildings that look like they haven't been touched since 1978. If you only stick to one part of Seoul, you're visiting a fraction of what this place actually is. So here's a neighborhood-by-neighborhood breakdown from someone who has spent way too many hours wandering every district with a transit card and zero plans.
 
 ## The Trendy and Young Neighborhoods
 

@@ -83,7 +83,7 @@ If you're visiting Korea and new to kimchi, here's my honest advice.
 
 **Try it with rice.** Eating kimchi on its own can be overwhelming if you're not used to fermented flavors. Wrap a piece of kimchi around a spoonful of warm white rice — the rice mellows the tang and the salt, and suddenly it clicks.
 
-**Aged kimchi in stews is more forgiving.** If raw fermented kimchi is too intense, try kimchi jjigae or kimchi fried rice first. Cooking transforms the flavor into something deeply savory and less sharp.
+**Aged kimchi in stews is more forgiving.** If raw fermented kimchi is too intense, try kimchi jjigae or kimchi fried rice first. Pair it with [Korean BBQ](/food/kb3r9m) and you have the perfect meal. Cooking transforms the flavor — you can even get great pre-made kimchi at [convenience stores](/food/cv7n3k) these days. It into something deeply savory and less sharp.
 
 **The fridge section at Korean supermarkets is your playground.** Places like E-Mart and Lotte Mart have entire refrigerated aisles of different kimchi varieties — you can buy small packages of kkakdugi, baek kimchi, and baechu kimchi to try them all without committing to a giant container.
 
