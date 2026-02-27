@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Disclaimer | TradeLog.dev" description="TradeLog.dev 면책조항 및 투자 위험 고지" noindex={true}>
+  <article class="static-page">
+    <h1 data-i18n-ko="면책조항" data-i18n-en="Disclaimer">면책조항</h1>
+    <p class="last-updated" data-i18n-ko="최종 수정: 2026년 2월 28일" data-i18n-en="Last updated: February 28, 2026">최종 수정: 2026년 2월 28일</p>
+
+    <div data-lang-content="ko">
+      <h2>투자 위험 고지</h2>
+      <p>
+        본 사이트(TradeLog.dev)에 게시된 모든 콘텐츠는 <strong>교육 및 정보 제공 목적</strong>으로만 작성되었습니다.
+        투자 조언, 금융 조언, 또는 거래 권유에 해당하지 않습니다.
+      </p>
+
+      <h2>암호화폐 거래 위험</h2>
+      <p>암호화폐 거래는 다음과 같은 위험을 수반합니다:</p>
+      <ul>
+        <li>투자 원금의 전액 손실 가능성</li>
+        <li>극심한 가격 변동성</li>
+        <li>레버리지 거래 시 원금 이상의 손실 가능성</li>
+        <li>거래소 해킹, 서비스 중단 등의 기술적 위험</li>
+        <li>규제 변경에 따른 위험</li>
+      </ul>
+
+      <h2>자동매매 시스템 위험</h2>
+      <p>
+        본 사이트에서 소개하는 자동매매 시스템(OWL)은 개인 프로젝트이며, 수익을 보장하지 않습니다.
+        과거 백테스트 결과는 미래 수익을 보장하지 않습니다. 자동매매 시스템은 기술적 오류,
+        네트워크 장애, 시장 급변 등으로 예상치 못한 손실을 초래할 수 있습니다.
+      </p>
+
+      <h2>책임 제한</h2>
+      <p>
+        본 사이트의 정보를 참고하여 발생한 투자 손실이나 기타 손해에 대해 TradeLog.dev 및 운영자는
+        어떠한 책임도 지지 않습니다. 모든 투자 결정은 본인의 판단과 책임하에 이루어져야 합니다.
+      </p>
+
+      <h2>전문가 상담 권고</h2>
+      <p>
+        투자 결정 전 반드시 자격을 갖춘 금융 전문가와 상담하시기 바랍니다.
+        본 사이트의 내용은 전문 금융 조언을 대체할 수 없습니다.
+      </p>
+    </div>
+
+    <div data-lang-content="en" style="display:none;">
+      <h2>Investment Risk Disclosure</h2>
+      <p>
+        All content published on this site (TradeLog.dev) is for <strong>educational and informational purposes only</strong>.
+        It does not constitute investment advice, financial advice, or trading recommendations.
+      </p>
+
+      <h2>Cryptocurrency Trading Risks</h2>
+      <p>Cryptocurrency trading involves the following risks:</p>
+      <ul>
+        <li>Potential loss of entire investment</li>
+        <li>Extreme price volatility</li>
+        <li>Losses exceeding initial investment when using leverage</li>
+        <li>Technical risks such as exchange hacks and service outages</li>
+        <li>Regulatory changes</li>
+      </ul>
+
+      <h2>Automated Trading System Risks</h2>
+      <p>
+        The automated trading system (OWL) featured on this site is a personal project and does not guarantee profits.
+        Past backtest results do not guarantee future performance. Automated trading systems may cause unexpected losses
+        due to technical errors, network failures, or sudden market changes.
+      </p>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        TradeLog.dev and its operator assume no responsibility for any investment losses or damages
+        resulting from the use of information on this site. All investment decisions should be made
+        at your own judgment and risk.
+      </p>
+
+      <h2>Professional Advice Recommended</h2>
+      <p>
+        Please consult a qualified financial professional before making investment decisions.
+        The content on this site cannot substitute for professional financial advice.
+      </p>
+    </div>
+  </article>
+
+  <script>
+    function applyLang(lang) {
+      document.querySelectorAll('[data-lang-content]').forEach(el => {
+        el.style.display = el.dataset.langContent === lang ? '' : 'none';
+      });
+      document.querySelectorAll('[data-i18n-ko]').forEach(el => {
+        const text = el.getAttribute(`data-i18n-${lang}`);
+        if (text) el.innerHTML = text;
+      });
+    }
+    function init() {
+      applyLang(localStorage.getItem('lang') || 'ko');
+      window.addEventListener('lang-change', (e) => applyLang(e.detail.lang));
+    }
+    document.addEventListener('astro:page-load', init);
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</BaseLayout>

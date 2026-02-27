@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact | TradeLog.dev" description="TradeLog.dev 문의하기">
+  <article class="static-page" id="contact-content">
+    <h1 data-i18n-ko="문의하기" data-i18n-en="Contact Us">문의하기</h1>
+
+    <div data-lang-content="ko">
+      <p>
+        TradeLog.dev에 대한 문의, 피드백, 제안, 또는 협업 요청이 있으시면 아래 이메일로 연락해주세요.
+      </p>
+
+      <div class="contact-info">
+        <h2>이메일</h2>
+        <p><a href="mailto:contact@baksuls.com">contact@baksuls.com</a></p>
+      </div>
+
+      <div class="contact-info">
+        <h2>문의 가능 사항</h2>
+        <ul>
+          <li>블로그 내용에 대한 질문이나 피드백</li>
+          <li>기술적 문의 (자동매매 시스템, 전략 관련)</li>
+          <li>광고 및 스폰서십 문의</li>
+          <li>협업 제안</li>
+          <li>오류 제보</li>
+        </ul>
+      </div>
+
+      <p>보통 1-2 영업일 이내에 답변 드립니다.</p>
+    </div>
+
+    <div data-lang-content="en" style="display:none;">
+      <p>
+        For inquiries, feedback, suggestions, or collaboration requests about TradeLog.dev,
+        please reach out via email below.
+      </p>
+
+      <div class="contact-info">
+        <h2>Email</h2>
+        <p><a href="mailto:contact@baksuls.com">contact@baksuls.com</a></p>
+      </div>
+
+      <div class="contact-info">
+        <h2>What You Can Reach Out About</h2>
+        <ul>
+          <li>Questions or feedback about blog content</li>
+          <li>Technical inquiries (auto-trading systems, strategies)</li>
+          <li>Advertising and sponsorship inquiries</li>
+          <li>Collaboration proposals</li>
+          <li>Bug reports</li>
+        </ul>
+      </div>
+
+      <p>We typically respond within 1-2 business days.</p>
+    </div>
+  </article>
+
+  <script>
+    function applyLang(lang) {
+      document.querySelectorAll('[data-lang-content]').forEach(el => {
+        el.style.display = el.dataset.langContent === lang ? '' : 'none';
+      });
+      document.querySelectorAll('[data-i18n-ko]').forEach(el => {
+        const text = el.getAttribute(`data-i18n-${lang}`);
+        if (text) el.innerHTML = text;
+      });
+    }
+    function init() {
+      applyLang(localStorage.getItem('lang') || 'ko');
+      window.addEventListener('lang-change', (e) => applyLang(e.detail.lang));
+    }
+    document.addEventListener('astro:page-load', init);
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</BaseLayout>

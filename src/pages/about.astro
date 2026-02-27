@@ -2,47 +2,113 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="소개 | TradeLog.dev" description="OWL — AI 코인 자동매매 시스템의 이야기">
-  <div class="about-page">
-    <h1>TradeLog.dev</h1>
-    <p class="subtitle">OWL — AI 코인 자동매매 시스템의 개발 일지</p>
+<BaseLayout title="About | TradeLog.dev" description="TradeLog.dev — AI 코인 자동매매 시스템 OWL의 개발자 소개">
+  <article class="static-page" id="about-content">
+    <h1>About TradeLog.dev</h1>
 
-    <h2>우리는 누구인가</h2>
-    <p>
-      우리는 감정적인 트레이딩에 지친 개발자들입니다. 차트를 보며 밤새 고민하고, 패닉 셀링을 하고, FOMO에 빠져 매수하고 — 이런 패턴에서 벗어나고 싶었습니다.
-    </p>
-    <p>
-      그래서 OWL을 만들었습니다. 코드가 감정 대신 판단하고, 데이터가 직감을 대체하는 시스템. 24시간 쉬지 않고, 흔들리지 않는 트레이딩 봇.
-    </p>
+    <div data-lang-content="ko">
+      <p class="intro">
+        코인 수동 매매로 돈을 잃고, 감정을 제거한 자동매매 시스템을 직접 만들기로 했습니다.
+        그 과정을 기록하는 블로그입니다.
+      </p>
 
-    <h2>OWL이란</h2>
-    <p>
-      OWL은 AI 기반 코인 자동매매 시스템입니다. Python으로 개발되었고, OKX 거래소에서 선물 거래를 수행합니다.
-    </p>
-    <div class="tech-stack">
-      <div class="tech-item">Python</div>
-      <div class="tech-item">ccxt</div>
-      <div class="tech-item">OKX API</div>
-      <div class="tech-item">Supabase</div>
-      <div class="tech-item">Discord</div>
-      <div class="tech-item">Docker</div>
+      <h2>만든 사람</h2>
+      <p>
+        풀스택 개발자이자 개인 트레이더입니다. Python, JavaScript/TypeScript, React, Astro 등을 다루며,
+        현재 Mac mini에서 24시간 돌아가는 코인 자동매매 시스템 <strong>OWL</strong>을 운영하고 있습니다.
+      </p>
+      <p>
+        화려한 수익 인증이나 시그널 판매가 아닙니다.
+        실제 시스템을 만들고, 실패하고, 고치는 과정을 투명하게 공유합니다.
+      </p>
+
+      <h2>OWL이란?</h2>
+      <p>
+        <strong>OWL (Overnight Watch & Logic)</strong>은 AI 기반 암호화폐 자동매매 시스템입니다.
+        올빼미처럼 밤새 시장을 감시하며, 사전에 정의된 규칙대로만 매매합니다.
+      </p>
+      <ul>
+        <li>Python + ccxt + OKX 거래소</li>
+        <li>15개 이상의 전략 (컨센서스, 피보나치, 엘리엇 파동, 역발상 등)</li>
+        <li>Supabase에 모든 거래 기록</li>
+        <li>React 대시보드로 실시간 모니터링</li>
+        <li>Discord 알림 시스템</li>
+      </ul>
+
+      <h2>블로그 내용</h2>
+      <ul>
+        <li>🔧 시스템 구축 과정 (아키텍처, 기술 스택)</li>
+        <li>📊 전략 개발 & 백테스트 결과</li>
+        <li>📈 일일 매매 기록 & 수익률</li>
+        <li>💡 실패 경험과 교훈</li>
+        <li>🤖 AI/LLM을 트레이딩에 활용하는 방법</li>
+      </ul>
+
+      <h2>면책</h2>
+      <p>
+        이 블로그의 모든 내용은 교육 및 정보 제공 목적입니다. 투자 조언이 아닙니다.
+        암호화폐 거래는 높은 위험을 수반하며, 투자 손실에 대한 책임은 본인에게 있습니다.
+      </p>
     </div>
 
-    <h2>이 블로그의 목적</h2>
-    <p>
-      TradeLog.dev는 OWL의 개발 과정과 실전 성과를 투명하게 공유하는 공간입니다.
-    </p>
-    <ul>
-      <li><strong>시스템 아키텍처</strong> — 스크리너, 전략 엔진, 리스크 매니저 등 핵심 모듈 설계</li>
-      <li><strong>전략 분석</strong> — 마틴게일 피보나치, 피보나치 스윙, 컨센서스 등 실전 전략</li>
-      <li><strong>일일 리포트</strong> — 매일의 트레이딩 성과와 시장 관찰</li>
-      <li><strong>인사이트</strong> — 알고 트레이딩에서 배운 교훈과 발견</li>
-      <li><strong>튜토리얼</strong> — 비슷한 시스템을 만들고 싶은 사람들을 위한 가이드</li>
-    </ul>
+    <div data-lang-content="en" style="display:none;">
+      <p class="intro">
+        After losing money trading crypto manually, I decided to build an automated trading system
+        that removes emotions entirely. This blog documents that journey.
+      </p>
 
-    <h2>Why "OWL"?</h2>
-    <p>
-      부엉이는 밤에 가장 잘 봅니다. 크립토 시장도 잠들지 않습니다. OWL은 24/7 시장을 지켜보며, 어둠 속에서도 기회를 포착합니다.
-    </p>
-  </div>
+      <h2>Who I Am</h2>
+      <p>
+        I'm a fullstack developer and independent trader. I work with Python, JavaScript/TypeScript,
+        React, and Astro. Currently running <strong>OWL</strong>, a 24/7 crypto auto-trading system
+        on a Mac mini.
+      </p>
+      <p>
+        This isn't about flashy profit screenshots or selling signals.
+        It's about building a real system, failing, fixing, and sharing the process transparently.
+      </p>
+
+      <h2>What is OWL?</h2>
+      <p>
+        <strong>OWL (Overnight Watch & Logic)</strong> is an AI-powered cryptocurrency auto-trading system.
+        Like an owl watching through the night, it monitors markets 24/7 and trades strictly by predefined rules.
+      </p>
+      <ul>
+        <li>Python + ccxt + OKX exchange</li>
+        <li>15+ strategies (consensus, Fibonacci, Elliott wave, contrarian, etc.)</li>
+        <li>All trades logged to Supabase</li>
+        <li>React dashboard for real-time monitoring</li>
+        <li>Discord notification system</li>
+      </ul>
+
+      <h2>What You'll Find Here</h2>
+      <ul>
+        <li>🔧 System architecture & build process</li>
+        <li>📊 Strategy development & backtest results</li>
+        <li>📈 Daily trade logs & performance</li>
+        <li>💡 Failures and lessons learned</li>
+        <li>🤖 Using AI/LLMs for trading</li>
+      </ul>
+
+      <h2>Disclaimer</h2>
+      <p>
+        All content on this blog is for educational and informational purposes only. This is not investment advice.
+        Cryptocurrency trading involves significant risk, and you are solely responsible for your investment decisions.
+      </p>
+    </div>
+  </article>
+
+  <script>
+    function applyLang(lang) {
+      document.querySelectorAll('[data-lang-content]').forEach(el => {
+        el.style.display = el.dataset.langContent === lang ? '' : 'none';
+      });
+    }
+    function init() {
+      applyLang(localStorage.getItem('lang') || 'ko');
+      window.addEventListener('lang-change', (e) => applyLang(e.detail.lang));
+    }
+    document.addEventListener('astro:page-load', init);
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </BaseLayout>

@@ -46,14 +46,21 @@ const l = labels[lang] || labels.ko;
         </div>
         <div class="footer-column">
           <span class="footer-column-title">{l.links}</span>
-          <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="/about">{l.about}</a>
+          <a href="/contact">{lang === 'ko' ? '문의' : 'Contact'}</a>
+          <a href="/privacy">{lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy'}</a>
+          <a href="/disclaimer">{lang === 'ko' ? '면책조항' : 'Disclaimer'}</a>
         </div>
       </div>
     </div>
     <div class="footer-divider"></div>
     <div class="footer-bottom">
       <p>&copy; {year} TradeLog.dev. All rights reserved.</p>
-      <div class="footer-social"></div>
+      <div class="footer-links-bottom">
+        <a href="/privacy">{lang === 'ko' ? '개인정보처리방침' : 'Privacy'}</a>
+        <a href="/disclaimer">{lang === 'ko' ? '면책조항' : 'Disclaimer'}</a>
+        <a href="/contact">{lang === 'ko' ? '문의' : 'Contact'}</a>
+      </div>
     </div>
   </div>
 </footer>
