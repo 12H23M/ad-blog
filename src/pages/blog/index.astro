@@ -52,29 +52,38 @@ const categoryLabels: Record<string, string> = {
 </BaseLayout>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
-    const filterBar = document.getElementById('filter-bar');
+  function applyFilters() {
     const grid = document.getElementById('posts-grid');
-    if (!filterBar || !grid) return;
+    const filterBar = document.getElementById('filter-bar');
+    if (!grid || !filterBar) return;
 
-    const buttons = filterBar.querySelectorAll('.filter-btn');
+    const lang = localStorage.getItem('lang') || 'ko';
+    const activeBtn = filterBar.querySelector('.filter-btn.active') as HTMLElement;
+    const category = activeBtn?.dataset.category || 'all';
     const posts = grid.querySelectorAll('[data-post-category]');
 
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const category = (btn as HTMLElement).dataset.category;
-        buttons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
+    posts.forEach((post) => {
+      const el = post as HTMLElement;
+      const langMatch = el.dataset.postLang === lang;
+      const catMatch = category === 'all' || el.dataset.postCategory === category;
+      el.style.display = langMatch && catMatch ? '' : 'none';
+    });
+  }
 
-        posts.forEach((post) => {
-          const el = post as HTMLElement;
-          if (category === 'all' || el.dataset.postCategory === category) {
-            el.style.display = '';
-          } else {
-            el.style.display = 'none';
-          }
-        });
+  document.addEventListener('astro:page-load', () => {
+    const filterBar = document.getElementById('filter-bar');
+    if (!filterBar) return;
+
+    filterBar.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBar.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
       });
     });
+
+    applyFilters();
+    window.addEventListener('lang-change', () => applyFilters());
   });
+  document.addEventListener('DOMContentLoaded', () => applyFilters());
 </script>

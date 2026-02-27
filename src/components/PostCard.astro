@@ -25,7 +25,7 @@ function formatDate(dateStr: string, lang: string): string {
 const readingLabel = lang === 'ko' ? '분 소요' : 'min read';
 ---
 
-<a href={`/blog/${slug}`} class="post-card">
+<a href={`/blog/${slug}`} class="post-card" data-lang={lang}>
   <div class="post-card-body">
     <div class="post-card-top">
       <CategoryBadge category={category} lang={lang} />

@@ -12,18 +12,18 @@ const seriesList = await getSeriesList();
   <!-- Hero Section -->
   <section class="hero">
     <span class="hero-badge">// AI Trading System</span>
-    <h1>코드로 시장을<br><span class="accent">읽다</span></h1>
-    <p class="hero-description">
+    <h1 data-i18n-ko="코드로 시장을<br><span class='accent'>읽다</span>" data-i18n-en="Reading Markets<br>with <span class='accent'>Code</span>">코드로 시장을<br><span class="accent">읽다</span></h1>
+    <p class="hero-description" data-i18n-ko="AI 코인 자동매매 시스템 OWL의 개발 과정, 전략 분석, 그리고 실전 트레이딩 일지를 공유합니다." data-i18n-en="Dev logs, strategy analysis, and live trading journals from OWL — an AI-powered crypto trading system.">
       AI 코인 자동매매 시스템 OWL의 개발 과정, 전략 분석, 그리고 실전 트레이딩 일지를 공유합니다.
     </p>
-    <a href="/blog" class="hero-cta">블로그 읽기 &rarr;</a>
+    <a href="/blog" class="hero-cta" data-i18n-ko="블로그 읽기 →" data-i18n-en="Read Blog →">블로그 읽기 &rarr;</a>
   </section>
 
   <!-- Latest Posts -->
   <section style="max-width: var(--max-width-wide); margin: 0 auto; padding: 48px 40px 64px; position: relative; z-index: 1;">
     <div class="section-header">
-      <h2 class="section-title">최근 포스트</h2>
-      <a href="/blog" class="section-link">전체 보기 &rarr;</a>
+      <h2 class="section-title" data-i18n-ko="최근 포스트" data-i18n-en="Latest Posts">최근 포스트</h2>
+      <a href="/blog" class="section-link" data-i18n-ko="전체 보기 →" data-i18n-en="View All →">전체 보기 &rarr;</a>
     </div>
 
     {latestPosts.length > 0 ? (
@@ -51,8 +51,8 @@ const seriesList = await getSeriesList();
   {seriesList.length > 0 && (
     <section style="max-width: var(--max-width-wide); margin: 0 auto; padding: 0 40px 64px; position: relative; z-index: 1;">
       <div class="section-header">
-        <h2 class="section-title">시리즈</h2>
-        <a href="/series" class="section-link">전체 보기 &rarr;</a>
+        <h2 class="section-title" data-i18n-ko="시리즈" data-i18n-en="Series">시리즈</h2>
+        <a href="/series" class="section-link" data-i18n-ko="전체 보기 →" data-i18n-en="View All →">전체 보기 &rarr;</a>
       </div>
       <div class="series-list">
         {seriesList.map((s) => (
@@ -64,4 +64,24 @@ const seriesList = await getSeriesList();
       </div>
     </section>
   )}
+  <script>
+    function applyLang(lang) {
+      // Filter post cards by language
+      document.querySelectorAll('.post-card').forEach(card => {
+        card.style.display = card.dataset.lang === lang ? '' : 'none';
+      });
+      // Translate i18n elements
+      document.querySelectorAll('[data-i18n-ko]').forEach(el => {
+        const text = el.getAttribute(`data-i18n-${lang}`);
+        if (text) el.innerHTML = text;
+      });
+    }
+    function init() {
+      const lang = localStorage.getItem('lang') || 'ko';
+      applyLang(lang);
+      window.addEventListener('lang-change', (e) => applyLang(e.detail.lang));
+    }
+    document.addEventListener('astro:page-load', init);
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </BaseLayout>

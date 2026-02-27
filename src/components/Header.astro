@@ -37,7 +37,7 @@ const { currentPath = '/', lang = 'ko' } = Astro.props;
 </header>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  function initHeader() {
     const btn = document.getElementById('mobile-menu-btn');
     const nav = document.getElementById('main-nav');
     if (!btn || !nav) return;
@@ -45,5 +45,7 @@ const { currentPath = '/', lang = 'ko' } = Astro.props;
       nav.classList.toggle('open');
       btn.textContent = nav.classList.contains('open') ? '\u2715' : '\u2630';
     });
-  });
+  }
+  document.addEventListener('astro:page-load', initHeader);
+  document.addEventListener('DOMContentLoaded', initHeader);
 </script>

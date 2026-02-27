@@ -8,9 +8,10 @@ const { currentLang = 'ko' } = Astro.props;
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  function initLangToggle() {
     const toggle = document.querySelector('[data-lang-toggle]');
-    if (!toggle) return;
+    if (!toggle || toggle.dataset.initialized) return;
+    toggle.dataset.initialized = 'true';
 
     const buttons = toggle.querySelectorAll('button');
     const stored = localStorage.getItem('lang') || 'ko';
@@ -26,5 +27,7 @@ const { currentLang = 'ko' } = Astro.props;
         window.dispatchEvent(new CustomEvent('lang-change', { detail: { lang } }));
       });
     });
-  });
+  }
+  document.addEventListener('astro:page-load', initLangToggle);
+  document.addEventListener('DOMContentLoaded', initLangToggle);
 </script>
