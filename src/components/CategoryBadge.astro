@@ -1,0 +1,17 @@
+---
+interface Props {
+  category: string;
+  lang?: 'ko' | 'en';
+}
+
+const { category, lang = 'ko' } = Astro.props;
+
+const labels: Record<string, Record<string, string>> = {
+  ko: { system: '시스템', strategy: '전략', daily: '일일 리포트', insight: '인사이트', tutorial: '튜토리얼' },
+  en: { system: 'System', strategy: 'Strategy', daily: 'Daily Log', insight: 'Insight', tutorial: 'Tutorial' },
+};
+
+const label = labels[lang]?.[category] ?? category;
+---
+
+<span class={`cat-badge cat-badge--${category}`}>{label}</span>

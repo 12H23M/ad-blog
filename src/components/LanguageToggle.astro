@@ -1,0 +1,30 @@
+---
+const { currentLang = 'ko' } = Astro.props;
+---
+
+<div class="lang-toggle" data-lang-toggle>
+  <button class:list={[{ active: currentLang === 'ko' }]} data-lang="ko">KO</button>
+  <button class:list={[{ active: currentLang === 'en' }]} data-lang="en">EN</button>
+</div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.querySelector('[data-lang-toggle]');
+    if (!toggle) return;
+
+    const buttons = toggle.querySelectorAll('button');
+    const stored = localStorage.getItem('lang') || 'ko';
+
+    buttons.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === stored);
+
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        if (!lang) return;
+        localStorage.setItem('lang', lang);
+        buttons.forEach((b) => b.classList.toggle('active', b.dataset.lang === lang));
+        window.dispatchEvent(new CustomEvent('lang-change', { detail: { lang } }));
+      });
+    });
+  });
+</script>

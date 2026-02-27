@@ -1,0 +1,66 @@
+:root {
+  /* Backgrounds */
+  --bg-primary: #0F1729;
+  --bg-surface: #1A2332;
+  --bg-card: #1E293B;
+  --bg-card-hover: #243044;
+  --bg-code: #0D1117;
+  --bg-input: #1E293B;
+
+  /* Text */
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-heading: #F1F5F9;
+
+  /* Accent */
+  --accent-blue: #00D4FF;
+  --accent-blue-dim: rgba(0, 212, 255, 0.15);
+  --accent-green: #00FF88;
+  --accent-green-dim: rgba(0, 255, 136, 0.15);
+  --accent-yellow: #FFB800;
+  --accent-yellow-dim: rgba(255, 184, 0, 0.15);
+  --accent-red: #FF6B6B;
+  --accent-red-dim: rgba(255, 107, 107, 0.15);
+  --accent-purple: #A78BFA;
+  --accent-purple-dim: rgba(167, 139, 250, 0.15);
+
+  /* Category colors */
+  --cat-system: var(--accent-blue);
+  --cat-system-dim: var(--accent-blue-dim);
+  --cat-strategy: var(--accent-green);
+  --cat-strategy-dim: var(--accent-green-dim);
+  --cat-daily: var(--accent-yellow);
+  --cat-daily-dim: var(--accent-yellow-dim);
+  --cat-insight: var(--accent-red);
+  --cat-insight-dim: var(--accent-red-dim);
+  --cat-tutorial: var(--accent-purple);
+  --cat-tutorial-dim: var(--accent-purple-dim);
+
+  /* Borders */
+  --border-subtle: rgba(148, 163, 184, 0.1);
+  --border-strong: rgba(148, 163, 184, 0.2);
+
+  /* Layout */
+  --max-width: 780px;
+  --max-width-wide: 1200px;
+  --header-height: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 100px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}

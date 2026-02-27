@@ -6,11 +6,13 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.string(),
-    category: z.enum(['culture', 'food', 'travel', 'lifestyle', 'language']),
-    shortId: z.string().length(6),
-    keywords: z.string().optional(),
-    image: z.string().optional(),
-    imageAlt: z.string().optional(),
+    lang: z.enum(['ko', 'en']),
+    category: z.enum(['system', 'strategy', 'daily', 'insight', 'tutorial']),
+    series: z.string().optional(),
+    seriesOrder: z.number().optional(),
+    translationOf: z.string().optional(),
+    tags: z.array(z.string()),
+    draft: z.boolean().default(false),
   }),
 });
 

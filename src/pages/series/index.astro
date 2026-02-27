@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSeriesList } from '../../utils/posts';
+
+const seriesList = await getSeriesList();
+---
+
+<BaseLayout title="시리즈 | TradeLog.dev" description="관련 주제를 묶어서 체계적으로 학습할 수 있는 시리즈 모음">
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">시리즈</h1>
+  <p style="color: var(--text-secondary); margin-bottom: 32px;">관련 주제를 묶어서 체계적으로 학습할 수 있는 시리즈 모음입니다.</p>
+
+  {seriesList.length > 0 ? (
+    <div class="series-list">
+      {seriesList.map((s) => (
+        <a href={`/series/${s.slug}`} class="series-card">
+          <div class="series-card-title">{s.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</div>
+          <div class="series-card-meta">
+            {s.count}개의 포스트 &middot; {Array.from(s.langs).join(', ')}
+          </div>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="empty-state">
+      <p>아직 시리즈가 없습니다.</p>
+    </div>
+  )}
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import CategoryBadge from './CategoryBadge.astro';
+
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  pubDate: string;
+  category: string;
+  lang: 'ko' | 'en';
+  tags?: string[];
+  readingTime?: number;
+}
+
+const { slug, title, description, pubDate, category, lang, tags, readingTime } = Astro.props;
+
+function formatDate(dateStr: string, lang: string): string {
+  const date = new Date(dateStr);
+  if (lang === 'ko') {
+    return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}.`;
+  }
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+const readingLabel = lang === 'ko' ? '분 소요' : 'min read';
+---
+
+<a href={`/blog/${slug}`} class="post-card">
+  <div class="post-card-body">
+    <div class="post-card-top">
+      <CategoryBadge category={category} lang={lang} />
+      <span class="lang-badge">{lang === 'ko' ? '한국어' : 'EN'}</span>
+    </div>
+    <h3 class="post-card-title">{title}</h3>
+    <p class="post-card-desc">{description}</p>
+    <div class="post-card-meta">
+      <span>{formatDate(pubDate, lang)}</span>
+      {readingTime && <span>&middot; {readingTime}{readingLabel}</span>}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getAllPosts } from '../../utils/posts';
+
+const allPosts = await getAllPosts();
+
+const categories = ['all', 'system', 'strategy', 'daily', 'insight', 'tutorial'];
+const categoryLabels: Record<string, string> = {
+  all: '전체',
+  system: '시스템',
+  strategy: '전략',
+  daily: '일일 리포트',
+  insight: '인사이트',
+  tutorial: '튜토리얼',
+};
+---
+
+<BaseLayout title="블로그 | TradeLog.dev" description="OWL 트레이딩 시스템의 개발, 전략, 인사이트를 공유합니다.">
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">블로그</h1>
+  <p style="color: var(--text-secondary); margin-bottom: 32px;">OWL 트레이딩 시스템의 개발, 전략, 인사이트를 공유합니다.</p>
+
+  <div class="filter-bar" id="filter-bar">
+    {categories.map((cat) => (
+      <button class={`filter-btn ${cat === 'all' ? 'active' : ''}`} data-category={cat}>
+        {categoryLabels[cat]}
+      </button>
+    ))}
+  </div>
+
+  {allPosts.length > 0 ? (
+    <div class="cards-grid" id="posts-grid">
+      {allPosts.map((post) => (
+        <div data-post-category={post.data.category} data-post-lang={post.data.lang}>
+          <PostCard
+            slug={post.id}
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            lang={post.data.lang}
+            tags={post.data.tags}
+          />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div class="empty-state">
+      <p>포스트가 없습니다.</p>
+    </div>
+  )}
+</BaseLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const filterBar = document.getElementById('filter-bar');
+    const grid = document.getElementById('posts-grid');
+    if (!filterBar || !grid) return;
+
+    const buttons = filterBar.querySelectorAll('.filter-btn');
+    const posts = grid.querySelectorAll('[data-post-category]');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const category = (btn as HTMLElement).dataset.category;
+        buttons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        posts.forEach((post) => {
+          const el = post as HTMLElement;
+          if (category === 'all' || el.dataset.postCategory === category) {
+            el.style.display = '';
+          } else {
+            el.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "TradeLog.dev",
+    "description": "AI 코인 자동매매 시스템 OWL의 개발 일지와 트레이딩 인사이트"
+  },
+  "nav": {
+    "home": "홈",
+    "blog": "블로그",
+    "series": "시리즈",
+    "daily": "일일 리포트",
+    "about": "소개"
+  },
+  "hero": {
+    "badge": "AI 트레이딩 시스템",
+    "title": "코드로 시장을 읽다",
+    "subtitle": "AI 코인 자동매매 시스템 OWL의 개발 과정, 전략 분석, 그리고 실전 트레이딩 일지를 공유합니다.",
+    "cta": "블로그 읽기"
+  },
+  "sections": {
+    "latestPosts": "최근 포스트",
+    "featuredSeries": "시리즈",
+    "viewAll": "전체 보기"
+  },
+  "post": {
+    "readingTime": "분 소요",
+    "publishedOn": "작성일",
+    "tableOfContents": "목차",
+    "relatedPosts": "관련 포스트",
+    "prevInSeries": "이전 글",
+    "nextInSeries": "다음 글",
+    "seriesLabel": "시리즈",
+    "translation": "English version available",
+    "draft": "초안"
+  },
+  "categories": {
+    "system": "시스템",
+    "strategy": "전략",
+    "daily": "일일 리포트",
+    "insight": "인사이트",
+    "tutorial": "튜토리얼"
+  },
+  "blog": {
+    "title": "블로그",
+    "description": "OWL 트레이딩 시스템의 개발, 전략, 인사이트를 공유합니다.",
+    "allCategories": "전체",
+    "allLanguages": "전체 언어",
+    "noPosts": "포스트가 없습니다."
+  },
+  "about": {
+    "title": "소개",
+    "subtitle": "OWL — AI 코인 자동매매 시스템"
+  },
+  "daily": {
+    "title": "일일 리포트",
+    "description": "매일의 트레이딩 성과와 시장 분석을 기록합니다."
+  },
+  "series": {
+    "title": "시리즈",
+    "description": "관련 주제를 묶어서 체계적으로 학습할 수 있는 시리즈 모음입니다.",
+    "postsCount": "개의 포스트"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "description": "AI 코인 자동매매 시스템 OWL의 개발 일지"
+  },
+  "lang": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}

@@ -1,0 +1,43 @@
+---
+interface Props {
+  pnl?: string;
+  winRate?: string;
+  trades?: string;
+  balance?: string;
+  lang?: 'ko' | 'en';
+}
+
+const { pnl = '--', winRate = '--', trades = '--', balance = '--', lang = 'ko' } = Astro.props;
+
+const labels = {
+  ko: { pnl: '손익 (PnL)', winRate: '승률', trades: '거래 수', balance: '잔고' },
+  en: { pnl: 'PnL', winRate: 'Win Rate', trades: 'Trades', balance: 'Balance' },
+};
+
+const l = labels[lang] || labels.ko;
+
+function getValueClass(val: string): string {
+  if (val.startsWith('+')) return 'positive';
+  if (val.startsWith('-')) return 'negative';
+  return 'neutral';
+}
+---
+
+<div class="daily-stats">
+  <div class="stat-card">
+    <div class="stat-label">{l.pnl}</div>
+    <div class={`stat-value ${getValueClass(pnl)}`}>{pnl}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">{l.winRate}</div>
+    <div class="stat-value neutral">{winRate}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">{l.trades}</div>
+    <div class="stat-value neutral">{trades}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">{l.balance}</div>
+    <div class="stat-value neutral">{balance}</div>
+  </div>
+</div>

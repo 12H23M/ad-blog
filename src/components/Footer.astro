@@ -1,35 +1,62 @@
 ---
+const { lang = 'ko' } = Astro.props;
 const year = new Date().getFullYear();
+
+const labels = {
+  ko: {
+    description: 'AI 코인 자동매매 시스템 OWL의 개발 일지',
+    nav: '네비게이션',
+    home: '홈',
+    blog: '블로그',
+    series: '시리즈',
+    daily: '일일 리포트',
+    about: '소개',
+    links: '링크',
+  },
+  en: {
+    description: 'Dev logs from OWL, an AI-powered crypto trading system',
+    nav: 'Navigation',
+    home: 'Home',
+    blog: 'Blog',
+    series: 'Series',
+    daily: 'Daily Log',
+    about: 'About',
+    links: 'Links',
+  },
+};
+
+const l = labels[lang] || labels.ko;
 ---
 
 <footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="/" class="footer-logo">baksuls</a>
-                <p class="footer-tagline">Introducing Korea to the world — one story at a time. Culture, food, travel, lifestyle, and language.</p>
-            </div>
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <span class="footer-column-title">Categories</span>
-                    <a href="/category/culture">Culture</a>
-                    <a href="/category/food">Food</a>
-                    <a href="/category/travel">Travel</a>
-                    <a href="/category/lifestyle">Lifestyle</a>
-                    <a href="/category/language">Language</a>
-                </div>
-                <div class="footer-column">
-                    <span class="footer-column-title">About</span>
-                    <a href="/about">About Us</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/privacy">Privacy Policy</a>
-                </div>
-            </div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">TradeLog.dev</a>
+        <p class="footer-tagline">{l.description}</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <span class="footer-column-title">{l.nav}</span>
+          <a href="/">{l.home}</a>
+          <a href="/blog">{l.blog}</a>
+          <a href="/series">{l.series}</a>
+          <a href="/daily">{l.daily}</a>
+          <a href="/about">{l.about}</a>
         </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <p>&copy; {year} Baksuls. All rights reserved.</p>
-            <p>baksuls.com</p>
+        <div class="footer-column">
+          <span class="footer-column-title">{l.links}</span>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>
         </div>
+      </div>
     </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; {year} TradeLog.dev. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
 </footer>

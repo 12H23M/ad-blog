@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "TradeLog.dev",
+    "description": "Dev logs and trading insights from OWL, an AI-powered crypto trading system"
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "series": "Series",
+    "daily": "Daily Log",
+    "about": "About"
+  },
+  "hero": {
+    "badge": "AI Trading System",
+    "title": "Reading Markets with Code",
+    "subtitle": "Development logs, strategy analysis, and real trading journals from OWL — our AI-powered crypto trading bot.",
+    "cta": "Read the Blog"
+  },
+  "sections": {
+    "latestPosts": "Latest Posts",
+    "featuredSeries": "Series",
+    "viewAll": "View all"
+  },
+  "post": {
+    "readingTime": "min read",
+    "publishedOn": "Published",
+    "tableOfContents": "Table of Contents",
+    "relatedPosts": "Related Posts",
+    "prevInSeries": "Previous",
+    "nextInSeries": "Next",
+    "seriesLabel": "Series",
+    "translation": "한국어 버전 보기",
+    "draft": "Draft"
+  },
+  "categories": {
+    "system": "System",
+    "strategy": "Strategy",
+    "daily": "Daily Log",
+    "insight": "Insight",
+    "tutorial": "Tutorial"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Development, strategy, and insights from the OWL trading system.",
+    "allCategories": "All",
+    "allLanguages": "All Languages",
+    "noPosts": "No posts found."
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "OWL — AI-Powered Crypto Trading System"
+  },
+  "daily": {
+    "title": "Daily Log",
+    "description": "Daily trading performance and market analysis reports."
+  },
+  "series": {
+    "title": "Series",
+    "description": "Structured learning paths through related topics.",
+    "postsCount": "posts"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "description": "Dev logs from OWL, an AI-powered crypto trading system"
+  },
+  "lang": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}

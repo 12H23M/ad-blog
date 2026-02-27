@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import DailyStats from '../../components/DailyStats.astro';
+import { getPostsByCategory } from '../../utils/posts';
+
+const dailyPosts = await getPostsByCategory('daily');
+---
+
+<BaseLayout title="일일 리포트 | TradeLog.dev" description="매일의 트레이딩 성과와 시장 분석을 기록합니다.">
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">일일 리포트</h1>
+  <p style="color: var(--text-secondary); margin-bottom: 32px;">매일의 트레이딩 성과와 시장 분석을 기록합니다.</p>
+
+  <DailyStats lang="ko" />
+
+  {dailyPosts.length > 0 ? (
+    <div class="cards-grid">
+      {dailyPosts.map((post) => (
+        <PostCard
+          slug={post.id}
+          title={post.data.title}
+          description={post.data.description}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          lang={post.data.lang}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  ) : (
+    <div class="empty-state">
+      <p>아직 리포트가 없습니다. 곧 매일의 트레이딩 기록이 올라옵니다.</p>
+    </div>
+  )}
+</BaseLayout>

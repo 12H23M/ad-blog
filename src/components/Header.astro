@@ -1,16 +1,49 @@
 ---
-const { currentPath = '/' } = Astro.props;
+import LanguageToggle from './LanguageToggle.astro';
+
+const { currentPath = '/', lang = 'ko' } = Astro.props;
 ---
 
 <header class="site-header">
-    <div class="header-inner">
-        <a href="/" class="logo">baksuls</a>
-        <nav class="main-nav">
-            <a href="/category/culture" class:list={{ active: currentPath.includes('/culture') }}>Culture</a>
-            <a href="/category/food" class:list={{ active: currentPath.includes('/food') }}>Food</a>
-            <a href="/category/travel" class:list={{ active: currentPath.includes('/travel') }}>Travel</a>
-            <a href="/category/lifestyle" class:list={{ active: currentPath.includes('/lifestyle') }}>Lifestyle</a>
-            <a href="/category/language" class:list={{ active: currentPath.includes('/language') }}>Language</a>
-        </nav>
+  <div class="header-inner">
+    <a href="/" class="logo">TradeLog.dev</a>
+
+    <div class="header-right">
+      <nav class="main-nav" id="main-nav">
+        <a href="/" class:list={[{ active: currentPath === '/' }]}>
+          {lang === 'ko' ? '홈' : 'Home'}
+        </a>
+        <a href="/blog" class:list={[{ active: currentPath.startsWith('/blog') }]}>
+          {lang === 'ko' ? '블로그' : 'Blog'}
+        </a>
+        <a href="/series" class:list={[{ active: currentPath.startsWith('/series') }]}>
+          {lang === 'ko' ? '시리즈' : 'Series'}
+        </a>
+        <a href="/daily" class:list={[{ active: currentPath.startsWith('/daily') }]}>
+          {lang === 'ko' ? '일일 리포트' : 'Daily Log'}
+        </a>
+        <a href="/about" class:list={[{ active: currentPath.startsWith('/about') }]}>
+          {lang === 'ko' ? '소개' : 'About'}
+        </a>
+      </nav>
+
+      <LanguageToggle currentLang={lang} />
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        &#9776;
+      </button>
     </div>
+  </div>
 </header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('main-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      btn.textContent = nav.classList.contains('open') ? '\u2715' : '\u2630';
+    });
+  });
+</script>

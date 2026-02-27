@@ -1,0 +1,23 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+  lang?: 'ko' | 'en';
+}
+
+const { headings, lang = 'ko' } = Astro.props;
+const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const title = lang === 'ko' ? '목차' : 'Table of Contents';
+---
+
+{filteredHeadings.length > 0 && (
+  <nav class="toc">
+    <div class="toc-title">{title}</div>
+    <ul>
+      {filteredHeadings.map((heading) => (
+        <li class={heading.depth === 3 ? 'toc-h3' : ''}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

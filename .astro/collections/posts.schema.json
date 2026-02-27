@@ -13,29 +13,41 @@
         "pubDate": {
           "type": "string"
         },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "ko",
+            "en"
+          ]
+        },
         "category": {
           "type": "string",
           "enum": [
-            "culture",
-            "food",
-            "travel",
-            "lifestyle",
-            "language"
+            "system",
+            "strategy",
+            "daily",
+            "insight",
+            "tutorial"
           ]
         },
-        "shortId": {
-          "type": "string",
-          "minLength": 6,
-          "maxLength": 6
-        },
-        "keywords": {
+        "series": {
           "type": "string"
         },
-        "image": {
+        "seriesOrder": {
+          "type": "number"
+        },
+        "translationOf": {
           "type": "string"
         },
-        "imageAlt": {
-          "type": "string"
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "draft": {
+          "type": "boolean",
+          "default": false
         },
         "$schema": {
           "type": "string"
@@ -45,8 +57,9 @@
         "title",
         "description",
         "pubDate",
+        "lang",
         "category",
-        "shortId"
+        "tags"
       ],
       "additionalProperties": false
     }

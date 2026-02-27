@@ -1,0 +1,43 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getReadingTime } from '../utils/posts';
+
+interface Props {
+  seriesSlug: string;
+  posts: any[];
+  lang?: 'ko' | 'en';
+}
+
+const { seriesSlug, posts, lang = 'ko' } = Astro.props;
+
+const seriesTitle = seriesSlug
+  .split('-')
+  .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+  .join(' ');
+
+const countLabel = lang === 'ko' ? `${posts.length}개의 포스트` : `${posts.length} posts`;
+---
+
+<BaseLayout title={`${seriesTitle} | TradeLog.dev`} lang={lang}>
+  <div class="series-page">
+    <header style="margin-bottom: 40px;">
+      <h1 style={`font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;`}>{seriesTitle}</h1>
+      <p style={`color: var(--text-muted); font-family: var(--font-mono); font-size: 0.875rem;`}>{countLabel}</p>
+    </header>
+
+    <div class="cards-grid">
+      {posts.map((post) => (
+        <PostCard
+          slug={post.id}
+          title={post.data.title}
+          description={post.data.description}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          lang={post.data.lang}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

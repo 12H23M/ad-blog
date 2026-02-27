@@ -1,0 +1,34 @@
+---
+interface SeriesPost {
+  slug: string;
+  title: string;
+}
+
+interface Props {
+  prev?: SeriesPost | null;
+  next?: SeriesPost | null;
+  lang?: 'ko' | 'en';
+}
+
+const { prev, next, lang = 'ko' } = Astro.props;
+
+const prevLabel = lang === 'ko' ? '이전 글' : 'Previous';
+const nextLabel = lang === 'ko' ? '다음 글' : 'Next';
+---
+
+{(prev || next) && (
+  <nav class="series-nav">
+    {prev ? (
+      <a href={`/blog/${prev.slug}`} class="series-nav-item">
+        <span class="series-nav-label">&larr; {prevLabel}</span>
+        <span class="series-nav-title">{prev.title}</span>
+      </a>
+    ) : <div />}
+    {next ? (
+      <a href={`/blog/${next.slug}`} class="series-nav-item next">
+        <span class="series-nav-label">{nextLabel} &rarr;</span>
+        <span class="series-nav-title">{next.title}</span>
+      </a>
+    ) : <div />}
+  </nav>
+)}

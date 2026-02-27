@@ -2,127 +2,47 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title="About | Baksuls Blog"
-  description="Meet the person behind Baksuls — a Korean mom sharing authentic stories about food, travel, and history for anyone curious about Korea."
->
-  <article class="static-page about-page">
-    <h1>About Baksuls</h1>
+<BaseLayout title="소개 | TradeLog.dev" description="OWL — AI 코인 자동매매 시스템의 이야기">
+  <div class="about-page">
+    <h1>TradeLog.dev</h1>
+    <p class="subtitle">OWL — AI 코인 자동매매 시스템의 개발 일지</p>
 
-    <p class="intro">
-      Hi there. I'm a Korean mom in my forties living in Seoul, and this blog is my way of
-      sharing the Korea I know and love with the rest of the world.
+    <h2>우리는 누구인가</h2>
+    <p>
+      우리는 감정적인 트레이딩에 지친 개발자들입니다. 차트를 보며 밤새 고민하고, 패닉 셀링을 하고, FOMO에 빠져 매수하고 — 이런 패턴에서 벗어나고 싶었습니다.
+    </p>
+    <p>
+      그래서 OWL을 만들었습니다. 코드가 감정 대신 판단하고, 데이터가 직감을 대체하는 시스템. 24시간 쉬지 않고, 흔들리지 않는 트레이딩 봇.
     </p>
 
-    <section>
-      <h2>Who I Am</h2>
-      <p>
-        I've spent most of my life in Korea — raising a family, cooking way too much food
-        for every occasion, and dragging my kids to historical sites they pretend not to enjoy.
-        Travel, cooking, and history are the three things I never get tired of, and Korea
-        happens to be one of the best places on earth for all three.
-      </p>
-      <p>
-        I started Baksuls because I kept running into the same problem: friends visiting from
-        abroad would ask me where to eat, what to see, or how something in Korea works, and
-        I'd end up writing them small essays. Eventually I figured I should just put it all
-        in one place.
-      </p>
-    </section>
+    <h2>OWL이란</h2>
+    <p>
+      OWL은 AI 기반 코인 자동매매 시스템입니다. Python으로 개발되었고, OKX 거래소에서 선물 거래를 수행합니다.
+    </p>
+    <div class="tech-stack">
+      <div class="tech-item">Python</div>
+      <div class="tech-item">ccxt</div>
+      <div class="tech-item">OKX API</div>
+      <div class="tech-item">Supabase</div>
+      <div class="tech-item">Discord</div>
+      <div class="tech-item">Docker</div>
+    </div>
 
-    <section>
-      <h2>What You'll Find Here</h2>
-      <p>
-        This blog covers the Korea I actually experience — not the glossy tourist brochure
-        version, but the real stuff. The neighborhood restaurant with no English menu that
-        makes the best kimchi jjigae you'll ever taste. The Joseon-era fortress you can hike
-        to in twenty minutes from a subway station. The small cultural habits that confuse
-        newcomers and the context that makes them make sense.
-      </p>
-      <p>
-        I write about <strong>food</strong> because I genuinely believe Korean cuisine is one
-        of the most underrated in the world, and I want more people to know what to order
-        beyond bibimbap. I write about <strong>travel</strong> because Korea has far more to
-        offer than Seoul and Jeju, and some of my favorite spots are places most visitors
-        never hear about. And I write about <strong>culture</strong> and <strong>history</strong>
-        because understanding where Korea comes from makes everything you see here more
-        interesting.
-      </p>
-    </section>
+    <h2>이 블로그의 목적</h2>
+    <p>
+      TradeLog.dev는 OWL의 개발 과정과 실전 성과를 투명하게 공유하는 공간입니다.
+    </p>
+    <ul>
+      <li><strong>시스템 아키텍처</strong> — 스크리너, 전략 엔진, 리스크 매니저 등 핵심 모듈 설계</li>
+      <li><strong>전략 분석</strong> — 마틴게일 피보나치, 피보나치 스윙, 컨센서스 등 실전 전략</li>
+      <li><strong>일일 리포트</strong> — 매일의 트레이딩 성과와 시장 관찰</li>
+      <li><strong>인사이트</strong> — 알고 트레이딩에서 배운 교훈과 발견</li>
+      <li><strong>튜토리얼</strong> — 비슷한 시스템을 만들고 싶은 사람들을 위한 가이드</li>
+    </ul>
 
-    <section>
-      <h2>Why "Baksuls"</h2>
-      <p>
-        박술 (baksul) is a casual way of saying "knack" or "know-how" in Korean — the kind
-        of practical wisdom you pick up from experience, not textbooks. That's what I'm trying
-        to share here: the things you learn from actually living in and loving this country.
-        The "s" at the end is just to make it work in English.
-      </p>
-    </section>
-
-    <section>
-      <h2>Get in Touch</h2>
-      <p>
-        If you have questions about Korea, want to suggest a topic, or just want to say hi,
-        feel free to reach out through the <a href="/contact">contact page</a>.
-        I read every message and do my best to respond.
-      </p>
-    </section>
-  </article>
+    <h2>Why "OWL"?</h2>
+    <p>
+      부엉이는 밤에 가장 잘 봅니다. 크립토 시장도 잠들지 않습니다. OWL은 24/7 시장을 지켜보며, 어둠 속에서도 기회를 포착합니다.
+    </p>
+  </div>
 </BaseLayout>
-
-<style>
-  .static-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  .about-page h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1a202c;
-  }
-
-  .intro {
-    font-size: 1.15rem;
-    color: #4a5568;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-  }
-
-  .about-page section {
-    margin-bottom: 2.5rem;
-  }
-
-  .about-page h2 {
-    font-size: 1.25rem;
-    color: #2d3748;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 0.5rem;
-  }
-
-  .about-page p {
-    color: #4a5568;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .about-page p:last-child {
-    margin-bottom: 0;
-  }
-
-  .about-page strong {
-    color: #2d3748;
-  }
-
-  .about-page a {
-    color: #2b6cb0;
-    text-decoration: none;
-  }
-
-  .about-page a:hover {
-    text-decoration: underline;
-  }
-</style>

@@ -11,23 +11,26 @@ interface Props {
   ogType?: string;
   wide?: boolean;
   noindex?: boolean;
+  lang?: 'ko' | 'en';
 }
 
 const {
   title,
-  description = 'Discover Korea through authentic stories about culture, food, travel, and daily life.',
+  description = 'AI 코인 자동매매 시스템 OWL의 개발 일지와 트레이딩 인사이트',
   ogTitle,
   ogDescription,
   ogType = 'website',
   wide = false,
-  noindex = false
+  noindex = false,
+  lang = 'ko',
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const siteUrl = 'https://baksuls.com';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,7 +46,7 @@ const currentPath = Astro.url.pathname;
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -58,9 +61,8 @@ const currentPath = Astro.url.pathname;
     <meta property="og:title" content={ogTitle || title}>
     <meta property="og:description" content={ogDescription || description}>
     <meta property="og:type" content={ogType}>
-
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Baksuls Blog RSS" href="/rss.xml" />
+    <meta property="og:site_name" content="TradeLog.dev">
+    <meta property="og:url" content={siteUrl + currentPath}>
 
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-3610279445330236">
@@ -75,7 +77,7 @@ const currentPath = Astro.url.pathname;
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <Header currentPath={currentPath} />
+    <Header currentPath={currentPath} lang={lang} />
 
     {wide ? (
         <main>
@@ -87,6 +89,6 @@ const currentPath = Astro.url.pathname;
         </main>
     )}
 
-    <Footer />
+    <Footer lang={lang} />
 </body>
 </html>
