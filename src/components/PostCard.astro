@@ -1,5 +1,6 @@
 ---
 import CategoryBadge from './CategoryBadge.astro';
+import { categoryColors } from '../utils/posts';
 
 interface Props {
   slug: string;
@@ -10,9 +11,10 @@ interface Props {
   lang: 'ko' | 'en';
   tags?: string[];
   readingTime?: number;
+  body?: string;
 }
 
-const { slug, title, description, pubDate, category, lang, tags, readingTime } = Astro.props;
+const { slug, title, description, pubDate, category, lang, tags, readingTime, body } = Astro.props;
 
 function formatDate(dateStr: string, lang: string): string {
   const date = new Date(dateStr);
@@ -22,10 +24,19 @@ function formatDate(dateStr: string, lang: string): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
+// Calculate reading time from body if not provided
+let rt = readingTime;
+if (!rt && body) {
+  const words = body.split(/\s+/).length;
+  rt = Math.max(1, Math.ceil(words / 200));
+}
+
 const readingLabel = lang === 'ko' ? '분 소요' : 'min read';
+const catColor = categoryColors[category] || '#00D4FF';
 ---
 
-<a href={`/blog/${slug}`} class="post-card" data-lang={lang}>
+<a href={`/blog/${slug}`} class="post-card" data-lang={lang} style={`--card-cat-color: ${catColor}`}>
+  <div class="post-card-color-bar"></div>
   <div class="post-card-body">
     <div class="post-card-top">
       <CategoryBadge category={category} lang={lang} />
@@ -35,7 +46,7 @@ const readingLabel = lang === 'ko' ? '분 소요' : 'min read';
     <p class="post-card-desc">{description}</p>
     <div class="post-card-meta">
       <span>{formatDate(pubDate, lang)}</span>
-      {readingTime && <span>&middot; {readingTime}{readingLabel}</span>}
+      {rt && <span>&middot; {rt}{readingLabel}</span>}
     </div>
   </div>
 </a>

@@ -45,6 +45,16 @@ const { currentPath = '/', lang = 'ko' } = Astro.props;
       nav.classList.toggle('open');
       btn.textContent = nav.classList.contains('open') ? '\u2715' : '\u2630';
     });
+
+    // Scroll shadow on header
+    const header = document.querySelector('.site-header');
+    if (header) {
+      const onScroll = () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
   }
   document.addEventListener('astro:page-load', initHeader);
   document.addEventListener('DOMContentLoaded', initHeader);

@@ -24,6 +24,7 @@ const dailyPosts = await getPostsByCategory('daily');
           category={post.data.category}
           lang={post.data.lang}
           tags={post.data.tags}
+          body={post.body}
         />
       ))}
     </div>

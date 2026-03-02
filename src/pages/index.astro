@@ -17,6 +17,7 @@ const seriesList = await getSeriesList();
       AI 코인 자동매매 시스템 OWL의 개발 과정, 전략 분석, 그리고 실전 트레이딩 일지를 공유합니다.
     </p>
     <a href="/blog" class="hero-cta" data-i18n-ko="블로그 읽기 →" data-i18n-en="Read Blog →">블로그 읽기 &rarr;</a>
+    <div class="hero-fade"></div>
   </section>
 
   <!-- Latest Posts -->
@@ -37,6 +38,7 @@ const seriesList = await getSeriesList();
             category={post.data.category}
             lang={post.data.lang}
             tags={post.data.tags}
+            body={post.body}
           />
         ))}
       </div>

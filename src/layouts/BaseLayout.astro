@@ -90,5 +90,24 @@ const siteUrl = 'https://baksuls.com';
     )}
 
     <Footer lang={lang} />
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+      function initBackToTop() {
+        const backToTop = document.getElementById('back-to-top');
+        if (!backToTop) return;
+        const toggleBtn = () => {
+          backToTop.classList.toggle('visible', window.scrollY > 400);
+        };
+        window.addEventListener('scroll', toggleBtn, { passive: true });
+        toggleBtn();
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      document.addEventListener('astro:page-load', initBackToTop);
+      document.addEventListener('DOMContentLoaded', initBackToTop);
+    </script>
 </body>
 </html>
