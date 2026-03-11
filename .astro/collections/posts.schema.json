@@ -27,7 +27,8 @@
             "strategy",
             "daily",
             "insight",
-            "tutorial"
+            "tutorial",
+            "devlog"
           ]
         },
         "series": {

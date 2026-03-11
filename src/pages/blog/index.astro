@@ -5,11 +5,12 @@ import { getAllPosts } from '../../utils/posts';
 
 const allPosts = await getAllPosts();
 
-const categories = ['all', 'system', 'strategy', 'daily', 'insight', 'tutorial'];
+const categories = ['all', 'system', 'strategy', 'devlog', 'daily', 'insight', 'tutorial'];
 const categoryLabels: Record<string, string> = {
   all: '전체',
   system: '시스템',
   strategy: '전략',
+  devlog: '개발일지',
   daily: '일일 리포트',
   insight: '인사이트',
   tutorial: '튜토리얼',
@@ -71,9 +72,10 @@ const categoryLabels: Record<string, string> = {
     });
   }
 
-  document.addEventListener('astro:page-load', () => {
+  function initBlog() {
     const filterBar = document.getElementById('filter-bar');
-    if (!filterBar) return;
+    if (!filterBar || filterBar.dataset.initialized) return;
+    filterBar.dataset.initialized = 'true';
 
     filterBar.querySelectorAll('.filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -85,6 +87,7 @@ const categoryLabels: Record<string, string> = {
 
     applyFilters();
     window.addEventListener('lang-change', () => applyFilters());
-  });
-  document.addEventListener('DOMContentLoaded', () => applyFilters());
+  }
+  document.addEventListener('astro:page-load', initBlog);
+  document.addEventListener('DOMContentLoaded', initBlog);
 </script>

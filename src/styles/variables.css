@@ -30,6 +30,8 @@
   --cat-system-dim: var(--accent-blue-dim);
   --cat-strategy: var(--accent-green);
   --cat-strategy-dim: var(--accent-green-dim);
+  --cat-devlog: #FF9F43;
+  --cat-devlog-dim: rgba(255, 159, 67, 0.15);
   --cat-daily: var(--accent-yellow);
   --cat-daily-dim: var(--accent-yellow-dim);
   --cat-insight: var(--accent-red);

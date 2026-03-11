@@ -412,6 +412,7 @@ body::before {
 
 .cat-badge--system { background: var(--cat-system-dim); color: var(--cat-system); }
 .cat-badge--strategy { background: var(--cat-strategy-dim); color: var(--cat-strategy); }
+.cat-badge--devlog { background: var(--cat-devlog-dim); color: var(--cat-devlog); }
 .cat-badge--daily { background: var(--cat-daily-dim); color: var(--cat-daily); }
 .cat-badge--insight { background: var(--cat-insight-dim); color: var(--cat-insight); }
 .cat-badge--tutorial { background: var(--cat-tutorial-dim); color: var(--cat-tutorial); }

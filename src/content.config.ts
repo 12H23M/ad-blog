@@ -7,7 +7,7 @@ const posts = defineCollection({
     description: z.string(),
     pubDate: z.string(),
     lang: z.enum(['ko', 'en']),
-    category: z.enum(['system', 'strategy', 'daily', 'insight', 'tutorial']),
+    category: z.enum(['system', 'strategy', 'daily', 'insight', 'tutorial', 'devlog']),
     series: z.string().optional(),
     seriesOrder: z.number().optional(),
     translationOf: z.string().optional(),
