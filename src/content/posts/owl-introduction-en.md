@@ -1,6 +1,6 @@
 ---
-title: "OWL — I Built an AI-Powered Crypto Trading Bot"
-description: "Tired of emotional trading, I built an automated crypto trading system from scratch. Here's the tech stack, architecture, strategies, and why I started."
+title: "OWL — I Ditched My Emotions and Built a Trading Bot"
+description: "A developer who couldn't sleep because of crypto charts built an automated trading bot. 3 weeks later: 320 demo trades, live trading, and 20+ bots running 24/7."
 pubDate: "2026-02-28"
 lang: "en"
 category: "system"
@@ -11,133 +11,99 @@ tags: ["OWL", "auto-trading", "crypto", "trading-bot", "Python", "system-overvie
 draft: false
 ---
 
-# OWL — I Built an AI-Powered Crypto Trading Bot
+## 3 AM on the Toilet, Staring at Charts
 
-## Why I Built This
+It was 3 AM. My kid was asleep. My wife was asleep. I was sitting on the toilet, staring at the Binance app. My BTC long position was down -1.8%. "It'll bounce back," I told myself.
 
-Let me be honest: I lost money trading crypto manually.
+It didn't. I stopped out at -3%. That was the third stop-loss that week.
 
-I'd stare at charts and think "this is the bottom" — then it'd drop further. I'd feel confident enough to use leverage — then get liquidated. One night at 3 AM, I caught myself checking charts on my phone in the bathroom, unable to sleep because of an open position. That's when it hit me — this isn't investing. This is gambling.
+Walking back to bed, it hit me — **I wasn't trading. I was gambling.** FOMO-chasing pumps, fear-holding losers, overconfident after wins, revenge-trading after losses. Textbook emotional trading.
 
-The market wasn't the problem. **I was the problem.** The moment emotions enter the equation, judgment goes out the window. FOMO makes you chase pumps. Fear makes you hold losers. One win makes you overconfident. One loss makes you revenge trade.
+Then I remembered something. I'm a developer. **What if I built a bot that has zero emotions?**
 
-So I thought — what if I removed emotions entirely? What if I defined rules and built a system that trades strictly by those rules?
+That's how OWL started.
 
-That's how OWL was born.
+## Where Things Stand Now
+
+Let me spoil the ending:
+
+- 📊 **320 demo trades** completed. 47.2% win rate. Total PnL **+155%**
+- 💰 **23 live trades** with real money. PnL **+4.40%**
+- 🤖 **20+ bots** running simultaneously, 24/7
+- 🧠 AI analyzing market conditions and auto-adjusting strategies
+
+Not glamorous numbers. Win rate barely beats a coin flip. But **three weeks ago, this same person was checking charts on the toilet at 3 AM.** The journey from there to here — that's what this blog is about.
 
 ## What is OWL?
 
-**OWL (Overnight Watch & Logic)** is a 24/7 automated cryptocurrency trading bot. While I sleep, while I work, the system monitors markets, enters positions when conditions are met, and exits when targets are hit.
+**OWL (Overnight Watch & Logic)**. Like an owl watching through the night — it never sleeps.
 
-Like an owl watching through the night — it never sleeps.
+While I sleep, eat, work — the bot watches. Conditions met? It buys. Target hit? It sells. Emotions? None. FOMO? Doesn't know the word. Revenge trading? Can't execute what isn't in the code.
 
-Three core principles:
-1. **No emotions** — Every entry/exit follows predefined rules
-2. **Risk first** — No single trade can blow up the account
-3. **Full transparency** — Every trade is logged and analyzable
+Three principles:
+1. **Zero emotions** — Every entry/exit follows predefined rules only
+2. **Risk first** — No single trade risks everything
+3. **Log everything** — Every trade hits the database
 
-## Tech Stack
+## Tech Stack: All Free
 
-I started from zero. You don't need fancy infrastructure:
+"Automated trading" sounds expensive — servers, API costs, data feeds... Reality:
 
-- **Python 3.9** — Main language. Great for rapid prototyping
-- **ccxt** — Unified exchange API library
-- **OKX** — Primary exchange. Demo trading support was the deciding factor
-- **Supabase (PostgreSQL)** — Trade logging. Free tier is plenty
-- **Discord** — Real-time alerts on every entry/exit
-- **Mac mini** — 24/7 server. Zero cloud costs
+- **Python 3.9** — Main language. Prototype in 2 weeks
+- **ccxt** — Unified exchange API library. Works with OKX, Binance, all of them
+- **OKX** — Primary exchange. **Demo trading** was the killer feature (real market, fake money)
+- **Supabase** — Free PostgreSQL. Trade logging
+- **Discord** — Alerts. Every trade pings my phone
+- **Mac mini** — Runs 24/7 at home. Zero cloud costs
 
-<!-- diagram: tech-stack-overview -->
+Monthly operating cost? **Electricity.** That's it.
 
-Everything is free or already owned. Monthly operating cost is basically electricity.
+<!-- image: OWL tech stack diagram -->
 
-## Architecture
+## Architecture: 5 Moving Parts
 
-The system has five major components:
+**① Screener** — Filters 3-5 tradeable coins from hundreds
+**② Data Collector** — Fetches candles + computes 14 technical indicators in real time
+**③ Strategy Engine** — "Buy now, sell now, or wait?" (15 strategies analyzing simultaneously)
+**④ Risk Manager** — 1% per trade, 3% daily max loss, kill switch
+**⑤ Alerts & Storage** — Real-time Discord notifications, everything saved to Supabase
 
-### 1. Screener
-Scans the market to filter tradeable pairs. Currently focused on BTC/USDT and ETH/USDT. Large-cap coins have better liquidity and technical analysis works more reliably — learned that the hard way. (Meme coins like DOGE? Wave analysis is basically useless.)
+<!-- image: OWL architecture diagram -->
 
-### 2. Strategy Engine
-The brain. Each strategy is an independent class, managed by a `strategy_manager`. Every strategy has its own entry conditions, exit conditions, and risk parameters.
-
-Currently running 4 active strategies:
-
-**① Martingale Fibonacci (martingale_fib_v1)**
-- Enters at Fibonacci 38.2–61.8% retracement zones (golden zone)
-- RSI divergence for trend reversal confirmation
-- Martingale sizing on losses (up to 5 levels)
-- Resets to base size on wins
-
-**② Fibonacci Swing (fib_divergence_swing_v1)**
-- 4-hour timeframe swing trading
-- Fibonacci golden zone + RSI divergence
-- Both long and short entries
-
-**③④ Consensus (3of5, 4of5)**
-- 5 indicators (EMA, RSI, MACD, Bollinger Bands, Stochastic) must agree: 3 out of 5 (aggressive, ETH) or 4 out of 5 (conservative, BTC)
-
-<!-- diagram: architecture-overview -->
-
-### 3. Executor
-When a strategy signals "buy" or "sell," the executor places the actual order via ccxt → OKX API.
-
-### 4. Risk Manager
-This is the most important piece. No strategy survives without risk management.
-
-- **Per-trade risk:** 1% of total capital
-- **Daily max loss:** 3% (trading halts for the day if exceeded)
-- **Kill switch:** Emergency close all positions
-- **Leverage:** Max 3x (conservative)
-- **Exit system:** TP (take profit), SL (stop loss), trailing stop, breakeven stop, time-based exit
-
-### 5. Notifier & Storage
-Every entry/exit triggers a Discord alert. All trades are stored in Supabase for analysis.
-
-Example alert:
+Here's what the Discord alert looks like:
 ```
 [🟡 DEMO] 📈 LONG Entry
-BTC/USDT | martingale_fib_v1
+BTC/USDT | consensus_3of5
 Entry: $84,230.5 | Size: 0.015 BTC
-TP: $85,915.1 (+2.0%) | SL: $82,967.0 (-1.5%)
+TP: $86,717.4 (+3.0%) | SL: $82,546.0 (-2.0%)
 ```
 
-## Demo → Live Pipeline
+Honestly, I still get a little thrill when these come in. Watching something you built make autonomous decisions — it's a weird feeling.
 
-OKX's demo trading is incredibly useful. You trade with virtual funds against real market data, letting you validate strategies before risking real money.
+## There Were More Failures Than Wins
 
-Currently running $14,000 in demo across 4 strategies. Once enough data accumulates (minimum 100 trades, 1+ month), there's a formal promotion process to go live.
+This post might make things look smooth. Reality:
 
-## Lessons Learned So Far
+- First strategy (Bollinger + Stochastic) was **deprecated in two weeks**
+- 5-minute scalping was **structurally impossible** due to fee overhead
+- Martingale hit **BTC minimum order size limits** and got scrapped
+- OKX API **rate-limited me at 3 AM** — emergency fix session
+- The pure terror of discovering trades **weren't saving to the database**
 
-Two weeks of development taught me:
+No system is built without failures. This blog documents all of them. I believe **debugging logs are more valuable than profit screenshots**.
 
-1. **15-minute EMA crossovers = overtrading.** Way too many signals. You'll bleed from fees alone. Use 1-hour minimum.
-2. **Long-only in a downtrend = death.** You need to short. Bidirectional trading is essential.
-3. **Fibonacci golden zones actually work.** The 38.2–61.8% retracement zone is a legit bounce point more often than not.
-4. **Small altcoins don't respond to TA.** No wave structure. Only meaningful on large caps like BTC and ETH.
-5. **Risk management > strategy.** A 30% win-rate strategy with good risk management makes money. A 70% win-rate strategy with no risk management can blow up from one bad trade.
+## What's Coming
 
-## Backtest Results (Summary)
+This blog will cover:
+- 📊 Daily trade logs and performance (nothing hidden)
+- 🔧 Strategy development process (failures included)
+- 🐛 Bug fixes and debugging adventures
+- 💡 Lessons in "what NOT to do"
 
-| Strategy | Period | Return | Win Rate | MDD | Profit Factor |
-|----------|--------|--------|----------|-----|---------------|
-| martingale_fib_v1 | BTC 180d | +3.96% | 49.3% | 5.28% | 1.37 |
-| fib_swing_v1 | BTC 180d | +0.77% | 42.9% | 2.2% | 1.16 |
-| consensus_3of5 | ETH 90d | +9.17% | 52% | 3.07% | 1.50 |
+There's no perfect system. The process of building one — that's the content.
 
-Not flashy. That's reality. Monthly 100% returns are either scams or luck. A system that consistently grinds out small gains — that's what's real.
-
-## What's Next
-
-This blog will document everything about OWL:
-- Daily trade logs and performance
-- New strategy development process
-- Failures and bug fixes
-- Code snippets and technical deep-dives
-
-There's no perfect system. The process of building one is where the value lies. Follow along.
+Follow along.
 
 ---
 
-*Next post: OWL's First Strategy — How Martingale Fibonacci Works*
+*Next post: [The Screener — How to Pick 3 Coins Out of Hundreds](/blog/owl-screener-en)*

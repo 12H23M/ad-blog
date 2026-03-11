@@ -1494,3 +1494,185 @@ body::before {
     font-size: 0.75rem;
   }
 }
+
+/* ========================================
+   Live Stats (Homepage)
+   ======================================== */
+.live-stats {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width-wide);
+  margin: -20px auto 0;
+  padding: 0 40px;
+}
+
+.live-stats-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px 40px;
+  box-shadow: var(--shadow-card);
+}
+
+.live-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.live-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.live-stat-value.positive { color: var(--accent-green); }
+.live-stat-value.negative { color: var(--accent-red); }
+
+.live-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+}
+
+.live-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-subtle);
+  margin: 0 8px;
+}
+
+/* ========================================
+   Callout Boxes (Posts)
+   ======================================== */
+.post-content .callout {
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  margin: 24px 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.post-content .callout-warning {
+  background: rgba(255, 184, 0, 0.08);
+  border-left: 3px solid var(--accent-yellow);
+}
+
+.post-content .callout-tip {
+  background: rgba(0, 255, 136, 0.08);
+  border-left: 3px solid var(--accent-green);
+}
+
+.post-content .callout-danger {
+  background: rgba(255, 107, 107, 0.08);
+  border-left: 3px solid var(--accent-red);
+}
+
+/* ========================================
+   Static Pages (About, Contact, etc.)
+   ======================================== */
+.static-page {
+  position: relative;
+  z-index: 1;
+}
+
+.static-page h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.static-page .intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.static-page h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 36px 0 16px;
+  padding-left: 14px;
+  border-left: 3px solid var(--accent-blue);
+}
+
+.static-page p {
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+.static-page a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.static-page a:hover {
+  color: var(--accent-green);
+}
+
+.static-page ul {
+  margin: 16px 0;
+  padding-left: 28px;
+}
+
+.static-page li {
+  margin: 8px 0;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.static-page li::marker {
+  color: var(--accent-blue);
+}
+
+.static-page .last-updated {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  margin-bottom: 32px;
+}
+
+.contact-info {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+/* ========================================
+   Responsive: Live Stats
+   ======================================== */
+@media (max-width: 768px) {
+  .live-stats { padding: 0 16px; }
+  .live-stats-inner {
+    padding: 20px 16px;
+    gap: 0;
+  }
+  .live-stat-value { font-size: 1.25rem; }
+  .live-stat-divider { margin: 0 4px; }
+}
+
+@media (max-width: 480px) {
+  .live-stats-inner {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .live-stat { min-width: 40%; }
+  .live-stat-divider { display: none; }
+}
