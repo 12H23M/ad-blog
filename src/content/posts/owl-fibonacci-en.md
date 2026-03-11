@@ -139,4 +139,3 @@ This is one reason OWL focuses on BTC, ETH, and SOL. Only large-cap coins have e
 
 ---
 
-*Next post: [The Temptation and Reality of Martingale](/blog/owl-martingale-en)*

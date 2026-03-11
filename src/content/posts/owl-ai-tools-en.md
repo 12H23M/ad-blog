@@ -121,4 +121,3 @@ The human's role keeps shrinking. Whether that's exciting or terrifying — I'm 
 
 ---
 
-*Next post: [Why Risk Management Matters More Than Strategy](/blog/owl-risk-en)*

@@ -214,4 +214,3 @@ If you're building something similar, start with the screener. Don't skip it. I 
 
 ---
 
-*Next in the series: OWL's Strategy Engine — How entry and exit signals are generated.*

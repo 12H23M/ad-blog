@@ -64,7 +64,7 @@ let seriesPrev = null;
 let seriesNext = null;
 if (series && seriesOrder !== undefined) {
   const seriesPosts = publishedPosts
-    .filter(p => p.data.series === series)
+    .filter(p => p.data.series === series && p.data.lang === lang)
     .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
   const currentIdx = seriesPosts.findIndex(p => stripMd(p.id) === slug);
   if (currentIdx > 0) {
@@ -79,7 +79,7 @@ if (series && seriesOrder !== undefined) {
 
 // Related posts
 const relatedPosts = publishedPosts
-  .filter(p => stripMd(p.id) !== slug)
+  .filter(p => stripMd(p.id) !== slug && p.data.lang === lang)
   .sort((a, b) => {
     if (a.data.category === category && b.data.category !== category) return -1;
     if (b.data.category === category && a.data.category !== category) return 1;
