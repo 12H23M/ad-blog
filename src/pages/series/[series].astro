@@ -26,11 +26,11 @@ const seriesTitle = series!
 
 <BaseLayout title={`${seriesTitle} | TradeLog.dev`}>
   <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">{seriesTitle}</h1>
-  <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.875rem; margin-bottom: 32px;">
+  <p id="series-count" style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.875rem; margin-bottom: 32px;">
     {posts.length}개의 포스트
   </p>
 
-  <div class="cards-grid">
+  <div class="cards-grid" id="posts-grid">
     {posts.map((post) => (
       <PostCard
         slug={post.id.replace('.md', '')}
@@ -44,4 +44,22 @@ const seriesTitle = series!
       />
     ))}
   </div>
+  <script>
+    function filterByLang() {
+      const lang = localStorage.getItem('lang') || 'ko';
+      document.querySelectorAll('.post-card').forEach(card => {
+        (card as HTMLElement).style.display = (card as HTMLElement).dataset.lang === lang ? '' : 'none';
+      });
+      // Update post count
+      const visible = document.querySelectorAll('.post-card[style=""],.post-card:not([style])').length;
+      const countEl = document.getElementById('series-count');
+      if (countEl) countEl.textContent = `${visible}개의 포스트`;
+    }
+    function init() {
+      filterByLang();
+      window.addEventListener('lang-change', filterByLang);
+    }
+    document.addEventListener('astro:page-load', init);
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </BaseLayout>
