@@ -56,7 +56,7 @@ const seriesList = await getSeriesList();
       <div class="cards-grid">
         {latestPosts.map((post) => (
           <PostCard
-            slug={post.id}
+            slug={post.id.replace('.md', '')}
             title={post.data.title}
             description={post.data.description}
             pubDate={post.data.pubDate}

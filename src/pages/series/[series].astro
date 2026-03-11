@@ -33,7 +33,7 @@ const seriesTitle = series!
   <div class="cards-grid">
     {posts.map((post) => (
       <PostCard
-        slug={post.id}
+        slug={post.id.replace('.md', '')}
         title={post.data.title}
         description={post.data.description}
         pubDate={post.data.pubDate}

@@ -7,6 +7,10 @@ import CategoryBadge from '../components/CategoryBadge.astro';
 import { getCollection } from 'astro:content';
 import '../styles/global.css';
 
+function stripMd(id: string) {
+  return id.endsWith('.md') ? id.slice(0, -3) : id;
+}
+
 interface Props {
   frontmatter: {
     title: string;
@@ -50,7 +54,7 @@ const publishedPosts = allPosts.filter(p => !p.data.draft);
 
 // Translation link
 const translationPost = translationOf
-  ? publishedPosts.find(p => p.id === translationOf)
+  ? publishedPosts.find(p => stripMd(p.id) === translationOf)
   : null;
 
 const translationLabel = lang === 'ko' ? 'English version available' : '한국어 버전 보기';
@@ -62,20 +66,20 @@ if (series && seriesOrder !== undefined) {
   const seriesPosts = publishedPosts
     .filter(p => p.data.series === series)
     .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
-  const currentIdx = seriesPosts.findIndex(p => p.id === slug);
+  const currentIdx = seriesPosts.findIndex(p => stripMd(p.id) === slug);
   if (currentIdx > 0) {
     const prev = seriesPosts[currentIdx - 1];
-    seriesPrev = { slug: prev.id, title: prev.data.title };
+    seriesPrev = { slug: stripMd(prev.id), title: prev.data.title };
   }
   if (currentIdx >= 0 && currentIdx < seriesPosts.length - 1) {
     const next = seriesPosts[currentIdx + 1];
-    seriesNext = { slug: next.id, title: next.data.title };
+    seriesNext = { slug: stripMd(next.id), title: next.data.title };
   }
 }
 
 // Related posts
 const relatedPosts = publishedPosts
-  .filter(p => p.id !== slug)
+  .filter(p => stripMd(p.id) !== slug)
   .sort((a, b) => {
     if (a.data.category === category && b.data.category !== category) return -1;
     if (b.data.category === category && a.data.category !== category) return 1;
@@ -84,7 +88,7 @@ const relatedPosts = publishedPosts
   .slice(0, 3);
 
 // hreflang
-const hreflangUrl = translationPost ? `${siteUrl}/blog/${translationPost.id}` : null;
+const hreflangUrl = translationPost ? `${siteUrl}/blog/${stripMd(translationPost.id)}` : null;
 const hreflangLang = lang === 'ko' ? 'en' : 'ko';
 ---
 
@@ -171,7 +175,7 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
     <main class="main-content">
       <article class="post-article" itemscope itemtype="https://schema.org/Article">
         {translationPost && (
-          <a href={`/blog/${translationPost.id}`} class="post-translation-link">
+          <a href={`/blog/${stripMd(translationPost.id)}`} class="post-translation-link">
             {translationLabel}
           </a>
         )}
@@ -201,7 +205,7 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
             <h3>{lang === 'ko' ? '관련 포스트' : 'Related Posts'}</h3>
             <div class="related-posts-list">
               {relatedPosts.map((post) => (
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                <a href={`/blog/${stripMd(post.id)}`}>{post.data.title}</a>
               ))}
             </div>
           </aside>

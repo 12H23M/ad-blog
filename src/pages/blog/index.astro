@@ -34,7 +34,7 @@ const categoryLabels: Record<string, string> = {
       {allPosts.map((post) => (
         <div data-post-category={post.data.category} data-post-lang={post.data.lang}>
           <PostCard
-            slug={post.id}
+            slug={post.id.replace('.md', '')}
             title={post.data.title}
             description={post.data.description}
             pubDate={post.data.pubDate}
