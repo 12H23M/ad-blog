@@ -181,13 +181,13 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
         )}
 
         <header class="post-header">
+          <h1 class="post-title" itemprop="headline">{title}</h1>
           <div class="post-meta">
             <CategoryBadge category={category} lang={lang} />
             <span>{formatDate(pubDate, lang)}</span>
             <span>&middot;</span>
             <span>{readingLabel}</span>
           </div>
-          <h1 class="post-title" itemprop="headline">{title}</h1>
         </header>
 
         <TOC headings={headings} lang={lang} />
