@@ -1,0 +1,22 @@
+name: Notify Discord on Blog Comment
+
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_ADBLOG }}
+        run: |
+          COMMENT_BODY=$(echo '${{ github.event.comment.body }}' | head -c 200)
+          AUTHOR="${{ github.event.comment.user.login }}"
+          DISCUSSION_URL="${{ github.event.discussion.html_url }}"
+          DISCUSSION_TITLE="${{ github.event.discussion.title }}"
+          
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\": \"💬 **새 댓글** on *${DISCUSSION_TITLE}*\n👤 ${AUTHOR}\n> ${COMMENT_BODY}\n🔗 ${DISCUSSION_URL}\"}" \
+            "$DISCORD_WEBHOOK"
