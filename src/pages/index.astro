@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getAllPosts, getSeriesList } from '../utils/posts';
+import stats from '../data/stats.json';
 
 const posts = await getAllPosts();
 const latestPosts = posts.slice(0, 6);
@@ -24,22 +25,22 @@ const seriesList = await getSeriesList();
   <section class="live-stats">
     <div class="live-stats-inner">
       <div class="live-stat">
-        <span class="live-stat-value">343</span>
+        <span class="live-stat-value">{stats.totalTrades}</span>
         <span class="live-stat-label" data-i18n-ko="총 거래" data-i18n-en="Total Trades">총 거래</span>
       </div>
       <div class="live-stat-divider"></div>
       <div class="live-stat">
-        <span class="live-stat-value positive">+155%</span>
+        <span class="live-stat-value positive">{stats.demoPnlPct}</span>
         <span class="live-stat-label" data-i18n-ko="데모 PnL" data-i18n-en="Demo PnL">데모 PnL</span>
       </div>
       <div class="live-stat-divider"></div>
       <div class="live-stat">
-        <span class="live-stat-value">20+</span>
+        <span class="live-stat-value">{stats.activeBots}</span>
         <span class="live-stat-label" data-i18n-ko="활성 봇" data-i18n-en="Active Bots">활성 봇</span>
       </div>
       <div class="live-stat-divider"></div>
       <div class="live-stat">
-        <span class="live-stat-value">15</span>
+        <span class="live-stat-value">{stats.strategies}</span>
         <span class="live-stat-label" data-i18n-ko="전략" data-i18n-en="Strategies">전략</span>
       </div>
     </div>
