@@ -69,6 +69,9 @@ Its advantage: supports multiple AI models — GPT-4, Claude, open-source models
 
 Concrete AI contributions to OWL:
 
+![OWL Bot Management — 20+ bots each running their own strategy](/images/dashboard-bots.jpg)
+*Dashboard bot management screen. Brain bots and individual strategy bots assigned to BTC/ETH/SOL. This screen — and this blog — were built by Rina.*
+
 **Rina:**
 - Found `storage.py` table name bug (`trades` → `crypto_trades`)
 - Suggested wrong-strategy filter in `close_trade()`

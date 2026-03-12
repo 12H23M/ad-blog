@@ -58,8 +58,6 @@ Three principles:
 
 Monthly operating cost? **Electricity.** That's it.
 
-<!-- image: OWL tech stack diagram -->
-
 ## Architecture: 5 Moving Parts
 
 **① Screener** — Filters 3-5 tradeable coins from hundreds
@@ -68,7 +66,8 @@ Monthly operating cost? **Electricity.** That's it.
 **④ Risk Manager** — 1% per trade, 3% daily max loss, kill switch
 **⑤ Alerts & Storage** — Real-time Discord notifications, everything saved to Supabase
 
-<!-- image: OWL architecture diagram -->
+![OWL Dashboard — 20+ bots running simultaneously](/images/dashboard-overview.png)
+*The actual OWL dashboard. Real-time BTC/ETH/SOL prices, fund allocation, and profit chart at a glance.*
 
 Here's what the Discord alert looks like:
 ```

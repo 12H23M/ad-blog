@@ -182,6 +182,9 @@ Any coin with an open position is "protected" — it stays on the watchlist rega
 
 Simple rule, but it prevents a whole class of bugs. I learned this the hard way when an early version deactivated a coin mid-trade and the position just... sat there, unmanaged. No trailing stop updates, no breakeven checks. Just an orphaned position floating in the void. That was a fun debugging session.
 
+![OWL Watchlist — Real-time technical indicators for BTC, SOL, ETH](/images/dashboard-watchlist.png)
+*Watchlist after screening. RSI, MACD, BB position, EMA, and ATR update in real time.*
+
 ## What Actually Ranks at the Top
 
 After running this screener for weeks, I noticed a pattern that surprised me: **the top coins are almost always the blue chips.**
