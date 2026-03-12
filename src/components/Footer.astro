@@ -33,23 +33,23 @@ const l = labels[lang] || labels.ko;
     <div class="footer-top">
       <div class="footer-brand">
         <a href="/" class="footer-logo">TradeLog.dev</a>
-        <p class="footer-tagline">{l.description}</p>
+        <p class="footer-tagline" data-i18n-ko="AI 코인 자동매매 시스템 OWL의 개발 일지" data-i18n-en="Dev logs from OWL, an AI-powered crypto trading system">{l.description}</p>
       </div>
       <div class="footer-columns">
         <div class="footer-column">
-          <span class="footer-column-title">{l.nav}</span>
-          <a href="/">{l.home}</a>
-          <a href="/blog">{l.blog}</a>
-          <a href="/series">{l.series}</a>
-          <a href="/daily">{l.daily}</a>
-          <a href="/about">{l.about}</a>
+          <span class="footer-column-title" data-i18n-ko="네비게이션" data-i18n-en="Navigation">{l.nav}</span>
+          <a href="/" data-i18n-ko="홈" data-i18n-en="Home">{l.home}</a>
+          <a href="/blog" data-i18n-ko="블로그" data-i18n-en="Blog">{l.blog}</a>
+          <a href="/series" data-i18n-ko="시리즈" data-i18n-en="Series">{l.series}</a>
+          <a href="/daily" data-i18n-ko="일일 리포트" data-i18n-en="Daily Log">{l.daily}</a>
+          <a href="/about" data-i18n-ko="소개" data-i18n-en="About">{l.about}</a>
         </div>
         <div class="footer-column">
-          <span class="footer-column-title">{l.links}</span>
-          <a href="/about">{l.about}</a>
-          <a href="/contact">{lang === 'ko' ? '문의' : 'Contact'}</a>
-          <a href="/privacy">{lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy'}</a>
-          <a href="/disclaimer">{lang === 'ko' ? '면책조항' : 'Disclaimer'}</a>
+          <span class="footer-column-title" data-i18n-ko="링크" data-i18n-en="Links">{l.links}</span>
+          <a href="/about" data-i18n-ko="소개" data-i18n-en="About">{l.about}</a>
+          <a href="/contact" data-i18n-ko="문의" data-i18n-en="Contact">{lang === 'ko' ? '문의' : 'Contact'}</a>
+          <a href="/privacy" data-i18n-ko="개인정보처리방침" data-i18n-en="Privacy Policy">{lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy'}</a>
+          <a href="/disclaimer" data-i18n-ko="면책조항" data-i18n-en="Disclaimer">{lang === 'ko' ? '면책조항' : 'Disclaimer'}</a>
         </div>
       </div>
     </div>
@@ -60,9 +60,9 @@ const l = labels[lang] || labels.ko;
         <p class="footer-craft">Built with Python, caffeine, and mass sleep deprivation</p>
       </div>
       <div class="footer-links-bottom">
-        <a href="/privacy">{lang === 'ko' ? '개인정보처리방침' : 'Privacy'}</a>
-        <a href="/disclaimer">{lang === 'ko' ? '면책조항' : 'Disclaimer'}</a>
-        <a href="/contact">{lang === 'ko' ? '문의' : 'Contact'}</a>
+        <a href="/privacy" data-i18n-ko="개인정보처리방침" data-i18n-en="Privacy">Privacy</a>
+        <a href="/disclaimer" data-i18n-ko="면책조항" data-i18n-en="Disclaimer">Disclaimer</a>
+        <a href="/contact" data-i18n-ko="문의" data-i18n-en="Contact">Contact</a>
       </div>
     </div>
   </div>

@@ -94,6 +94,19 @@ const siteUrl = 'https://baksuls.com';
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</button>
 
     <script>
+      function applyI18n() {
+        const lang = localStorage.getItem('lang') || 'ko';
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-i18n-ko][data-i18n-en]').forEach(el => {
+          const text = lang === 'ko' ? el.getAttribute('data-i18n-ko') : el.getAttribute('data-i18n-en');
+          if (text) el.textContent = text;
+        });
+      }
+      applyI18n();
+      window.addEventListener('lang-change', applyI18n);
+    </script>
+
+    <script>
       function initBackToTop() {
         const backToTop = document.getElementById('back-to-top');
         if (!backToTop) return;

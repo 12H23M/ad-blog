@@ -10,19 +10,19 @@ const { currentPath = '/', lang = 'ko' } = Astro.props;
 
     <div class="header-right">
       <nav class="main-nav" id="main-nav">
-        <a href="/" class:list={[{ active: currentPath === '/' }]}>
+        <a href="/" class:list={[{ active: currentPath === '/' }]} data-i18n-ko="홈" data-i18n-en="Home">
           {lang === 'ko' ? '홈' : 'Home'}
         </a>
-        <a href="/blog" class:list={[{ active: currentPath.startsWith('/blog') }]}>
+        <a href="/blog" class:list={[{ active: currentPath.startsWith('/blog') }]} data-i18n-ko="블로그" data-i18n-en="Blog">
           {lang === 'ko' ? '블로그' : 'Blog'}
         </a>
-        <a href="/series" class:list={[{ active: currentPath.startsWith('/series') }]}>
+        <a href="/series" class:list={[{ active: currentPath.startsWith('/series') }]} data-i18n-ko="시리즈" data-i18n-en="Series">
           {lang === 'ko' ? '시리즈' : 'Series'}
         </a>
-        <a href="/daily" class:list={[{ active: currentPath.startsWith('/daily') }]}>
+        <a href="/daily" class:list={[{ active: currentPath.startsWith('/daily') }]} data-i18n-ko="일일 리포트" data-i18n-en="Daily Log">
           {lang === 'ko' ? '일일 리포트' : 'Daily Log'}
         </a>
-        <a href="/about" class:list={[{ active: currentPath.startsWith('/about') }]}>
+        <a href="/about" class:list={[{ active: currentPath.startsWith('/about') }]} data-i18n-ko="소개" data-i18n-en="About">
           {lang === 'ko' ? '소개' : 'About'}
         </a>
       </nav>
