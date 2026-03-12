@@ -79,12 +79,18 @@ Bot = capital management unit. Strategy ≠ Bot. This separation is key.
 | leverage | 1–3x |
 | mode | demo / live |
 
+![Bot monitoring page — 21 bots with real-time status](/images/owl-bots-page.jpg)
+*Bot monitoring dashboard. Total value $19,885, PnL +$385 (+2.0%), 3 open positions. Each bot's strategy, capital, PnL, and latest logs displayed in real-time.*
+
 Why separate bots from strategies:
 - Run the same strategy with different capital
 - Brain **swaps strategies** without touching capital
 - Demo/live bots share the same strategy code
 
 ### 3. crypto_strategies — Strategy Metadata (34 columns)
+
+![Strategy management page — 19 strategies detailed](/images/owl-strategies-page.jpg)
+*Strategy management page. Type, target coins, timeframe, win rate, profit factor, and total PnL at a glance. Green = profit, red = loss.*
 
 Strategy configs, parameters, and performance records.
 
