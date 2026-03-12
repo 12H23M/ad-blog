@@ -41,11 +41,11 @@ How is this different from regular ChatGPT?
 
 This entire blog site? Rina built it. I said "turn this into a crypto trading blog" and she reset the Astro project, applied the dark theme, set up i18n, wrote the first posts, and deployed — all in one go.
 
-## Claude Code: Heavy Lifting
+## Claude Code: The Agent That Actually Codes
 
 For tasks too long for Rina to handle directly — like "redesign the entire blog" — she delegates to **Claude Code**.
 
-Claude Code is a coding agent that runs in the terminal. Give it a prompt, and it reads files, writes code, tests, and commits autonomously.
+Claude Code is a coding agent that runs in the terminal. Give it a prompt, and it reads files, writes code, tests, and commits autonomously. Rina spawns Claude Code as a **sub-agent** — it works in the background while Rina handles other things.
 
 Actual workflow:
 ```
@@ -57,13 +57,38 @@ Rina writes a prompt file (/tmp/blog-rebuild.md)
 
 The dark theme, 9 components, entire page structure of this blog — all built this way. I say what I want, AI executes.
 
-It's not always smooth though. Claude Code has died from 10-minute timeouts (signal 15), and once failed because its OAuth token expired. When that happens, Rina finishes the work directly.
+It's not always smooth. Claude Code has died from 10-minute timeouts (signal 15), and once failed because its OAuth token expired. When that happens, Rina codes the rest herself.
 
-## OpenCode: Quick and Light
+**What Claude Code actually built:**
+- This entire blog (dark theme + 850+ lines of components + i18n setup)
+- OWL dashboard redesign (bot management, profit charts, trade history)
+- Strategy code refactoring (bot-strategy separation architecture)
+- 44 safety test cases
+- Bilingual posts (Korean + English simultaneously)
 
-OpenCode is a similar coding agent, but lighter. One-file edits, single bug fixes.
+What would have taken 3 months solo, Claude Code finished in 3 weeks. Not an exaggeration.
 
-Its advantage: supports multiple AI models — GPT-4, Claude, open-source models. You can switch models based on the task.
+## Cost: $200/Month, and It Needs to Come Down
+
+Let's talk money honestly.
+
+Current setup:
+- **Claude Pro Max** — $200/month. Includes unlimited Claude Code usage.
+- **OpenClaw** — The platform Rina runs on. Self-hosted, so free.
+
+$200/month isn't cheap. But hiring a developer costs $3,000-5,000/month, so getting this level of output from an AI assistant + coding agent is absurd value.
+
+**But I plan to reduce costs:**
+- Claude Pro Max $200 is for the initial building phase only
+- Once the system stabilizes, switching to cheaper plans
+- **OpenCode** will let me use GPT-4o, DeepSeek, and open-source models too
+- Matching models to task complexity:
+  - Simple edits → GPT-4o mini or open-source (nearly free)
+  - Complex coding → Claude Sonnet (mid-range)
+  - Architecture design → Claude Opus (premium)
+- Target: **under $50/month** with the same productivity
+
+The key insight: "Don't use the most expensive model for everything — use the right model for each task." You don't need a katana to cut vegetables.
 
 ## What AI Actually Did
 
