@@ -289,6 +289,16 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
       }
       document.addEventListener('astro:page-load', initPostPage);
       document.addEventListener('DOMContentLoaded', initPostPage);
+
+      // Wrap tables in scrollable container for mobile
+      document.querySelectorAll('.post-content table').forEach(table => {
+        if (!table.parentElement?.classList.contains('table-wrap')) {
+          const wrap = document.createElement('div');
+          wrap.className = 'table-wrap';
+          table.parentNode?.insertBefore(wrap, table);
+          wrap.appendChild(table);
+        }
+      });
     </script>
 </body>
 </html>

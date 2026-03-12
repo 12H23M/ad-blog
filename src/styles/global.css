@@ -646,12 +646,18 @@ body::before {
 }
 
 /* Table styling */
+.post-content .table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 28px 0;
+}
+
 .post-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 28px 0;
   font-size: 0.9rem;
   border: 1px solid var(--border-subtle);
+  min-width: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -680,6 +686,12 @@ body::before {
 
 .post-content tbody tr:last-child td {
   border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .post-content table { font-size: 0.8rem; }
+  .post-content th { padding: 8px 10px; font-size: 0.7rem; white-space: nowrap; }
+  .post-content td { padding: 8px 10px; }
 }
 
 .post-content tbody tr:hover {
