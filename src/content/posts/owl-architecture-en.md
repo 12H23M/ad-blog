@@ -87,6 +87,9 @@ Why separate bots from strategies:
 - Brain **swaps strategies** without touching capital
 - Demo/live bots share the same strategy code
 
+![Open positions detail — entry, current price, TP/SL, real-time PnL](/images/owl-bots-positions.png)
+*Position filter view. BTC long +$2.02 (+0.74%), ETH short +$0.36 (+0.13%), SOL long +$4.44 (+2.20%). Entry price, TP/SL lines, and break-even (🔒BE) status at a glance.*
+
 ### 3. crypto_strategies — Strategy Metadata (34 columns)
 
 ![Strategy management page — 19 strategies detailed](/images/owl-strategies-page.jpg)
