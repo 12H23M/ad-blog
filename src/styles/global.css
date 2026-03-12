@@ -949,6 +949,26 @@ body::before {
 }
 
 /* ========================================
+   Comments (Giscus)
+   ======================================== */
+.post-comments {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.post-comments h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 20px;
+}
+
+.giscus {
+  max-width: 100%;
+}
+
+/* ========================================
    Footer
    ======================================== */
 .site-footer {
