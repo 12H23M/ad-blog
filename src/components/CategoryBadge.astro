@@ -14,4 +14,6 @@ const labels: Record<string, Record<string, string>> = {
 const label = labels[lang]?.[category] ?? category;
 ---
 
-<span class={`cat-badge cat-badge--${category}`}>{label}</span>
+<span class={`cat-badge cat-badge--${category}`}
+  data-i18n-ko={labels['ko']?.[category] ?? category}
+  data-i18n-en={labels['en']?.[category] ?? category}>{label}</span>

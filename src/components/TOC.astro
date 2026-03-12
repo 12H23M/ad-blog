@@ -11,7 +11,7 @@ const title = lang === 'ko' ? '목차' : 'Table of Contents';
 
 {filteredHeadings.length > 0 && (
   <nav class="toc">
-    <div class="toc-title">{title}</div>
+    <div class="toc-title" data-i18n-ko="목차" data-i18n-en="Table of Contents">{title}</div>
     <ul>
       {filteredHeadings.map((heading) => (
         <li class={heading.depth === 3 ? 'toc-h3' : ''}>

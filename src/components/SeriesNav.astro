@@ -20,13 +20,13 @@ const nextLabel = lang === 'ko' ? '다음 글' : 'Next';
   <nav class="series-nav">
     {prev ? (
       <a href={`/blog/${prev.slug}`} class="series-nav-item">
-        <span class="series-nav-label">&larr; {prevLabel}</span>
+        <span class="series-nav-label" data-i18n-ko="← 이전 글" data-i18n-en="← Previous">&larr; {prevLabel}</span>
         <span class="series-nav-title">{prev.title}</span>
       </a>
     ) : <div />}
     {next ? (
       <a href={`/blog/${next.slug}`} class="series-nav-item next">
-        <span class="series-nav-label">{nextLabel} &rarr;</span>
+        <span class="series-nav-label" data-i18n-ko="다음 글 →" data-i18n-en="Next →">{nextLabel} &rarr;</span>
         <span class="series-nav-title">{next.title}</span>
       </a>
     ) : <div />}

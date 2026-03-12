@@ -15,6 +15,15 @@ const categoryLabels: Record<string, string> = {
   insight: '인사이트',
   tutorial: '튜토리얼',
 };
+const categoryLabelsEn: Record<string, string> = {
+  all: 'All',
+  system: 'System',
+  strategy: 'Strategy',
+  devlog: 'Dev Log',
+  daily: 'Daily Log',
+  insight: 'Insight',
+  tutorial: 'Tutorial',
+};
 ---
 
 <BaseLayout title="블로그 | TradeLog.dev" description="OWL 트레이딩 시스템의 개발, 전략, 인사이트를 공유합니다.">
@@ -26,7 +35,8 @@ const categoryLabels: Record<string, string> = {
 
   <div class="filter-bar" id="filter-bar">
     {categories.map((cat) => (
-      <button class={`filter-btn ${cat === 'all' ? 'active' : ''}`} data-category={cat}>
+      <button class={`filter-btn ${cat === 'all' ? 'active' : ''}`} data-category={cat}
+        data-i18n-ko={categoryLabels[cat]} data-i18n-en={categoryLabelsEn[cat]}>
         {categoryLabels[cat]}
       </button>
     ))}

@@ -173,9 +173,12 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
     <Header currentPath={currentPath} lang={lang} />
 
     <main class="main-content">
-      <article class="post-article" itemscope itemtype="https://schema.org/Article">
+      <article class="post-article" itemscope itemtype="https://schema.org/Article"
+        data-post-lang={lang}
+        data-translation-url={translationPost ? `/blog/${stripMd(translationPost.id)}` : ''}>
         {translationPost && (
-          <a href={`/blog/${stripMd(translationPost.id)}`} class="post-translation-link">
+          <a href={`/blog/${stripMd(translationPost.id)}`} class="post-translation-link"
+             data-i18n-ko="English version available" data-i18n-en="한국어 버전 보기">
             {translationLabel}
           </a>
         )}
@@ -186,7 +189,7 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
             <CategoryBadge category={category} lang={lang} />
             <span>{formatDate(pubDate, lang)}</span>
             <span>&middot;</span>
-            <span>{readingLabel}</span>
+            <span data-i18n-ko={`${readingTime}분 소요`} data-i18n-en={`${readingTime} min read`}>{readingLabel}</span>
           </div>
         </header>
 
@@ -202,7 +205,7 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
 
         {relatedPosts.length > 0 && (
           <aside class="related-posts">
-            <h3>{lang === 'ko' ? '관련 포스트' : 'Related Posts'}</h3>
+            <h3 data-i18n-ko="관련 포스트" data-i18n-en="Related Posts">{lang === 'ko' ? '관련 포스트' : 'Related Posts'}</h3>
             <div class="related-posts-list">
               {relatedPosts.map((post) => (
                 <a href={`/blog/${stripMd(post.id)}`}>{post.data.title}</a>
@@ -227,7 +230,19 @@ const hreflangLang = lang === 'ko' ? 'en' : 'ko';
         });
       }
       applyI18n();
-      window.addEventListener('lang-change', applyI18n);
+
+      // Auto-redirect to translation when language changes
+      window.addEventListener('lang-change', () => {
+        applyI18n();
+        const article = document.querySelector('[data-post-lang][data-translation-url]');
+        if (!article) return;
+        const postLang = article.getAttribute('data-post-lang');
+        const translationUrl = article.getAttribute('data-translation-url');
+        const selectedLang = localStorage.getItem('lang') || 'ko';
+        if (postLang !== selectedLang && translationUrl) {
+          window.location.href = translationUrl;
+        }
+      });
     </script>
 
     <script>
