@@ -15,7 +15,7 @@ const seriesList = await getSeriesList();
         <a href={`/series/${s.slug}`} class="series-card">
           <div class="series-card-title">{s.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</div>
           <div class="series-card-meta">
-            {s.count}개의 포스트 &middot; {Array.from(s.langs).join(', ')}
+            {Math.ceil(s.count / 2)}개의 포스트
           </div>
         </a>
       ))}

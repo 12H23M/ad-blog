@@ -45,21 +45,24 @@ const seriesTitle = series!
     ))}
   </div>
   <script>
-    function filterByLang() {
+    function filterSeriesByLang() {
       const lang = localStorage.getItem('lang') || 'ko';
-      document.querySelectorAll('.post-card').forEach(card => {
-        (card as HTMLElement).style.display = (card as HTMLElement).dataset.lang === lang ? '' : 'none';
+      let visible = 0;
+      document.querySelectorAll('#posts-grid .post-card').forEach(card => {
+        const el = card as HTMLElement;
+        if (el.dataset.lang === lang) {
+          el.style.display = '';
+          visible++;
+        } else {
+          el.style.display = 'none';
+        }
       });
-      // Update post count
-      const visible = document.querySelectorAll('.post-card[style=""],.post-card:not([style])').length;
       const countEl = document.getElementById('series-count');
       if (countEl) countEl.textContent = `${visible}개의 포스트`;
     }
-    function init() {
-      filterByLang();
-      window.addEventListener('lang-change', filterByLang);
-    }
-    document.addEventListener('astro:page-load', init);
-    document.addEventListener('DOMContentLoaded', init);
+    filterSeriesByLang();
+    window.addEventListener('lang-change', () => filterSeriesByLang());
+    document.addEventListener('DOMContentLoaded', () => filterSeriesByLang());
+    document.addEventListener('astro:page-load', () => filterSeriesByLang());
   </script>
 </BaseLayout>
