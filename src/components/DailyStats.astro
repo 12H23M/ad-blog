@@ -25,19 +25,19 @@ function getValueClass(val: string): string {
 
 <div class="daily-stats">
   <div class="stat-card">
-    <div class="stat-label">{l.pnl}</div>
+    <div class="stat-label" data-i18n-ko="손익 (PnL)" data-i18n-en="PnL">{l.pnl}</div>
     <div class={`stat-value ${getValueClass(pnl)}`}>{pnl}</div>
   </div>
   <div class="stat-card">
-    <div class="stat-label">{l.winRate}</div>
+    <div class="stat-label" data-i18n-ko="승률" data-i18n-en="Win Rate">{l.winRate}</div>
     <div class="stat-value neutral">{winRate}</div>
   </div>
   <div class="stat-card">
-    <div class="stat-label">{l.trades}</div>
+    <div class="stat-label" data-i18n-ko="거래 수" data-i18n-en="Trades">{l.trades}</div>
     <div class="stat-value neutral">{trades}</div>
   </div>
   <div class="stat-card">
-    <div class="stat-label">{l.balance}</div>
+    <div class="stat-label" data-i18n-ko="잔고" data-i18n-en="Balance">{l.balance}</div>
     <div class="stat-value neutral">{balance}</div>
   </div>
 </div>

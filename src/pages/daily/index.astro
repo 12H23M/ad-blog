@@ -6,14 +6,11 @@ import { getPostsByCategory } from '../../utils/posts';
 
 const dailyPosts = await getPostsByCategory('daily');
 
-// Extract stats from latest daily post frontmatter/description
-// Parse from post content: look for PnL, win rate, trades, balance in descriptions
 let pnl = '--';
 let winRate = '--';
 let trades = '--';
 let balance = '--';
 
-// Get ko daily posts sorted by date desc
 const koPosts = dailyPosts
   .filter(p => p.data.lang === 'ko')
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
@@ -21,28 +18,23 @@ const koPosts = dailyPosts
 if (koPosts.length > 0) {
   const latest = koPosts[0];
   const body = latest.body || '';
-  
-  // Parse cumulative PnL from table: 누적 PnL | **-$3.18**
   const pnlMatch = body.match(/누적 PnL[^|]*\|\s*\*\*([^*]+)\*\*/);
   if (pnlMatch) pnl = pnlMatch[1].trim();
-  
-  // Parse win rate from table: 승률 | 50%
   const wrMatch = body.match(/승률[^|]*\|\s*(\d+%)/);
   if (wrMatch) winRate = wrMatch[1];
-  
-  // Parse trade count: 누적 N거래
   const trMatch = body.match(/누적\s*(\d+)\s*거래/);
   if (trMatch) trades = trMatch[1];
-  
-  // Parse balance: 현재 잔고 | **$1,009**
   const balMatch = body.match(/현재 잔고[^|]*\|\s*\*\*([^*]+)\*\*/);
   if (balMatch) balance = balMatch[1].trim();
 }
 ---
 
 <BaseLayout title="일일 리포트 | TradeLog.dev" description="매일의 트레이딩 성과와 시장 분석을 기록합니다.">
-  <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">일일 리포트</h1>
-  <p style="color: var(--text-secondary); margin-bottom: 32px;">매일의 트레이딩 성과와 시장 분석을 기록합니다.</p>
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;"
+      data-i18n-ko="일일 리포트" data-i18n-en="Daily Log">일일 리포트</h1>
+  <p style="color: var(--text-secondary); margin-bottom: 32px;"
+     data-i18n-ko="매일의 트레이딩 성과와 시장 분석을 기록합니다."
+     data-i18n-en="Daily trading performance and market analysis.">매일의 트레이딩 성과와 시장 분석을 기록합니다.</p>
 
   <DailyStats pnl={pnl} winRate={winRate} trades={trades} balance={balance} lang="ko" />
 
@@ -63,7 +55,7 @@ if (koPosts.length > 0) {
     </div>
   ) : (
     <div class="empty-state">
-      <p>아직 리포트가 없습니다. 곧 매일의 트레이딩 기록이 올라옵니다.</p>
+      <p data-i18n-ko="아직 리포트가 없습니다." data-i18n-en="No reports yet.">아직 리포트가 없습니다.</p>
     </div>
   )}
   <script>
@@ -76,6 +68,5 @@ if (koPosts.length > 0) {
     }
     filterDailyByLang();
     window.addEventListener('lang-change', () => filterDailyByLang());
-    document.addEventListener('DOMContentLoaded', () => filterDailyByLang());
   </script>
 </BaseLayout>

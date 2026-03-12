@@ -85,7 +85,7 @@ const seriesList = await getSeriesList();
         {seriesList.map((s) => (
           <a href={`/series/${s.slug}`} class="series-card">
             <div class="series-card-title">{s.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</div>
-            <div class="series-card-meta">{Math.ceil(s.count / 2)}개의 포스트</div>
+            <div class="series-card-meta" data-i18n-ko={`${Math.ceil(s.count / 2)}개의 포스트`} data-i18n-en={`${Math.ceil(s.count / 2)} posts`}>{Math.ceil(s.count / 2)}개의 포스트</div>
           </a>
         ))}
       </div>
