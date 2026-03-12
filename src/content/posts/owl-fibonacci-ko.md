@@ -1,7 +1,7 @@
 ---
 title: "피보나치 골든존은 진짜 작동하는가"
 description: "피보나치 38.2~61.8% 되돌림, RSI 다이버전스와의 조합. 수학적 미신인가 실전 도구인가? 실제 백테스트 데이터로 검증한다."
-pubDate: "2026-03-13"
+pubDate: "2026-03-10"
 lang: "ko"
 category: "strategy"
 series: "building-owl"

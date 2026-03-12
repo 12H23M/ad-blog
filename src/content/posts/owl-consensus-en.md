@@ -1,7 +1,7 @@
 ---
 title: "The Consensus Strategy — Only Buy When 5 Indicators Agree"
 description: "To avoid single-indicator traps, I built a voting system where 5 indicators must reach consensus before entering a trade. Here's how democratic decision-making works in auto-trading."
-pubDate: "2026-03-12"
+pubDate: "2026-03-08"
 lang: "en"
 category: "strategy"
 series: "building-owl"

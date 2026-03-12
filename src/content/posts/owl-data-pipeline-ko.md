@@ -1,7 +1,7 @@
 ---
 title: "데이터 파이프라인 — 실시간 지표 14개를 자동 수집하는 법"
 description: "자동매매 봇이 판단을 내리려면 데이터가 필요하다. OKX에서 캔들을 가져오고, 14개 기술지표를 계산하고, Supabase에 저장하는 파이프라인을 만든 과정."
-pubDate: "2026-03-03"
+pubDate: "2026-03-04"
 lang: "ko"
 category: "system"
 series: "building-owl"

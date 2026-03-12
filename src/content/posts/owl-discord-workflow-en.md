@@ -1,7 +1,7 @@
 ---
 title: "Building a Crypto Bot Through Discord — Real-Time Development with AI"
 description: "No IDE. No terminal. Just Discord. How I build and operate an automated crypto trading system by chatting with my AI assistant Rina in real-time — from the subway, the couch, or bed."
-pubDate: "2026-03-12"
+pubDate: "2026-03-13"
 lang: "en"
 category: "devlog"
 series: "building-owl"

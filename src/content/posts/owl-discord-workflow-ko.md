@@ -1,7 +1,7 @@
 ---
 title: "디스코드에서 AI와 코인봇을 만드는 법 — 리나와의 실시간 개발기"
 description: "IDE 대신 디스코드. 코드 리뷰 대신 채팅. AI 비서 리나와 디스코드에서 실시간으로 대화하며 코인 자동매매 시스템을 만들고 운영하는 실제 워크플로우."
-pubDate: "2026-03-12"
+pubDate: "2026-03-13"
 lang: "ko"
 category: "devlog"
 series: "building-owl"

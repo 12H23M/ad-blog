@@ -1,7 +1,7 @@
 ---
 title: "첫 번째 전략 실패담 — 볼린저+스토캐스틱의 함정"
 description: "OWL의 첫 번째 전략은 볼린저밴드와 스토캐스틱 조합이었다. 백테스트에서는 괜찮아 보였지만 실전에서 처참하게 실패한 이유."
-pubDate: "2026-03-04"
+pubDate: "2026-03-06"
 lang: "ko"
 category: "insight"
 series: "building-owl"

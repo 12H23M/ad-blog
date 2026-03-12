@@ -1,7 +1,7 @@
 ---
 title: "Data Pipeline — Auto-Collecting 14 Technical Indicators in Real Time"
 description: "A trading bot needs data to make decisions. Here's how I built a pipeline that fetches candles from OKX, computes 14 technical indicators, and stores everything in Supabase."
-pubDate: "2026-03-03"
+pubDate: "2026-03-04"
 lang: "en"
 category: "system"
 series: "building-owl"

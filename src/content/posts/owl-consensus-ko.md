@@ -1,7 +1,7 @@
 ---
 title: "컨센서스 전략 — 5개 지표가 동의할 때만 산다"
 description: "단일 지표의 함정을 피하기 위해 5개 지표의 합의(컨센서스)로 진입하는 전략. 민주주의적 투표 시스템이 자동매매에 적용된 방법."
-pubDate: "2026-03-12"
+pubDate: "2026-03-08"
 lang: "ko"
 category: "strategy"
 series: "building-owl"

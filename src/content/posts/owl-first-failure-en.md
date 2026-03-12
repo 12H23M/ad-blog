@@ -1,7 +1,7 @@
 ---
 title: "My First Strategy Failure — The Bollinger + Stochastic Trap"
 description: "OWL's first strategy combined Bollinger Bands and Stochastic oscillator. It looked great in backtests but failed miserably in practice. Here's why."
-pubDate: "2026-03-04"
+pubDate: "2026-03-06"
 lang: "en"
 category: "insight"
 series: "building-owl"
