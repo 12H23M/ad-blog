@@ -5,19 +5,52 @@ import DailyStats from '../../components/DailyStats.astro';
 import { getPostsByCategory } from '../../utils/posts';
 
 const dailyPosts = await getPostsByCategory('daily');
+
+// Extract stats from latest daily post frontmatter/description
+// Parse from post content: look for PnL, win rate, trades, balance in descriptions
+let pnl = '--';
+let winRate = '--';
+let trades = '--';
+let balance = '--';
+
+// Get ko daily posts sorted by date desc
+const koPosts = dailyPosts
+  .filter(p => p.data.lang === 'ko')
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+if (koPosts.length > 0) {
+  const latest = koPosts[0];
+  const body = latest.body || '';
+  
+  // Parse cumulative PnL from table: 누적 PnL | **-$3.18**
+  const pnlMatch = body.match(/누적 PnL[^|]*\|\s*\*\*([^*]+)\*\*/);
+  if (pnlMatch) pnl = pnlMatch[1].trim();
+  
+  // Parse win rate from table: 승률 | 50%
+  const wrMatch = body.match(/승률[^|]*\|\s*(\d+%)/);
+  if (wrMatch) winRate = wrMatch[1];
+  
+  // Parse trade count: 누적 N거래
+  const trMatch = body.match(/누적\s*(\d+)\s*거래/);
+  if (trMatch) trades = trMatch[1];
+  
+  // Parse balance: 현재 잔고 | **$1,009**
+  const balMatch = body.match(/현재 잔고[^|]*\|\s*\*\*([^*]+)\*\*/);
+  if (balMatch) balance = balMatch[1].trim();
+}
 ---
 
 <BaseLayout title="일일 리포트 | TradeLog.dev" description="매일의 트레이딩 성과와 시장 분석을 기록합니다.">
   <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">일일 리포트</h1>
   <p style="color: var(--text-secondary); margin-bottom: 32px;">매일의 트레이딩 성과와 시장 분석을 기록합니다.</p>
 
-  <DailyStats lang="ko" />
+  <DailyStats pnl={pnl} winRate={winRate} trades={trades} balance={balance} lang="ko" />
 
   {dailyPosts.length > 0 ? (
-    <div class="cards-grid">
+    <div class="cards-grid" id="daily-grid">
       {dailyPosts.map((post) => (
         <PostCard
-          slug={post.id}
+          slug={post.id.replace('.md', '')}
           title={post.data.title}
           description={post.data.description}
           pubDate={post.data.pubDate}
@@ -33,4 +66,16 @@ const dailyPosts = await getPostsByCategory('daily');
       <p>아직 리포트가 없습니다. 곧 매일의 트레이딩 기록이 올라옵니다.</p>
     </div>
   )}
+  <script>
+    function filterDailyByLang() {
+      const lang = localStorage.getItem('lang') || 'ko';
+      document.querySelectorAll('#daily-grid .post-card').forEach(card => {
+        const el = card as HTMLElement;
+        el.style.display = el.dataset.lang === lang ? '' : 'none';
+      });
+    }
+    filterDailyByLang();
+    window.addEventListener('lang-change', () => filterDailyByLang());
+    document.addEventListener('DOMContentLoaded', () => filterDailyByLang());
+  </script>
 </BaseLayout>
