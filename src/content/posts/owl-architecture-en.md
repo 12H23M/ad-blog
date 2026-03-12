@@ -1,7 +1,7 @@
 ---
 title: "OWL Blueprint — From Database to AI, Inside an Automated Trading System"
 description: "7 Supabase tables, RAG vector search, regime detection, Brain auto-strategy switching. The complete architecture of a crypto trading system built in 3 weeks."
-pubDate: "2026-03-15"
+pubDate: "2026-03-13"
 lang: "en"
 category: "system"
 series: "building-owl"

@@ -1,7 +1,7 @@
 ---
 title: "OWL 전체 설계도 — DB부터 AI까지, 자동매매 시스템의 속살"
 description: "Supabase 7개 테이블, RAG 벡터 검색, 레짐 판단, Brain 자동 전략 교체까지. 3주 만에 만든 코인 자동매매 시스템의 전체 아키텍처를 공개한다."
-pubDate: "2026-03-15"
+pubDate: "2026-03-13"
 lang: "ko"
 category: "system"
 series: "building-owl"
