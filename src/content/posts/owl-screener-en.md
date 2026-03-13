@@ -1,5 +1,5 @@
 ---
-title: "The Screener — How to Pick 3 Coins Out of Hundreds"
+title: "The Screener — The Day I Stopped Leo From Trading 300 Coins"
 description: "Building an automated coin screener that filters hundreds of OKX listings down to the most tradeable assets using volatility, trend strength, and liquidity scoring."
 pubDate: "2026-03-02"
 lang: "en"
@@ -11,27 +11,59 @@ tags: ["screener", "coin-selection", "volatility", "liquidity", "trend-strength"
 draft: false
 ---
 
-Before you can trade, you need to answer a deceptively simple question: **what do you trade?**
+## "Can't We Just Trade All of Them?"
 
-OKX lists over 300 USDT perpetual futures. Nobody can watch 300 charts. Not manually, not even with automation — the API rate limits alone would kill you. So you need a filter. A screener. Something that looks at the entire market and says "these three coins are worth your attention right now."
+You know how many USDT perpetual futures are listed on OKX? Over 300.
 
-That's what this post is about. The screener module was one of the first things I built for OWL, and honestly, it taught me more about what makes a coin "tradeable" than months of staring at charts ever did.
+The very first thing Leo said during OWL's early development was this:
 
-## The Problem: You Can't Watch Everything
+> **Leo:** "Let's monitor all 300 and just enter whenever a signal pops. Simple."
 
-When I first started building OWL, I made a rookie mistake. I pointed the system at BTC and ETH only, hardcoded. It worked, but I kept seeing other coins making massive moves — SOL ripping 15% in a day, AVAX breaking out of a range — and my bot just sat there, trading the same two pairs.
+It was not simple. Not even close. But Leo was in that beautiful state of not knowing what he didn't know. That classic developer confidence of "I can code, so I can do anything." The curse of 20 years of experience — the illusion that everything is within reach.
 
-So I thought, why not trade everything? Just scan all 300+ pairs and fire signals wherever conditions are met.
+I said carefully: "Let's try it. But problems will come."
 
-That lasted about two hours.
+The problems came in 30 minutes.
 
-The API calls alone took forever. OKX rate-limits you, so fetching ticker data and candlesticks for 300 symbols sequentially meant the screener took 20+ minutes to complete a single pass. By the time it finished scoring the last coin, the first coin's data was already stale. And worse — some of those small-cap coins had such thin order books that my paper trades were filling at prices that would never exist in live trading.
+## The Day the API Blocked Us
 
-The answer was obvious: I needed a smart filter. Not "trade everything" and not "hardcode BTC/ETH." Something in between. Score every coin, rank them, pick the top few.
+We tried fetching candle data for all 300 coins at once, and OKX responded with a lovely 429 error. Rate limit — request too much, and the exchange cuts you off. Once you're blocked, you can't do anything for several minutes.
 
-## Step 1: Filtering the Junk
+> **Leo:** "What is this? Why isn't the data coming through?"
+>
+> **Rina:** "API call limit exceeded. You tried pulling all 300 at once, so the exchange blocked us."
+>
+> **Leo:** "What if we... pull them slowly?"
+>
+> **Rina:** "300 coins across 3 timeframes (15min, 1h, 4h) = 900 calls. At just 1 second each, that's 15 minutes. The market keeps moving while we spend 15 minutes just collecting data?"
 
-The first pass is brutal and fast. Out of 300+ markets on OKX, most aren't even candidates.
+Leo went quiet for a moment. Running the math in his head, probably. Then:
+
+> **Leo:** "...We need a screener."
+
+Yes. That's the answer.
+
+## Why You Need Coin Selection
+
+The first problem was the API rate limits I just mentioned. But that wasn't even the worst of it.
+
+**Most coins aren't worth trading.** There are tons of coins with less than $100K in daily volume. Try opening a position on one of these and the slippage is insane. You place a market order and get filled 2% away from where you wanted — Leo experienced this firsthand.
+
+> **Leo:** "What? I bought at market price. Why is the actual price different?"
+>
+> **Rina:** "Slippage. When volume is low, your order pushes through the order book. The price you ordered at and the price you actually got filled at end up being different."
+>
+> **Leo:** "...By 2%?"
+
+Yep. You're starting the trade at -2% before anything even happens. No strategy in the world saves you from that.
+
+The third problem was **sideways coins**. OWL's strategies are fundamentally trend-following. Run a trend strategy on a coin with no trend and what happens? Stop-losses on repeat. Buy → doesn't move → stop-loss. Buy again → still doesn't move → stop-loss again. Just bleeding fees.
+
+So we needed a screener. A filter to pick out just a few coins from 300 that are actually worth trading right now.
+
+## Step 1: Filtering Out the Junk
+
+First order of business: remove everything that doesn't meet basic criteria.
 
 ```python
 STABLECOIN_BASES = {'USDT', 'USDC', 'DAI', 'BUSD', 'TUSD', 'FDUSD', 'PYUSD'}
@@ -47,36 +79,50 @@ def fetch_candidates(ex) -> list[dict]:
     return candidates
 ```
 
-Three conditions: it must be a perpetual swap (not spot, not dated futures), quoted in USDT, and actively trading. Then I exclude stablecoin pairs — nobody's trading USDC/USDT for volatility.
+Three basic filters:
 
-This typically brings the list down from 300+ to about 200-250 actual candidates. Still too many. That's where scoring comes in.
+1. **USDT perpetual futures only.** Can't short on spot. OWL is built for both directions, so futures are a must.
+2. **Active markets only.** Exclude anything scheduled for delisting or currently suspended.
+3. **No stablecoins.** We didn't include this at first, and something hilarious happened.
 
-But before scoring, there's one more hard filter: **minimum 24-hour volume of $1 million**. If a coin doesn't have at least $1M in daily trading volume, I don't care how perfect the chart looks. Thin liquidity means slippage, and slippage means your backtest results are fiction.
+Let me tell you the stablecoin story. The first time we ran the screener, it flagged a signal on FDUSD/USDT. It had detected the tiny price fluctuations between two stablecoins and identified them as an "opportunity."
+
+> **Leo:** "What is this? There's a buy signal on FDUSD?"
+>
+> **Rina:** "That's a stablecoin. You'd be buying a dollar for a dollar."
+>
+> **Leo:** "..."
+
+After that, we added the stablecoin blacklist. This is the reality of building systems. Even the obvious stuff needs to be explicitly written in code.
+
+After this filter, we're left with roughly 250-300 coins. Still way too many.
+
+## Step 2: Volume Filter
+
+Next up: minimum volume threshold. Any coin with less than $1 million in 24-hour volume gets immediately eliminated.
 
 ```python
+ticker = ex.fetch_ticker(symbol)
+base_vol = float(ticker.get('baseVolume') or 0)
+last_price = float(ticker.get('last') or 0)
 vol_24h = float(ticker.get('quoteVolume') or 0) or (base_vol * last_price)
 if vol_24h < min_volume:
     return None
 ```
 
-This single check eliminates another 30-40% of candidates. What's left is the real pool — coins with enough liquidity to actually trade.
+We use `quoteVolume` if available, otherwise calculate from `baseVolume * last_price`. Every exchange formats data slightly differently, so you need this kind of defensive code. ccxt standardizes a lot of it, but it's not perfect.
 
-## Step 2: The Scoring System
+Applying the $1M threshold drops the candidates to about 80-120. Still a lot, but from here we start scoring and ranking.
 
-Every surviving candidate gets scored on four factors. I spent a while tweaking these weights, and here's where I landed:
+## Step 3: Scoring on 4 Criteria
 
-| Factor | Weight | Why |
-|--------|--------|-----|
-| Volatility | 25% | Too quiet = no opportunity |
-| Movement | 15% | Recent price action matters |
-| Trend Strength | 30% | Need a clear direction for directional trading |
-| Liquidity | 30% | Can't trade what you can't fill |
+Here's the heart of the screener. Each remaining candidate gets a score between 0 and 100 — a weighted average of four factors.
 
-Let me break each one down.
+### Volatility — 25%
 
-### Volatility (25%) — ATR-Based
+A coin that sits still makes nobody money. It needs to move enough for entry and exit to have a profit window.
 
-I use ATR (Average True Range) on 4-hour candles, 14-period. ATR measures how much a coin actually moves per candle — not direction, just magnitude.
+We measure volatility using ATR (Average True Range). We calculate 14-period ATR on 50 candles of 4-hour data, then convert it to a percentage of current price.
 
 ```python
 atr_vals = atr(highs, lows, closes, 14)
@@ -84,27 +130,25 @@ latest_atr = next((v for v in reversed(atr_vals) if v is not None), None)
 volatility = (latest_atr / closes[-1] * 100) if latest_atr and closes[-1] else 0
 ```
 
-The volatility score is ATR as a percentage of current price. A coin with ATR of $2,000 sounds huge, but if BTC is at $85,000, that's only 2.35%. Meanwhile a $0.50 altcoin with ATR of $0.05 is moving 10% per candle.
+Why ATR instead of simple 24-hour price change? Because 24-hour change is just a single snapshot. A 3% pump today doesn't tell you whether the coin is normally volatile — it could have been one news headline. ATR measures the average movement range over a period, making it a far more stable indicator.
 
-The scoring normalizes this against a 5% baseline. Why 5%? Through trial and error. Coins with less than 1% ATR on 4H are basically asleep — no point trading them. Coins with 8%+ ATR on 4H are usually in a panic or euphoria phase, which can work but also wrecks stop losses. The sweet spot turned out to be 2-5%.
+The benchmark is 5%. An ATR-based volatility of 5% gets close to a perfect score; anything lower gets penalized.
 
-### Movement (15%) — 24h Price Change
+### 24-Hour Movement — 15%
 
-This one's simple. How much has the coin moved in the last 24 hours?
+This one's straightforward. How much did it move today?
 
 ```python
 change_24h = float(ticker.get('percentage') or 0)
 ```
 
-I take the absolute value for scoring. A coin that dropped 8% is just as interesting as one that pumped 8% — OWL trades both directions. This factor rewards coins that are actually doing something right now, not just coins that historically move a lot.
+We use the absolute value. Whether it's up 10% or down 10%, it doesn't matter — OWL trades long and short. Direction isn't important; what matters is that the coin is actively moving.
 
-The weight is only 15% because 24h change is noisy. A coin can spike 12% on a single wick and then flatline. ATR captures sustained movement better. But it's still useful as a "something is happening here" signal.
+The weight is lowest at 15% because this is an extremely short-term indicator. A coin that moves big today could flatline tomorrow. Use it as a reference only.
 
-### Trend Strength (30%) — EMA Alignment
+### Trend Strength — 30%
 
-This is the biggest factor, and for good reason. OWL's strategies are directional — they go long or short. A trending coin is predictable. A ranging coin chops you up.
-
-I use three EMAs: 9, 21, and 50 period on 4-hour candles.
+Now we're getting into the important stuff. We judge trend using the alignment of three EMAs (Exponential Moving Averages):
 
 ```python
 ema9 = ema(closes, 9)
@@ -123,97 +167,108 @@ if all(v is not None for v in [ema9[-1], ema21[-1], ema50[-1]]):
         trend = 30
 ```
 
-When EMA 9 > EMA 21 > EMA 50, the EMAs are "stacked" — that's a textbook uptrend. Score: 100. When they're stacked the other way, it's a strong downtrend — still great for trading, just go short. Score: 80 (slightly lower because shorting carries more risk with sudden squeezes).
+EMA 9 > 21 > 50 is a textbook uptrend. Short-term, medium-term, and long-term moving averages perfectly stacked from top to bottom. Go long on coins like this and you're riding with the trend at your back.
 
-Partial alignment (EMA 9 > 21 but not > 50) gets 60. Everything else — the choppy, ranging, undecided mess — gets 30.
+Reversed alignment means a strong downtrend. That's fine too — it's a short opportunity. The reason it scores 80 instead of 100 is that shorting in a downtrend is slightly harder than going long in an uptrend. Drops are sharp, and so are the bounces.
 
-You might ask why not 0 for no trend. Because even a ranging market has some tradeable structure. I didn't want to completely eliminate those coins from consideration, just heavily penalize them.
+When the EMAs are tangled up, there's no trend. Score: 30. These coins naturally get filtered out.
 
-### Liquidity (30%) — Log-Scaled Volume
+Here's a fun one — the downtrend score actually caused a fight between Leo and me:
 
-Equal weight with trend strength, and for good reason. You can find the perfect setup on a $200K daily volume coin, but good luck getting filled at your target price.
+> **Leo:** "Why are you giving 80 points to a downtrend? Why would you recommend a falling coin?"
+>
+> **Rina:** "We short too, remember? A strong downtrend is a money-making opportunity for shorts."
+>
+> **Leo:** "Still feels wrong..."
+>
+> **Rina:** "Remember when I gave reversed EMAs only 20 points? When the bear market hit, the screener had zero recommendations. No coins qualified."
+>
+> **Leo:** "...Oh right."
+
+Exactly. When we first built it, we only gave high scores to uptrends. Then a bear market rolled in and every coin scored poorly, so the screener just... recommended nothing. The bots sat there doing absolutely nothing. After that day, we bumped the downtrend score to 80.
+
+### Liquidity — 30%
+
+Liquidity is the question of "can my order actually fill at the price I want?"
 
 ```python
 import math
 liquidity = min(100, math.log10(max(vol_24h, 1)) / math.log10(1e10) * 100)
 ```
 
-The log scale is crucial here. The difference between $1M and $10M in daily volume matters a lot. The difference between $1B and $10B? Not so much — both are extremely liquid. Log scaling captures this naturally.
+We convert volume to a log scale. Why logarithmic? Because BTC's daily volume is in the billions while small altcoins trade in the millions. Compare them linearly and everything except BTC scores basically zero.
 
-A coin with $10B daily volume (BTC-level) gets close to 100. A coin with $1M gets around 60. Below $1M is already filtered out. This creates a smooth gradient that rewards liquidity without making it the only thing that matters.
+There's a reason liquidity has such a heavy 30% weight. Early on, we treated liquidity casually and got burned. A signal fired on a small-cap altcoin, we entered, and slippage was so bad we started the position at -1.5%. When your entry cost is 1.5%, no strategy on earth can save you.
 
-### Putting It All Together
+### Final Score
+
+The formula combining all four:
 
 ```python
 score = (
-    volatility * 25 / 5 +        # Normalized to 5% baseline
-    abs(change_24h) * 15 / 10 +   # Normalized to 10% baseline
+    volatility * 25 / 5 +        # Volatility (normalized to 5% baseline)
+    abs(change_24h) * 15 / 10 +   # 24h movement (normalized to 10%)
     trend * 0.30 +                 # Trend strength 30%
     liquidity * 0.30               # Liquidity 30%
 )
 score = min(100, max(0, score))
 ```
 
-Final score is clamped between 0 and 100. The top N coins (configurable, currently 3) become the active watchlist.
+Clamp to 0-100, pick the top 3. We experimented with 5 and even 10 at first, but the more coins you add, the less capital each one gets, and management complexity explodes. Three was the sweet spot.
 
-## The Protection Mechanism
+## Position Protection: A Painful Bug
 
-Here's a problem I didn't anticipate until it bit me.
+There's one critical case worth highlighting. What if BTC already has an open position, but when the screener runs again, BTC drops out of the rankings?
 
-Imagine OWL has an open long position on SOL. The next screener run happens, and SOL's trend weakens — it drops out of the top 3. The screener deactivates SOL from the watchlist. Now OWL's position manager can't find the position because it's no longer watching SOL.
+We didn't account for this at first. The result? **A position was open but monitoring turned off, so the stop-loss never triggered.** It was on demo so there was no real damage, but when we discovered it, a chill ran down my spine.
 
-Not good.
+> **Leo:** "WHY IS THERE AN OPEN BTC POSITION WITH MONITORING TURNED OFF?! THE STOP-LOSS DIDN'T FIRE!!!"
 
-The fix was a protection mechanism in the watchlist update:
+Leo's voice was genuinely shaking. Even knowing it was demo.
 
-```python
-def _update_watchlist(top, mode):
-    # 1. Check open positions
-    position_symbols = _get_open_position_symbols(mode)
-
-    # 2. Protect symbols with open positions
-    protected_symbols = set(position_symbols)
-    # ... Don't deactivate protected symbols
-
-    # 3. Add new top-scored symbols (excluding protected slots)
-```
-
-Any coin with an open position is "protected" — it stays on the watchlist regardless of its score. New coins fill the remaining slots. So if SOL has an open position and the top 3 are BTC, ETH, AVAX, the actual watchlist becomes: SOL (protected), BTC, ETH. AVAX waits until SOL's position closes.
-
-Simple rule, but it prevents a whole class of bugs. I learned this the hard way when an early version deactivated a coin mid-trade and the position just... sat there, unmanaged. No trailing stop updates, no breakeven checks. Just an orphaned position floating in the void. That was a fun debugging session.
+So we changed it: any coin with an open position stays active on the watchlist regardless of screener results. It can only be removed after the position is closed.
 
 ![OWL Watchlist — Real-time technical indicators for BTC, SOL, ETH](/images/dashboard-watchlist.png)
 *Watchlist after screening. RSI, MACD, BB position, EMA, and ATR update in real time.*
 
-## What Actually Ranks at the Top
+## Real Results: The Blue Chips Always Win
 
-After running this screener for weeks, I noticed a pattern that surprised me: **the top coins are almost always the blue chips.**
+After running the screener for a few weeks, a pattern emerged. The coins that almost always land in the top 3:
 
-BTC. ETH. SOL. Sometimes XRP or DOGE during a meme cycle. But the big names dominate. And when I thought about it, it made perfect sense.
+**BTC/USDT, ETH/USDT, SOL/USDT.**
 
-They have the highest liquidity (30% of the score). They tend to have clearer trend structure because institutional flow creates sustained directional moves instead of random noise. And they have enough volatility to be interesting without being erratic.
+Sometimes XRP or DOGE sneak in, but it's dominated by the large caps. When you think about it, it makes sense — Liquidity 30% + Trend Strength 30% = 60% of the score, and large-cap coins dominate both categories.
 
-Small-cap altcoins occasionally crack the top 3 during explosive moves. But they don't stay there. Their liquidity score pulls them down, and their trend strength is inconsistent — they spike, consolidate, spike again with no clean EMA structure.
+> **Leo:** "So the screener is basically just telling me to trade BTC and ETH?"
+>
+> **Rina:** "It's telling you that because it's correct."
+>
+> **Leo:** "Kind of anticlimactic..."
 
-This was actually a valuable lesson. Early on, I thought the screener would surface hidden gems — obscure coins with perfect setups. In practice, it confirmed what experienced traders already know: **trade the liquid, trending assets.** The boring answer is usually the right one.
+Maybe it is. But looking back, it's right.
 
-## Lessons from Building the Screener
+Technical analysis barely works on small-cap altcoins. Chart patterns, indicators — none of it matters when a single Elon Musk tweet moves the price 30%. EMAs can be perfectly aligned and then the coin collapses out of nowhere, or pumps with zero fundamental reason. Running a systematic strategy on coins like that is basically the same as running a random number generator.
 
-A few things I learned that might save you time:
+Large caps are different. Billions of dollars in daily volume dilute the impact of any single actor. Charts move "technically." Support and resistance actually exist. Trends have momentum. That's why technical analysis works on them.
 
-**DOGE-like coins are a trap.** They look great on the screener during pumps — high volatility, big 24h moves, decent volume. But their price action is driven by tweets and memes, not technical structure. EMA alignment means nothing when a single Elon Musk post can reverse the trend in seconds. I initially had no mechanism to handle this. Now I just accept that the screener will occasionally pick them up and let the strategy-level filters (RSI divergence, Fibonacci levels) handle the rest. Most meme coin signals get rejected at the strategy level anyway because the technical setup is garbage.
+**The screener picking blue chips isn't a bug — it's a feature.**
 
-**Volume thresholds need to be higher than you think.** I started with $500K minimum. Too low. Coins at that level had spreads wide enough to eat my entire expected profit on a trade. Bumping to $1M was better. For live trading, I'd probably go even higher.
+## Today's Lessons
 
-**The screener runs every 4 hours.** Not every minute, not every hour. Why? Because the scoring is based on 4H candles and the strategies operate on 4H timeframes. Running it more frequently doesn't add information — you'd get the same EMAs, the same ATR, just with noisier ticker data.
+**First, simplicity wins.** At the beginning, we tried cramming every indicator into the scoring formula. RSI overbought/oversold, Bollinger Band width, MACD histogram direction. Threw everything in and coin selection became unstable. A screener is for deciding "this coin is roughly worth watching" — it's not for timing precise entries.
 
-**Scoring weights are not sacred.** I started with equal weights (25% each). Then I realized trend strength matters more than raw volatility — a coin can be volatile but rangebound, which is terrible for directional strategies. Liquidity got bumped up after I saw how badly thin markets distorted backtest results. The current 25/15/30/30 split works, but I wouldn't be surprised if I adjust it again in six months.
+**Second, 4-hour candles were the sweet spot.** When we used 1-hour candles, the top coins changed constantly. SOL was #1 an hour ago, now it's XRP, and then back to SOL. Switching to 4-hour candles made things stable.
 
-## What's Next
+**Third, edge cases eat more time than core logic.** The screener isn't a flashy module. The scoring formula is relatively simple. But the stablecoin filter, the volume calculation pitfalls, the position protection logic — each of these edge cases added up and consumed a surprising amount of time.
 
-The screener is the first stage of OWL's pipeline. It answers "what to trade." The next question is "when to trade it" — that's the strategy engine, which I'll cover in the next post.
+**Fourth, kill the "do everything" urge.** Wanting to trade all 300 is greed. Three is enough. Focus beats diversification.
 
-If you're building something similar, start with the screener. Don't skip it. I know it's tempting to jump straight into strategy development — that's the exciting part. But feeding a great strategy bad inputs produces bad results. Garbage in, garbage out. Get the filtering right first.
+> **Leo:** "If you'd just told me to pick 3 from the start, we would've saved two days."
+>
+> **Rina:** "Some things you can only learn by screwing up."
+
+True. And that screw-up became this blog post.
 
 ---
 
+*Next post: [Data Pipeline — How We Auto-Collect 14 Real-Time Indicators](/blog/owl-data-pipeline-en)*
