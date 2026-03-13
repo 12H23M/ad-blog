@@ -20,7 +20,7 @@ if (koPosts.length > 0) {
   const body = latest.body || '';
   const pnlMatch = body.match(/누적 PnL[^|]*\|\s*\*\*([^*]+)\*\*/);
   if (pnlMatch) pnl = pnlMatch[1].trim();
-  const wrMatch = body.match(/승률[^|]*\|\s*\**(\d+%)\**/);
+  const wrMatch = body.match(/승률[^|]*\|\s*\**([\d.]+%)\**/);
   if (wrMatch) winRate = wrMatch[1];
   const trMatch = body.match(/누적\s*(\d+)\s*거래/);
   if (trMatch) trades = trMatch[1];
