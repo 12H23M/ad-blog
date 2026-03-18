@@ -23,15 +23,38 @@ const seriesList = await getSeriesList();
 
   <!-- Live Stats -->
   <section class="live-stats">
+    <div class="live-stats-label" data-i18n-ko="🔴 LIVE" data-i18n-en="🔴 LIVE">🔴 LIVE</div>
     <div class="live-stats-inner">
       <div class="live-stat">
-        <span class="live-stat-value">{stats.totalTrades}</span>
-        <span class="live-stat-label" data-i18n-ko="총 거래" data-i18n-en="Total Trades">총 거래</span>
+        <span class="live-stat-value">{stats.liveTrades}</span>
+        <span class="live-stat-label" data-i18n-ko="거래" data-i18n-en="Trades">거래</span>
       </div>
       <div class="live-stat-divider"></div>
       <div class="live-stat">
-        <span class="live-stat-value positive">{stats.demoPnlPct}</span>
-        <span class="live-stat-label" data-i18n-ko="데모 PnL" data-i18n-en="Demo PnL">데모 PnL</span>
+        <span class="live-stat-value positive">{stats.liveWinRate}</span>
+        <span class="live-stat-label" data-i18n-ko="승률" data-i18n-en="Win Rate">승률</span>
+      </div>
+      <div class="live-stat-divider"></div>
+      <div class="live-stat">
+        <span class="live-stat-value positive">{stats.livePnl}</span>
+        <span class="live-stat-label">PnL</span>
+      </div>
+      <div class="live-stat-divider"></div>
+      <div class="live-stat">
+        <span class="live-stat-value">{stats.liveBalance}</span>
+        <span class="live-stat-label" data-i18n-ko="잔고" data-i18n-en="Balance">잔고</span>
+      </div>
+    </div>
+    <div class="live-stats-label" style="margin-top: 16px;" data-i18n-ko="🟡 DEMO" data-i18n-en="🟡 DEMO">🟡 DEMO</div>
+    <div class="live-stats-inner">
+      <div class="live-stat">
+        <span class="live-stat-value">{stats.totalTrades}</span>
+        <span class="live-stat-label" data-i18n-ko="거래" data-i18n-en="Trades">거래</span>
+      </div>
+      <div class="live-stat-divider"></div>
+      <div class="live-stat">
+        <span class={`live-stat-value ${stats.demoPnlPct.startsWith('-') ? 'negative' : 'positive'}`}>{stats.demoPnlPct}</span>
+        <span class="live-stat-label">PnL</span>
       </div>
       <div class="live-stat-divider"></div>
       <div class="live-stat">

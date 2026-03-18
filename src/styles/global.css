@@ -1539,6 +1539,15 @@ body::before {
   padding: 0 40px;
 }
 
+.live-stats-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
 .live-stats-inner {
   display: flex;
   justify-content: center;
@@ -1549,6 +1558,10 @@ body::before {
   border-radius: var(--radius-lg);
   padding: 24px 40px;
   box-shadow: var(--shadow-card);
+}
+
+.live-stat-value.negative {
+  color: var(--color-red, #ff4757);
 }
 
 .live-stat {
