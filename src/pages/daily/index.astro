@@ -18,13 +18,18 @@ const koPosts = dailyPosts
 if (koPosts.length > 0) {
   const latest = koPosts[0];
   const body = latest.body || '';
-  const pnlMatch = body.match(/누적 PnL[^|]*\|\s*\*\*([^*]+)\*\*/);
+  const pnlMatch = body.match(/누적\s*PnL[^|]*\|\s*\**([^|*\n]+)\**/);
   if (pnlMatch) pnl = pnlMatch[1].trim();
-  const wrMatch = body.match(/승률[^|]*\|\s*\**([\d.]+%)\**/);
+  const wrMatch = body.match(/승률\s*([\d.]+%)/);
   if (wrMatch) winRate = wrMatch[1];
-  const trMatch = body.match(/누적\s*(\d+)\s*거래/);
-  if (trMatch) trades = trMatch[1];
-  const balMatch = body.match(/현재 잔고[^|]*\|\s*\*\*([^*]+)\*\*/);
+  const trMatch = body.match(/누적\s*거래[^|]*\|\s*(\d+)/);
+  if (!trMatch) {
+    const trMatch2 = body.match(/(\d+)건\s*\(/);
+    if (trMatch2) trades = trMatch2[1];
+  } else {
+    trades = trMatch[1];
+  }
+  const balMatch = body.match(/현재\s*잔고[^|]*\|\s*\**([^|*\n]+)\**/);
   if (balMatch) balance = balMatch[1].trim();
 }
 ---
