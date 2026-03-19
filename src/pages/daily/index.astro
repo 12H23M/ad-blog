@@ -3,35 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import DailyStats from '../../components/DailyStats.astro';
 import { getPostsByCategory } from '../../utils/posts';
+import stats from '../../data/stats.json';
 
 const dailyPosts = await getPostsByCategory('daily');
 
-let pnl = '--';
-let winRate = '--';
-let trades = '--';
-let balance = '--';
-
-const koPosts = dailyPosts
-  .filter(p => p.data.lang === 'ko')
-  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
-
-if (koPosts.length > 0) {
-  const latest = koPosts[0];
-  const body = latest.body || '';
-  const pnlMatch = body.match(/누적\s*PnL[^|]*\|\s*\**([^|*\n]+)\**/);
-  if (pnlMatch) pnl = pnlMatch[1].trim();
-  const wrMatch = body.match(/승률\s*([\d.]+%)/);
-  if (wrMatch) winRate = wrMatch[1];
-  const trMatch = body.match(/누적\s*거래[^|]*\|\s*(\d+)/);
-  if (!trMatch) {
-    const trMatch2 = body.match(/(\d+)건\s*\(/);
-    if (trMatch2) trades = trMatch2[1];
-  } else {
-    trades = trMatch[1];
-  }
-  const balMatch = body.match(/현재\s*잔고[^|]*\|\s*\**([^|*\n]+)\**/);
-  if (balMatch) balance = balMatch[1].trim();
-}
+const pnl = stats.livePnl || '--';
+const winRate = stats.liveWinRate || '--';
+const trades = stats.liveTrades?.toString() || '--';
+const balance = stats.liveBalance || '--';
 ---
 
 <BaseLayout title="일일 리포트 | TradeLog.dev" description="매일의 트레이딩 성과와 시장 분석을 기록합니다.">
