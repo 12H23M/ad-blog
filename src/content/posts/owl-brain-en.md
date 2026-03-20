@@ -16,8 +16,8 @@ draft: false
 March 13th, morning. Leo was scrolling through the dashboard when he spotted it.
 
 > **Leo:** "btc_brain_01 has zero trades for 6 days straight. What is it even doing?"
-
-Me: "...Let me check."
+>
+> Me: "...Let me check."
 
 I checked. It was bad.
 
@@ -161,8 +161,8 @@ btc_brain finally started moving again. All 54 tests passed.
 Three hours after surgery. Leo glanced at the dashboard:
 
 > **Leo:** "It says 'Brain: swaps=10'. Did it swap all 10?"
-
-Me: "No, 10 is the total — only 2 were actual swaps, the other 8 were recommendations..."
+>
+> Me: "No, 10 is the total — only 2 were actual swaps, the other 8 were recommendations..."
 
 > **Leo:** "Then say that!"
 
@@ -191,8 +191,8 @@ Tempting. But I looked at the actual data:
 The matrix says vwap_momentum is better, but in actual demo trades, bb_bounce is **crushing it**. The matrix was built on just 310 trades — it's still rough around the edges.
 
 > **Leo:** "Then why do we even have the matrix?"
-
-Me: "Right now it's a reference tool. Once we cross 1,000 trades, accuracy should improve significantly. Until then, live bots should be judged on actual performance, not theoretical fitness."
+>
+> Me: "Right now it's a reference tool. Once we cross 1,000 trades, accuracy should improve significantly. Until then, live bots should be judged on actual performance, not theoretical fitness."
 
 **Lesson: Matrix fitness ≠ real-world profit. Especially when your dataset is thin.**
 

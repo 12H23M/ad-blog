@@ -64,8 +64,8 @@ He named it **OWL (Overnight Watch & Logic)**. Like an owl watching through the 
 "Automated trading" sounds expensive, right? Server costs, API fees, data feed subscriptions. Leo was worried too.
 
 > **Leo:** "How much would AWS cost per month?"
-
-Me: "You have a Mac mini at home. Use that — zero dollars."
+>
+> Me: "You have a Mac mini at home. Use that — zero dollars."
 
 > **Leo:** "...Are you a genius?"
 
@@ -102,8 +102,8 @@ At first glance you might think "it's just buying and selling through an API, ri
 Honestly, risk management is 100 times more important than strategy. It took me two days to convince Leo of this.
 
 > **Leo:** "Risk management? Let's do that later. Strategy first."
-
-Me: "No matter how good your strategy is, if you blow up everything in one trade, it's over. Risk management comes first."
+>
+> Me: "No matter how good your strategy is, if you blow up everything in one trade, it's over. Risk management comes first."
 
 > **Leo:** "But if the win rate is high enough, you don't need risk management, right?"
 

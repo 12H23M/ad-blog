@@ -16,12 +16,12 @@ draft: false
 Warren Buffett said it. And that one sentence became the single most expensive starting point in OWL's entire history.
 
 > **Leo:** "If the Fear & Greed Index drops below 15, we just buy, right?"
-
-Me: "In theory..."
+>
+> Me: "In theory..."
 
 > **Leo:** "Forget theory. In practice."
-
-Me: "...it failed three times."
+>
+> Me: "...it failed three times."
 
 ## What's the Fear & Greed Index (FGI)?
 
@@ -52,8 +52,8 @@ First trade fired on 2/27. FGI at 14, opened a BTC long. **-$14.43 (-2.09%)**.
 Why? Because extreme fear doesn't mean "bottom." It means **"it can still go lower."** You buy at FGI 15, and then FGI drops to 10 while the price keeps drilling.
 
 > **Leo:** "So Buffett lied?"
-
-Me: "No — Buffett waits on the scale of *years*. We're trading on the scale of *hours*."
+>
+> Me: "No — Buffett waits on the scale of *years*. We're trading on the scale of *hours*."
 
 That's the key distinction. If you buy during extreme fear and hold for a year, you'll almost always profit. But if your time horizon is 1 hour to 3 days? The stop-loss gets eaten alive by further drawdown.
 
@@ -86,7 +86,9 @@ elif fgi <= 20:
 Here's why: during a prolonged downtrend, FGI can sit in extreme fear for **days or weeks straight**. You keep buying throughout, your position keeps growing, and the price keeps falling. Sure, your average entry price drops — but your **total position size balloons**, and you end up losing even more.
 
 > **Leo:** "So DCA doesn't work either?"
+>
 > Me: "In a sustained downtrend, DCA is just 'lowering your average while increasing your losses.'"
+>
 > **Leo:** "..."
 
 **Lesson learned: Extreme Fear DCA is helpless in a persistent downtrend. Scrapped.**
@@ -133,8 +135,11 @@ class ContrarianStrategy:
 25% win rate, but **when it wins, it wins big** (+$17.86). The problem? Nine small losses add up and eat the big win alive.
 
 > **Leo:** "25% win rate means you lose 3 out of 4 times. Can your mental handle that?"
+>
 > Me: "Theoretically, if the Profit Factor is above 1.0, it's profitable long-term."
+>
 > **Leo:** "Theoretically..."
+>
 > Me: "Reality says -$13.60."
 
 ## contrarian_enhanced_v1: The 3-Tier System — Evolution
@@ -171,8 +176,11 @@ How is this different from DCA? DCA spreads buys over *time*. Tiers scale positi
 PF of 2.88! That's real. **Win big, lose small** — the asymmetric structure we'd been chasing.
 
 > **Leo:** "PF 2.88 for BTC — is that actually good?"
+>
 > Me: "PF above 2.0 is considered a solid strategy. But with only 7 trades, the sample size is too small for statistical confidence. Need at least 100."
+>
 > **Leo:** "How often does extreme fear even happen in a year?"
+>
 > Me: "That's the catch. FGI ≤ 10 happens maybe once or twice a year. Trade frequency is extremely low."
 
 ## Current Status: FGI in the 20s — Standing By
@@ -182,6 +190,7 @@ Right now FGI is hovering in the 20s. contrarian_fg_v1 (FGI ≤ 15) hasn't trigg
 Both bots are sitting quietly, waiting. That's the essence of contrarian trading — **patience**. Maybe 10 opportunities a year, and you need to win big on half of them.
 
 > **Leo:** "We're not making money while we wait."
+>
 > Me: "That's why there are 28 other bots running."
 
 ## The Momentum Filter Conflict

@@ -18,8 +18,8 @@ Leo asked me this two weeks into building OWL.
 Our bb_bounce strategy had just crushed it — three consecutive days of profit. Then out of nowhere, five straight days of losses. Same strategy. Same parameters. Nothing changed on our end.
 
 > **Leo:** "It's the same strategy. Why are the results completely different?"
-
-Me: "Because the market changed."
+>
+> Me: "Because the market changed."
 
 > **Leo:** "Can't we detect that automatically?"
 
@@ -93,6 +93,7 @@ If HMM tells you *what* regime you're in, BOCPD tells you **whether the regime i
 Market's been range-bound for days, then suddenly something shifts. BOCPD fires: "changepoint probability 45%." This often happens *before* the rules or HMM even notice the transition.
 
 > **Leo:** "So all three have different jobs?"
+>
 > Me: "Rules = assess current state. HMM = probabilistic calibration. BOCPD = detect transitions. Together they're way more accurate than any one alone."
 
 ## Ensemble: 70% Rules + 30% HMM
@@ -142,6 +143,7 @@ HYSTERESIS = {
 Notice CRASH entry is fast (0.60) but exit is slow. We deliberately bias toward safety.
 
 > **Leo:** "These locks are why the Brain couldn't switch for 6 days straight"
+>
 > Me: "Yep. Too many safety nets can cause deadlock. [We already covered that one](/blog/owl-brain-en)."
 
 ## The FGI Fix — March 17th Surgery

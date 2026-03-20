@@ -44,8 +44,8 @@ Check 270 coins' 1h candles every 30 seconds. Detect pump, open short. Clean.
 | PF | 1.85 |
 
 > **Leo:** "PF 1.85? That's amazing!"
-
-Me: "Wait. That's close-based."
+>
+> Me: "Wait. That's close-based."
 
 ## Close vs High/Low — Reality Bites
 
@@ -139,8 +139,8 @@ March 13th afternoon, v4 goes live.
 Day one total: **-$35.34**
 
 > **Leo:** "Negative on day one."
-
-Me: "3 trades is statistically meaningless."
+>
+> Me: "3 trades is statistically meaningless."
 
 > **Leo:** "I know. Still sucks though."
 

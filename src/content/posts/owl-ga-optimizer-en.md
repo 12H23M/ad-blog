@@ -20,12 +20,12 @@ Should bb_bounce's RSI oversold threshold be 30? 35? 40? Take profit at 2%? 2.5%
 Just those combinations alone add up to hundreds. Running backtests one by one would take **days**. Multiply that by 6 strategies × 3 coins = 18 combos, each with hundreds of parameter permutations. No human should have to do this.
 
 > **Leo:** "So... why not just automate it?"
-
-Me: "Genetic algorithm. That's exactly what it's for."
+>
+> Me: "Genetic algorithm. That's exactly what it's for."
 
 > **Leo:** "Genetic? Like DNA?"
-
-Me: "Close enough. We breed parameter sets like living organisms and let natural selection do its thing."
+>
+> Me: "Close enough. We breed parameter sets like living organisms and let natural selection do its thing."
 
 ## What Even Is a Genetic Algorithm?
 
@@ -133,8 +133,8 @@ March 14th, cron job results. 6 strategies × 3 coins = 15 combinations tested.
 | vwap_momentum:SOL | 2.84 | 3.79 | -50.8% | ❌ |
 
 > **Leo:** "PF 583?! That's insane! We're rich!"
-
-Me: "That's overfitting."
+>
+> Me: "That's overfitting."
 
 The truth behind PF 583.06: On training data, it made **exactly 1–2 trades** and won them all. 100% win rate, practically infinite PF. Sounds amazing, right? On validation data: **zero trades**. It literally refused to trade. Can't validate what doesn't exist.
 
