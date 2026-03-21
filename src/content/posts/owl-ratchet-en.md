@@ -79,7 +79,7 @@ A ratchet is a mechanical term — **a toothed gear that only rotates in one dir
 
 **TP goes up. SL goes up. But SL never, ever comes back down.**
 
-![OWL Dashboard — cumulative profit +$211, 50 trades](/images/owl-ratchet-dashboard.png)
+![OWL Dashboard — cumulative profit +$211, 50 trades](/images/owl-ratchet-positions.jpg)
 *Dashboard overview. +$211 cumulative profit. Ratchet protecting gains even at FGI 12 (extreme fear).*
 
 ### The Core Formula
@@ -197,7 +197,6 @@ What if the ratchet hasn't kicked in yet (still at Step 0) and the market flash-
 
 Ratchet state gets saved to a JSON file. Bot crashes, server reboots — doesn't matter. TP/SL positions survive. We also write to the DB in real-time so the dashboard always shows the current ratchet state.
 
-![Bot monitoring — 30 bots at a glance](/images/owl-ratchet-bots.jpg)
 *Bot monitoring screen. Any bot holding a position shows its TP/SL updating live as the ratchet adjusts.*
 
 ## Liquidation Tags: Know What Killed You
