@@ -3,7 +3,7 @@ title: "라이브 첫 거래, 5.78달러를 잃고 배운 것들"
 description: "데모 500건 검증하고 라이브 버튼 눌렀다. 첫 거래는 손실. 그래도 괜찮았다. 진짜 돈이 걸리면 어떤 일이 벌어지는지, 그리고 우리가 어떤 실수를 했는지."
 pubDate: "2026-03-27"
 lang: "ko"
-category: "story"
+category: "system"
 series: "owl-operations"
 seriesOrder: 19
 translationOf: "owl-live-ops-en"

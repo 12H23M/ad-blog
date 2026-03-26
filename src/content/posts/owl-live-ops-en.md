@@ -3,7 +3,7 @@ title: "First Live Trade: Lost $5.78 and Learned Everything"
 description: "500 demo trades validated, then hit the live button. First trade was a loss. That's fine. What happens when real money's on the line, and every bug we discovered the hard way."
 pubDate: "2026-03-27"
 lang: "en"
-category: "story"
+category: "system"
 series: "owl-operations"
 seriesOrder: 19
 translationOf: "owl-live-ops-ko"
