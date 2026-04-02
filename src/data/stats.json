@@ -1,10 +1,10 @@
 {
-  "totalTrades": 597,
+  "totalTrades": 635,
   "demoPnlPct": "-0.5%",
   "activeBots": 32,
   "strategies": 21,
-  "liveTrades": 44,
-  "liveWinRate": "52.3%",
-  "livePnl": "+$16.83",
-  "liveBalance": "$1,022"
+  "liveTrades": 45,
+  "liveWinRate": "51.1%",
+  "livePnl": "+$11.19",
+  "liveBalance": "$1,016"
 }
